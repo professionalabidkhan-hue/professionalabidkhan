@@ -10,6 +10,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* Auth Button Styles */
+.auth-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-cyber-auth {
+    font-family: 'Orbitron', sans-serif;
+    padding: 10px 25px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-signin {
+    background: transparent;
+    border: 1px solid var(--it-purple);
+    color: var(--it-purple);
+}
+
+.btn-signin:hover {
+    background: var(--it-purple);
+    color: #fff;
+    box-shadow: 0 0 15px var(--it-purple);
+}
+
+.btn-signup {
+    background: linear-gradient(45deg, var(--it-purple), var(--neon-blue));
+    border: none;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+}
+
+.btn-signup:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--neon-blue);
+    color: #fff;
+}
         :root {
             --it-purple: #a855f7;
             --neon-blue: #0ea5e9;
@@ -133,7 +179,25 @@
     </style>
 </head>
 <body>
+<div class="col-md-8">
+    <h1 class="hero-header fw-bold text-uppercase display-5">Technical Excellence Laboratory</h1>
+    <p class="text-secondary fs-5">Secure Module Selection: Deploy your learning path.</p>
+    
+    <div class="d-flex flex-wrap gap-3 align-items-center mt-3">
+        <a href="index.html" class="btn-return-dashboard">
+            <i class="fas fa-th-large me-2"></i> Command Bridge
+        </a>
 
+        <div class="auth-container">
+            <a href="signin.html" class="btn-cyber-auth btn-signin">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+            </a>
+            <a href="signup.html" class="btn-cyber-auth btn-signup">
+                <i class="fas fa-user-plus"></i> Join Lab
+            </a>
+        </div>
+    </div>
+</div>
 <div class="container mt-5 pt-4">
     <div class="row align-items-center mb-5">
         <div class="col-md-8">
@@ -291,3 +355,4 @@
 
 </body>
 </html>
+
