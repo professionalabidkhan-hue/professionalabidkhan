@@ -1,14 +1,14 @@
 ﻿<?php
 session_start();
-require_once 'connect.php';
+require_once 'connect.html';
 $error = "";
 
 // MASTER OVERRIDE: If already logged in, skip the gate
 if (isset($_SESSION['user_id'])) {
     if ($_SESSION['user_role'] === 'trainer') {
-        header("Location: DASHBOARD_MENTOR.php");
+        header("Location: DASHBOARD_MENTOR.html");
     } else {
-        header("Location: DASHBOARD_STUDENT.php");
+        header("Location: DASHBOARD_STUDENT.html");
     }
     exit();
 }
@@ -36,9 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // UNIFIED ROUTING: Mentor or Student
         if ($role === 'trainer') {
-            header("Location: DASHBOARD_MENTOR.php");
+            header("Location: DASHBOARD_MENTOR.html");
         } else {
-            header("Location: DASHBOARD_STUDENT.php");
+            header("Location: DASHBOARD_STUDENT.html");
         }
         exit();
     } else {
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
     
     <div class="mt-4">
-        <a href="signup.php" class="text-secondary small text-decoration-none">New Identity? <span class="text-info">Register Here</span></a>
+        <a href="signup.html" class="text-secondary small text-decoration-none">New Identity? <span class="text-info">Register Here</span></a>
     </div>
 </div>
 </body>

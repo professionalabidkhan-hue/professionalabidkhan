@@ -1,11 +1,11 @@
 <?php
-// recovery_process.php - MUST NOT HAVE ANY HTML OR INCLUDES AT THE TOP
+// recovery_process.html - MUST NOT HAVE ANY HTML OR INCLUDES AT THE TOP
 header('Content-Type: application/json');
 
 // Stop errors from printing as HTML (this prevents the <script> error)
 error_reporting(0); 
 
-require_once 'connect.php';
+require_once 'connect.html';
 
 // Capture the JSON payload
 $input = json_decode(file_get_contents('php://input'), true);

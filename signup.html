@@ -1,5 +1,5 @@
 ﻿<?php
-require_once 'connect.php'; 
+require_once 'connect.html'; 
 $message = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_stmt_execute($stmt)) {
         $wa_text = urlencode("Asalamu Alaikum Master Abid Khan. New Identity Registered.\nName: $name\nRole: $role");
         $wa_link = "https://api.whatsapp.com/send?phone=923497469638&text=$wa_text";
-        echo "<script>alert('Identity Logged.'); window.open('$wa_link', '_blank'); window.location.href='signin.php?success';</script>";
+        echo "<script>alert('Identity Logged.'); window.open('$wa_link', '_blank'); window.location.href='signin.html?success';</script>";
     } else {
         $message = "<div class='alert alert-danger'>Vault Error: " . mysqli_error($conn) . "</div>";
     }

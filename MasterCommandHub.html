@@ -1,7 +1,7 @@
 ﻿<?php
 session_start();
 if(!isset($_SESSION['user_role']) || $_SESSION['user_role'] != 'trainer') { 
-    header("Location: signin.php?unauthorized_access"); exit(); 
+    header("Location: signin.html?unauthorized_access"); exit(); 
 }
 ?>
 <!DOCTYPE html>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'connect.php';
+require_once 'connect.html';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $otp = mysqli_real_escape_string($conn, $_POST['otp']);
@@ -12,9 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['verified_email'] = $row['email'];
-        header("Location: reset_password_final.php");
+        header("Location: reset_password_final.html");
     } else {
-        header("Location: verify_otp.php?error=invalid_key");
+        header("Location: verify_otp.html?error=invalid_key");
     }
 }
 ?><script>

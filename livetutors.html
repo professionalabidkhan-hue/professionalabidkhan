@@ -1,6 +1,6 @@
 ﻿<?php
 // session_start(); // Commented out so visitors don't need a session
-require_once 'connect.php';
+require_once 'connect.html';
 
 // Fetch Total Count for the Header
 $count_query = mysqli_query($conn, "SELECT COUNT(*) as total FROM ak_users WHERE user_role = 'trainer'");
@@ -51,7 +51,7 @@ $result = mysqli_query($conn, $query);
                     <img src="<?php echo $row['profile_pic']; ?>" class="tutor-pic">
                     <h5 class="mentor-name text-white mb-1"><?php echo $row['full_name']; ?></h5>
                     <div class="text-info small mb-3"><?php echo $row['department']; ?> Specialist</div>
-                    <a href="signup.php" class="btn-join">BOOK A SESSION</a>
+                    <a href="signup.html" class="btn-join">BOOK A SESSION</a>
                 </div>
             </div>
             <?php endwhile; ?>

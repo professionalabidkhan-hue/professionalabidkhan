@@ -1,8 +1,8 @@
 ﻿<?php 
-include('header.php'); 
-include('fetch_rozee_jobs.php'); 
-include('ai_assistant.php'); 
-include('connect.php'); // Sentinel Security & DB Bridge
+include('header.html'); 
+include('fetch_rozee_jobs.html'); 
+include('ai_assistant.html'); 
+include('connect.html'); // Sentinel Security & DB Bridge
 
 // 1. VAULT JOBS - Professional Hierarchy
 $vault_jobs = [
@@ -11,7 +11,7 @@ $vault_jobs = [
         "location" => "Remote (USA/Europe)",
         "type" => "International",
         "icon" => "fa-cloud",
-        "link" => "cloud_arch.php", 
+        "link" => "cloud_arch.html", 
         "desc" => "Lead global pedagogy delivery networks using high-availability AWS/Azure architectures."
     ],
     [
@@ -19,7 +19,7 @@ $vault_jobs = [
         "location" => "London, UK / Remote",
         "type" => "International",
         "icon" => "fa-microchip",
-        "link" => "ai_researcher.php",
+        "link" => "ai_researcher.html",
         "desc" => "Orchestrate adaptive learning algorithms for next-generation e-pedagogy systems."
     ],
     [
@@ -27,7 +27,7 @@ $vault_jobs = [
         "location" => "Lahore / Karachi",
         "type" => "Domestic",
         "icon" => "fa-database",
-        "link" => "web_dev_pakistan.php",
+        "link" => "web_dev_pakistan.html",
         "desc" => "Architecting scalable institute databases and secure high-traffic student portals."
     ]
 ];
@@ -193,6 +193,6 @@ $rozeeJobs = getRozeeJobs();
     </div>
 </div>
 
-<?php include('footer.php'); ?>
+<?php include('footer.html'); ?>
 </body>
 </html>

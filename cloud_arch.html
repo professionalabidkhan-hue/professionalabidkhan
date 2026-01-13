@@ -1,21 +1,21 @@
 <?php
-// cloud_arch.php
-include('header.php'); // Fixed: Removed ../
+// cloud_arch.html
+include('header.html'); // Fixed: Removed ../
 ?>
 
 <div class="container">
     <div class="detail-card shadow-lg">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <a href="jobs.php" class="btn btn-sm btn-outline-secondary rounded-pill"> <i class="fas fa-arrow-left me-2"></i> Back to Vault
+            <a href="jobs.html" class="btn btn-sm btn-outline-secondary rounded-pill"> <i class="fas fa-arrow-left me-2"></i> Back to Vault
             </a>
             <span class="identity-badge">LEVEL 4 SECURITY CLEARANCE REQUIRED</span>
         </div>
         </div>
 </div>
 
-<?php include('footer.php'); ?> ```
+<?php include('footer.html'); ?> ```
 
-### 2. Update `jobs.php`
+### 2. Update `jobs.html`
 The links in your **Vault Jobs** array need to be updated because the `jobs/` folder no longer exists.
 
 ```php
@@ -26,7 +26,7 @@ $vault_jobs = [
         "location" => "Remote (USA/Global)",
         "type" => "International",
         "icon" => "fa-user-shield",
-        "link" => "job_detail_template.php", // Fixed: Removed jobs/
+        "link" => "job_detail_template.html", // Fixed: Removed jobs/
         "desc" => "Elite threat monitoring and cloud infrastructure security."
     ],
     [
@@ -34,7 +34,7 @@ $vault_jobs = [
         "location" => "Islamabad / Remote",
         "type" => "Domestic",
         "icon" => "fa-code",
-        "link" => "web_dev_pakistan.php", // Fixed: Removed jobs/
+        "link" => "web_dev_pakistan.html", // Fixed: Removed jobs/
         "desc" => "Developing high-end pedagogy platforms using PHP and React."
     ]
 ];<script>

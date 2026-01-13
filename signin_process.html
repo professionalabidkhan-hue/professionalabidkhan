@@ -4,11 +4,11 @@ error_reporting(0); // Prevents warnings from corrupting the JSON output
 header('Content-Type: application/json');
 
 // 1. Safety Check for Connection
-if (!file_exists('connect.php')) {
+if (!file_exists('connect.html')) {
     echo json_encode(['success' => false, 'message' => 'Connection module missing.']);
     exit();
 }
-require_once 'connect.php';
+require_once 'connect.html';
 
 // 2. Decode Input
 $input = json_decode(file_get_contents('php://input'), true);
@@ -44,9 +44,9 @@ if (isset($input['email']) && isset($input['password'])) {
         // 5. UNIFIED ROUTING LOGIC (The Master Update)
         // No matter the department, we route based on ROLE to your unified files
         if ($role === 'trainer') {
-            $redirect = 'DASHBOARD_MENTOR.php';
+            $redirect = 'DASHBOARD_MENTOR.html';
         } else {
-            $redirect = 'DASHBOARD_STUDENT.php';
+            $redirect = 'DASHBOARD_STUDENT.html';
         }
 
         echo json_encode(['success' => true, 'redirect' => $redirect]);

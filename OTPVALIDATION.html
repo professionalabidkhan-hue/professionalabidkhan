@@ -20,7 +20,7 @@
     <script>
         async function triggerOtpStrike() {
             const email = document.getElementById('testEmail').value;
-            const response = await fetch('connect_hub.php', {
+            const response = await fetch('connect_hub.html', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

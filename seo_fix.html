@@ -17,7 +17,7 @@ $files = glob("*.{php,html}", GLOB_BRACE);
 echo "<h2>Starting SEO Injection...</h2>";
 
 foreach ($files as $file) {
-    if ($file == 'seo_fix.php') continue; // Don't touch this script itself
+    if ($file == 'seo_fix.html') continue; // Don't touch this script itself
 
     $content = file_get_contents($file);
 
@@ -66,5 +66,5 @@ foreach ($files as $file) {
 }
 
 echo "<h3>Insha Allah, your website is now SEO-Ready!</h3>";
-echo "<p style='color:red;'><strong>SECURITY ALERT:</strong> Delete 'seo_fix.php' from your htdocs immediately after running.</p>";
+echo "<p style='color:red;'><strong>SECURITY ALERT:</strong> Delete 'seo_fix.html' from your htdocs immediately after running.</p>";
 ?>

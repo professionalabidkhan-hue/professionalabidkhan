@@ -1,6 +1,6 @@
 <?php
-// submit_application.php - UPDATED WITH SENTINEL ALERTS
-include('connect.php');
+// submit_application.html - UPDATED WITH SENTINEL ALERTS
+include('connect.html');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $job_title = mysqli_real_escape_string($conn, $_POST['job_title']);
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         @mail($to, $subject, $body, $headers); // Attempts to send alert
         
-        echo "<script>alert('VAULT UPDATED: Your candidacy is secured.'); window.location.href='jobs.php';</script>";
+        echo "<script>alert('VAULT UPDATED: Your candidacy is secured.'); window.location.href='jobs.html';</script>";
     }
 }
 ?>

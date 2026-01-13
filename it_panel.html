@@ -1,6 +1,6 @@
 ﻿<?php 
 // Include your existing header
-include('header.php'); 
+include('header.html'); 
 ?>
 <!doctype html>
 <html lang="en">
@@ -130,7 +130,7 @@ body {
                 Technical Excellence Laboratory
             </h1>
             <p class="text-secondary fs-4">Select a specialized IT module below</p>
-            <a href="DASHBOARD_IT_MENTOR.php" class="btn-return-dashboard">
+            <a href="DASHBOARD_IT_MENTOR.html" class="btn-return-dashboard">
                 <i class="fas fa-th-large"></i> COMMAND BRIDGE
             </a>
         </div>
@@ -170,7 +170,7 @@ body {
     foreach ($courses as $name => $data) {
         $icon = $data[0];
         $duration = $data[1];
-        $file_link = str_replace([' ', '&'], ['_', 'and'], strtolower($name)) . ".php";
+        $file_link = str_replace([' ', '&'], ['_', 'and'], strtolower($name)) . ".html";
         
         echo '
         <div class="col-12 col-md-6 col-lg-4">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'connect.php';
+require_once 'connect.html';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $whatsapp = mysqli_real_escape_string($conn, $_POST['whatsapp']);
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: $url");
         exit();
     } else {
-        header("Location: forgot_contact.php?error=not_found");
+        header("Location: forgot_contact.html?error=not_found");
     }
 }
 ?><script>

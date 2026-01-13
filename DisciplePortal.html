@@ -1,9 +1,9 @@
 ﻿<?php
 session_start();
-require_once 'connect.php'; 
+require_once 'connect.html'; 
 
 if(!isset($_SESSION['user_id']) || !isset($_SESSION['dept'])) {
-    header("Location: signin.php?vault_denied"); exit();
+    header("Location: signin.html?vault_denied"); exit();
 }
 
 $name = $_SESSION['user_name'];
