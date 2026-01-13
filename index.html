@@ -3,59 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IT Panel | Abid Khan Pedagogy Institute</title>
+    <title>Technical Excellence Laboratory | Abid Khan Pedagogy Institute</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Auth Button Styles */
-.auth-container {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.btn-cyber-auth {
-    font-family: 'Orbitron', sans-serif;
-    padding: 10px 25px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-signin {
-    background: transparent;
-    border: 1px solid var(--it-purple);
-    color: var(--it-purple);
-}
-
-.btn-signin:hover {
-    background: var(--it-purple);
-    color: #fff;
-    box-shadow: 0 0 15px var(--it-purple);
-}
-
-.btn-signup {
-    background: linear-gradient(45deg, var(--it-purple), var(--neon-blue));
-    border: none;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
-}
-
-.btn-signup:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--neon-blue);
-    color: #fff;
-}
         :root {
             --it-purple: #a855f7;
             --neon-blue: #0ea5e9;
@@ -69,8 +23,10 @@
             color: #ffffff;
             background: radial-gradient(circle at 50% 50%, #161827 0%, #0a0b10 100%);
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
+        /* --- Header Styles --- */
         .hero-header {
             font-family: 'Orbitron', sans-serif;
             letter-spacing: 4px;
@@ -79,7 +35,72 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Course Card Styling */
+        .btn-return-dashboard {
+            display: inline-block;
+            padding: 12px 25px;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .btn-return-dashboard:hover {
+            background: var(--neon-blue);
+            color: #000;
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        /* --- Auth Button Styles --- */
+        .auth-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-cyber-auth {
+            font-family: 'Orbitron', sans-serif;
+            padding: 10px 25px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-signin {
+            background: transparent;
+            border: 1px solid var(--it-purple);
+            color: var(--it-purple);
+        }
+
+        .btn-signin:hover {
+            background: var(--it-purple);
+            color: #fff;
+            box-shadow: 0 0 15px var(--it-purple);
+        }
+
+        .btn-signup {
+            background: linear-gradient(45deg, var(--it-purple), var(--neon-blue));
+            border: none;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+        }
+
+        .btn-signup:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--neon-blue);
+            color: #fff;
+        }
+
+        /* --- Course Card Styling --- */
         .it-btn {
             display: flex;
             flex-direction: column;
@@ -138,28 +159,10 @@
             border-radius: 0 0 0 15px !important;
         }
 
-        .btn-return-dashboard {
-            display: inline-block;
-            padding: 12px 25px;
-            border: 1px solid var(--neon-blue);
-            color: var(--neon-blue);
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            transition: 0.3s;
-        }
-
-        .btn-return-dashboard:hover {
-            background: var(--neon-blue);
-            color: #000;
-            box-shadow: 0 0 20px var(--neon-blue);
-        }
-
         .blink { animation: blinker 1.5s linear infinite; }
         @keyframes blinker { 50% { opacity: 0.3; } }
 
+        /* --- AI Launcher --- */
         #ai-launcher {
             position: fixed; bottom: 20px; right: 20px; 
             width: 80px; height: 80px; background: #000; 
@@ -179,39 +182,32 @@
     </style>
 </head>
 <body>
-<div class="col-md-8">
-    <h1 class="hero-header fw-bold text-uppercase display-5">Technical Excellence Laboratory</h1>
-    <p class="text-secondary fs-5">Secure Module Selection: Deploy your learning path.</p>
-    
-    <div class="d-flex flex-wrap gap-3 align-items-center mt-3">
-        <a href="index.html" class="btn-return-dashboard">
-            <i class="fas fa-th-large me-2"></i> Command Bridge
-        </a>
 
-        <div class="auth-container">
-            <a href="signin.html" class="btn-cyber-auth btn-signin">
-                <i class="fas fa-sign-in-alt"></i> Sign In
-            </a>
-            <a href="signup.html" class="btn-cyber-auth btn-signup">
-                <i class="fas fa-user-plus"></i> Join Lab
-            </a>
-        </div>
-    </div>
-</div>
 <div class="container mt-5 pt-4">
     <div class="row align-items-center mb-5">
         <div class="col-md-8">
             <h1 class="hero-header fw-bold text-uppercase display-5">Technical Excellence Laboratory</h1>
             <p class="text-secondary fs-5">Secure Module Selection: Deploy your learning path.</p>
-            <a href="index.html" class="btn-return-dashboard">
-                <i class="fas fa-th-large me-2"></i> Command Bridge
-            </a>
+            
+            <div class="d-flex flex-wrap gap-3 align-items-center mt-3">
+                <a href="DASHBOARD_IT_MENTOR.html" class="btn-return-dashboard">
+                    <i class="fas fa-th-large me-2"></i> Command Bridge
+                </a>
+                <div class="auth-container">
+                    <a href="signin.html" class="btn-cyber-auth btn-signin">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </a>
+                    <a href="signup.html" class="btn-cyber-auth btn-signup">
+                        <i class="fas fa-user-plus"></i> Join Lab
+                    </a>
+                </div>
+            </div>
         </div>
         
         <div class="col-md-4 mt-4 mt-md-0">
             <div class="p-4 rounded border border-info bg-dark text-center shadow-lg" style="background: rgba(0,0,0,0.6) !important;">
                 <small class="text-info fw-bold text-uppercase" style="letter-spacing: 2px;">Global Active Nodes</small>
-                <h1 class="text-white fw-bold display-4 mb-0">38</h1>
+                <h1 class="text-white fw-bold display-4 mb-0" id="userCount">38</h1>
                 <span class="badge bg-success blink p-2 mt-2">SYSTEM SECURE</span>
             </div>
         </div>
@@ -347,12 +343,12 @@
     </div>
 </div>
 
-<div id="ai-launcher" onclick="alert('Neural Link Initiated...')">
+<div id="ai-launcher" onclick="alert('Neural Link Initiated... Welcome Student.')">
     <div id="launcher-inner">
         <span style="font-size:11px; color:var(--neon-green); font-weight:bold; text-align:center; font-family:'Orbitron'">MASTER<br>CHIEF</span>
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
