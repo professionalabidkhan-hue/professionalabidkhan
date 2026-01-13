@@ -1,0 +1,20 @@
+function loginMaster() {
+    const userRole = document.getElementById('role').value;
+    const accessKey = document.getElementById('key').value;
+
+    // The Master Key you give them in the email
+    if (accessKey === "HUB786") { 
+        localStorage.setItem('verified_user', 'true');
+        
+        // Redirect based on the 1,000 PKR registration category
+        if (userRole === 'IT Trainer') {
+            window.location.href = "dashboardittrainer/index.html";
+        } else if (userRole === 'Quran Trainer') {
+            window.location.href = "dashboardqurantrainer/index.html";
+        } else {
+            window.location.href = "DASHBOARDABIDKHAN/index.html";
+        }
+    } else {
+        alert("INVALID KEY: Payment Verification Required.");
+    }
+}
