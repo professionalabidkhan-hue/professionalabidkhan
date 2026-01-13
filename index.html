@@ -1,283 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
-    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture.">
-    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Built for sovereignty and security.">
     <meta name="author" content="Professor Doctor Abid Khan">
-    <link rel="icon" type="image/png" href="ABID KHAN.png">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <style>
-        :root {
-            --primary-blue: #0b63d3;
-            --accent-orange: #ff9800;
-            --it-purple: #a855f7;
-            --islamic-green: #10b981;
-            --dark-bg: #0a0b10;
-            --glass-white: rgba(255, 255, 255, 0.05);
-            --neon-green: #00ff00;
+        body { background: #07090d; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .master-input { background: rgba(0,0,0,0.5); border: 1px solid #1a1c2c; color: white; border-radius: 12px; padding: 12px; margin-bottom: 15px; width: 100%; transition: 0.3s; }
+        .master-input:focus { border-color: #4fc3f7; outline: none; box-shadow: 0 0 10px rgba(79, 195, 247, 0.3); }
+        
+        /* TWO PATH CARDS */
+        .role-selection-wrapper { display: flex; gap: 20px; margin-bottom: 30px; }
+        .path-card { flex: 1; background: rgba(255, 255, 255, 0.03); border: 2px solid rgba(79, 195, 247, 0.1); border-radius: 20px; padding: 25px; text-align: center; cursor: pointer; transition: 0.4s; position: relative; }
+        .path-card.active.trainer-path { border-color: #4fc3f7; background: rgba(79, 195, 247, 0.1); }
+        .path-card.active.student-path { border-color: #2196f3; background: rgba(33, 150, 243, 0.1); }
+        .path-card i { font-size: 2rem; margin-bottom: 10px; display: block; }
+        
+        .master-avatar-container { position: relative; display: inline-block; }
+        .master-avatar {
+            width: 120px; height: 120px; border-radius: 50%;
+            border: 3px solid #4fc3f7; object-fit: cover;
+            padding: 5px; background: rgba(79, 195, 247, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        .master-avatar:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(79, 195, 247, 0.6); border-color: #ffffff; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: #ffffff;
-            overflow-x: hidden;
-            -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% 50%, #1a1c2c 0%, #0a0b10 100%);
-            z-index: -1;
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            backdrop-filter: blur(10px);
-            background: rgba(10, 11, 16, 0.8) !important;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .navbar-brand img {
-            border: 2px solid var(--primary-blue);
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .navbar-brand img:hover { transform: rotate(360deg) scale(1.1); }
-
-        /* Hero Typography */
-        .hero-title {
-            font-weight: 800;
-            letter-spacing: -2px;
-            background: linear-gradient(to right, #fff, var(--primary-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 3.5rem;
-        }
-
-        /* Card Architecture */
-        .card {
-            background: var(--glass-white);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(11, 99, 211, 0.2);
-        }
-
-        .card-body.quran { border-top: 4px solid var(--primary-blue); }
-        .card-body.it { border-top: 4px solid var(--accent-orange); }
-        .card-body.it-panel { border-top: 4px solid var(--it-purple); }
-        .card-body.islamic { border-top: 4px solid var(--islamic-green); }
-
-        .icon-circle {
-            width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 15px; font-size: 24px;
-            background: rgba(255,255,255,0.1);
-        }
-
-        /* AI Ghostly Glow & Effects */
-        .ai-msg {
-            background: rgba(0, 255, 0, 0.1);
-            color: #fff; padding: 14px 18px; border-radius: 20px 20px 20px 4px;
-            align-self: flex-start; max-width: 85%; font-size: 14px;
-            border-left: 4px solid var(--neon-green);
-            animation: ghost-flicker 5s infinite;
-        }
-
-        @keyframes ghost-flicker {
-            0%, 100% { opacity: 1; }
-            92% { opacity: 1; }
-            93% { opacity: 0.7; transform: translateX(2px); }
-            94% { opacity: 1; transform: translateX(0); }
-        }
-
-        /* Buttons */
-        .btn-primary { background: var(--primary-blue); border: none; border-radius: 12px; font-weight: 600; }
-        .btn-primary:hover { background: #084ca3; box-shadow: 0 0 15px var(--primary-blue); }
-
-        .wave-bar { width: 3px; height: 10px; background: #00ff00; animation: wave 1s infinite ease-in-out; }
-        @keyframes wave { 0%, 100% { height: 5px; } 50% { height: 15px; } }
-        @keyframes pulse-border { 0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4); } 50% { box-shadow: 0 0 0 12px rgba(0, 255, 0, 0); } }
+        .btn-sentinel { background: #4fc3f7; color: black; font-weight: bold; border-radius: 15px; padding: 18px; width: 100%; border: none; transition: 0.3s; opacity: 0.3; cursor: not-allowed; text-transform: uppercase; }
+        .btn-active { opacity: 1 !important; cursor: pointer !important; box-shadow: 0 5px 20px rgba(79, 195, 247, 0.4); }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="ABID KHAN.png" alt="Logo" width="45" height="45" class="rounded-circle">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="it_panel.html">IT Lab</a></li>
-                    <li class="nav-item"><a class="nav-link" href="islamic_studies.html">Islamic Studies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
-                </ul>
-                <div class="d-flex">
-                    <a href="signin.html" class="btn btn-outline-light me-2">Sign In</a>
-                    <a href="signup.html" class="btn btn-primary">Join Now</a>
-                </div>
+<div class="container py-5">
+    <div class="mx-auto" style="max-width: 750px; background: #0d1117; padding: 45px; border-radius: 35px; border: 1px solid #1a1c2c; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+        
+        <div class="text-center mb-4">
+            <div class="master-avatar-container">
+                <img src="ABID KHAN.png" alt="Professor Doctor Master Abid Khan" class="master-avatar shadow-lg">
+            </div>
+        </div>     
+        
+        <h2 class="text-center fw-bold mb-4" style="letter-spacing: 2px;">ABID KHAN HUB</h2>
+
+        <div class="role-selection-wrapper">
+            <div class="path-card trainer-path" id="card-trainer" onclick="selectPath('trainer')">
+                <i class="fas fa-user-tie text-info"></i>
+                <h6 class="text-info m-0">MASTER TRAINER</h6>
+            </div>
+            <div class="path-card student-path active" id="card-student" onclick="selectPath('student')">
+                <i class="fas fa-user-graduate text-primary"></i>
+                <h6 class="text-primary m-0">DISCIPLE STUDENT</h6>
             </div>
         </div>
-    </nav>
 
-    <section class="container text-center pt-5 mt-5">
-        <div class="py-5">
-            <h1 class="hero-title text-uppercase">Abid Khan E-Learning Hub</h1>
-            <p class="lead text-secondary">Global Education Architect: Designing the Future of Tech and Spirituality.</p>
-            <div class="mt-4">
-                <a href="#explore" class="btn btn-primary btn-lg px-5">Explore Modules</a>
-                <a href="jobs.html" class="btn btn-outline-light btn-lg ms-3">Browse Jobs</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="container mb-5" id="explore">
-        <div class="row g-4">
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body it-panel text-center">
-                        <div class="icon-circle" style="background: rgba(168, 85, 247, 0.1);">
-                            <i class="fas fa-laptop-code" style="color:var(--it-purple)"></i>
-                        </div>
-                        <h4 class="mt-2" style="color:var(--it-purple)">IT Panel</h4>
-                        <p class="small text-secondary">Full-stack mastery & secure terminal training.</p>
-                        <a href="it_panel.html" class="btn btn-outline-light w-100 mt-3" style="border-color:var(--it-purple)">Enter Lab</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body islamic text-center">
-                        <div class="icon-circle" style="background: rgba(16, 185, 129, 0.1);">
-                            <i class="fas fa-book-quran" style="color:var(--islamic-green)"></i>
-                        </div>
-                        <h4 class="mt-2" style="color:var(--islamic-green)">Islamic Studies</h4>
-                        <p class="small text-secondary">Tajweed, Hifz, and the Al-Bukhari Library.</p>
-                        <a href="islamic_studies.html" class="btn btn-outline-light w-100 mt-3" style="border-color:var(--islamic-green)">Enter Madrasa</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body quran text-center">
-                        <div class="icon-circle text-primary">
-                            <i class="fas fa-users-rays"></i>
-                        </div>
-                        <h4 class="mt-2 text-primary">Live Tutors</h4>
-                        <p class="small text-secondary">Connect with expert Male & Female Trainers.</p>
-                        <a href="livetutors.html" class="btn btn-outline-primary w-100 mt-3">Find Tutors</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body text-center" style="border-top: 4px solid #fff;">
-                        <div class="icon-circle text-white">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h4 class="mt-2 text-white">Careers</h4>
-                        <p class="small text-secondary">Global opportunities in Tech and Logistics.</p>
-                        <a href="jobs.html" class="btn btn-outline-light w-100 mt-3">View Openings</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="ai-launcher" onclick="toggleAI()">
-        <div id="ai-badge" style="position:absolute; top:0; right:0; width:20px; height:20px; background:red; border:2px solid black; border-radius:50%; display:none; animation: blink 1s infinite;"></div>
-        <div id="launcher-inner">
-            <span id="launcher-text" style="font-size:10px; color:#00ff00; font-weight:bold; text-align:center; font-family: 'Courier New';">MASTER<br>CORE</span>
-        </div>
-    </div>
-
-    <div id="welcome-bubble" style="display:none; position:fixed; bottom:100px; right:30px; background:#00ff00; color:#000; padding:10px 15px; border-radius:15px; font-family: sans-serif; font-size:12px; font-weight:bold; z-index:10001; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
-        Hello! Need help with your courses?
-    </div>
-
-    <div id="ai-command-sector" style="display:none; position:fixed; bottom:100px; right:20px; width:420px; height:600px; background: rgba(0, 8, 0, 0.98); backdrop-filter: blur(20px); border: 1px solid #00ff00; border-radius:24px; z-index:9999; flex-direction:column; box-shadow: 0 25px 60px rgba(0,0,0,1); overflow: hidden;">
-        <div style="padding:18px 25px; background: rgba(0,255,0,0.07); border-bottom: 1px solid rgba(0,255,0,0.2); display:flex; justify-content:space-between; align-items:center;">
-            <div>
-                <div style="color:#00ff00; font-weight:bold; font-size:15px; letter-spacing:1px; font-family: 'Orbitron';">MASTER CHIEF AI</div>
-                <div id="status-text" style="font-size:10px; color:#00ff00; opacity:0.7;">System Operational</div>
-            </div>
-            <span onclick="toggleAI()" style="color:#00ff00; cursor:pointer; font-size:30px;">&times;</span>
-        </div>
-        <div id="discussion-feed" style="flex:1; padding:25px; overflow-y:auto; display:flex; flex-direction:column; gap:18px;">
-            <div class="ai-msg">Connection secure. Professor Abid Khan's neural network is active. How may I facilitate your success?</div>
-        </div>
-        <div style="padding:20px;">
-            <div style="display:flex; background:rgba(255,255,255,0.08); border:1px solid #00ff00; border-radius:30px; padding:6px 18px; align-items:center;">
-                <input type="text" id="master-input" placeholder="Ask the Master Core..." style="flex:1; background:transparent; border:none; color:#fff; padding:10px; outline:none;">
-                <button onclick="askAI()" style="background:#00ff00; border:none; width:38px; height:38px; border-radius:50%; cursor:pointer;">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        // Security Logic
-        document.addEventListener('contextmenu', e => e.preventDefault());
-        document.onkeydown = function(e) {
-            if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
-        };
-
-        // AI Logic
-        function toggleAI() {
-            const sector = document.getElementById('ai-command-sector');
-            sector.style.display = (sector.style.display !== "flex") ? "flex" : "none";
-            document.getElementById('ai-badge').style.display = "none";
-            document.getElementById('welcome-bubble').style.display = "none";
-        }
-
-        async function askAI() {
-            const input = document.getElementById('master-input');
-            const feed = document.getElementById('discussion-feed');
-            const query = input.value.trim();
-            if(!query) return;
-
-            feed.innerHTML += `<div style="background: #00ff00; color: #000; padding: 12px 18px; border-radius: 20px 20px 4px 20px; align-self: flex-end; max-width: 85%; font-size: 14px; font-weight: 600;">${query}</div>`;
-            input.value = '';
+        <form id="signupForm">
+            <input type="hidden" id="selectedRole" value="student">
             
-            setTimeout(() => {
-                feed.innerHTML += `<div class="ai-msg">Analyzing query... Requesting clearance from Professor Doctor Abid Khan. Please consult the <a href="it_panel.html" style="color:yellow">IT Lab</a> for technical modules.</div>`;
-                feed.scrollTop = feed.scrollHeight;
-            }, 1000);
-        }
+            <input type="text" id="full_name" class="master-input" placeholder="Full Identity Name" required>
+            <input type="email" id="email" class="master-input" placeholder="Email Address" required>
+            
+            <div class="row">
+                <div class="col-md-6"><input type="text" id="whatsapp" class="master-input" placeholder="WhatsApp No (e.g. 923...)" required></div>
+                <div class="col-md-6"><input type="password" id="password" class="master-input" placeholder="Set Access Key" required></div>
+            </div>
 
-        window.onload = () => {
-            setTimeout(() => {
-                document.getElementById('ai-badge').style.display = "block";
-                document.getElementById('welcome-bubble').style.display = "block";
-            }, 3000);
-        };
-    </script>
+            <div class="row">
+                <div class="col-md-6">
+                    <select id="department" class="master-input">
+                        <option value="IT">IT Mastery</option>
+                        <option value="QURAN">Quranic Studies</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="timing" class="master-input" placeholder="Preferred Timing">
+                </div>
+            </div>
+
+            <div id="trainerFields" style="display: none;">
+                <input type="text" id="qualification" class="master-input" placeholder="Professional Qualification">
+                <div class="row">
+                    <div class="col-md-6"><input type="text" id="experience" class="master-input" placeholder="Years of Experience"></div>
+                    <div class="col-md-6"><input type="text" id="expected_revenue" class="master-input" placeholder="Expected Revenue %"></div>
+                </div>
+            </div>
+
+            <input type="text" id="proposed_fee" class="master-input" placeholder="Proposed Fee (Optional)">
+
+            <div class="form-check mb-4 mt-2">
+                <input type="checkbox" id="agree" class="form-check-input" onchange="toggleButton()">
+                <label for="agree" class="small text-secondary">I solemnly accept the 30% Law & Hub Rules</label>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-sentinel" disabled>INITIALIZE IDENTITY</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function selectPath(role) {
+        // UI Toggle
+        document.getElementById('card-trainer').classList.remove('active');
+        document.getElementById('card-student').classList.remove('active');
+        
+        if(role === 'trainer') {
+            document.getElementById('card-trainer').classList.add('active');
+            document.getElementById('trainerFields').style.display = 'block';
+        } else {
+            document.getElementById('card-student').classList.add('active');
+            document.getElementById('trainerFields').style.display = 'none';
+        }
+        document.getElementById('selectedRole').value = role;
+    }
+
+    function toggleButton() {
+        const checkbox = document.getElementById('agree');
+        const btn = document.getElementById('submitBtn');
+        if(checkbox.checked) {
+            btn.disabled = false;
+            btn.classList.add('btn-active');
+        } else {
+            btn.disabled = true;
+            btn.classList.remove('btn-active');
+        }
+    }
+
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('full_name').value;
+        const role = document.getElementById('selectedRole').value;
+        const whatsapp = document.getElementById('whatsapp').value;
+
+        // WhatsApp Notification Logic (Master Notification)
+        const waText = encodeURIComponent(`Asalamu Alaikum Master Abid Khan. New Identity Registered.\nName: ${name}\nRole: ${role}\nWhatsApp: ${whatsapp}`);
+        const waLink = `https://api.whatsapp.com/send?phone=923497469638&text=${waText}`;
+
+        alert('Identity Initialization Request Sent to Master Core.');
+        window.open(waLink, '_blank');
+        window.location.href = 'signin.html?registered';
+    });
+</script>
 </body>
 </html>
