@@ -1,221 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
-    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture.">
     <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
     <meta name="author" content="Professor Doctor Abid Khan">
     <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
-    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
     <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Abid Khan E-Learning Hub - Global leader in Quranic Studies and IT Excellence.">
-    <meta name="keywords" content="Abid Khan, IT Training, online IT Training, Abid Khan E-Learning, Quran Tutors, Job Portal">
-    <title>Abid Khan | E-Pedagogy Hub</title>
+
     <link rel="icon" type="image/png" href="ABID KHAN.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-.ai-msg {
-    position: relative;
-    overflow: hidden;
-    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Ghostly glow */
-    animation: ghost-flicker 5s infinite; /* Periodic spectral instability */
-}
-
-@keyframes ghost-flicker {
-    0%, 100% { opacity: 1; }
-    92% { opacity: 1; }
-    93% { opacity: 0.7; transform: translateX(2px); } /* Brief glitch */
-    94% { opacity: 1; transform: translateX(0); }
-    95% { opacity: 0.8; }
-    96% { opacity: 1; }
-}
-</style>
-<div id="ai-launcher" onclick="toggleAI()" style="position:fixed; bottom:20px; right:20px; width:70px; height:70px; background:#000; border:2px solid #00ff00; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow: 0 0 25px rgba(0, 255, 0, 0.7); z-index:10000; transition: all 0.4s ease;">
-    <div id="ai-badge" style="position:absolute; top:0; right:0; width:20px; height:20px; background:red; border:2px solid black; border-radius:50%; display:none; animation: blink 1s infinite;"></div>
-    
-    <div id="launcher-inner" style="width:50px; height:50px; border-radius:50%; border:2px solid #00ff00; display:flex; align-items:center; justify-content:center; animation: pulse-border 2s infinite;">
-        <span id="launcher-text" style="font-size:10px; color:#00ff00; font-weight:bold; text-align:center; font-family: 'Courier New';">MASTER<br>CORE</span>
-    </div>
-</div>
-
-<div id="welcome-bubble" style="display:none; position:fixed; bottom:100px; right:30px; background:#00ff00; color:#000; padding:10px 15px; border-radius:15px; font-family: sans-serif; font-size:12px; font-weight:bold; z-index:10001; box-shadow: 0 5px 15px rgba(0,0,0,0.3); animation: slideUp 0.5s ease;">
-    Hello! Need help with your courses?
-    <div style="position:absolute; bottom:-8px; right:25px; width:0; height:0; border-left:10px solid transparent; border-right:10px solid transparent; border-top:10px solid #00ff00;"></div>
-</div>
-
-<div id="ai-command-sector" style="display:none; position:fixed; bottom:100px; right:20px; width:420px; height:600px; background: rgba(0, 8, 0, 0.98); backdrop-filter: blur(20px); border: 1px solid #00ff00; border-radius:24px; z-index:9999; flex-direction:column; font-family: 'Segoe UI', sans-serif; box-shadow: 0 25px 60px rgba(0,0,0,1); overflow: hidden; animation: openWindow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);">
-    
-    <div style="padding:18px 25px; background: rgba(0,255,0,0.07); border-bottom: 1px solid rgba(0,255,0,0.2); display:flex; justify-content:space-between; align-items:center;">
-        <div>
-            <div style="color:#00ff00; font-weight:bold; font-size:15px; letter-spacing:1px;">PROFESSOR DR. MASTER CHIEF</div>
-            <div id="status-text" style="font-size:10px; color:#00ff00; opacity:0.7;">Ready to solve your problems.</div>
-        </div>
-        <span onclick="toggleAI()" style="color:#00ff00; cursor:pointer; font-size:30px; line-height:0.5;">&times;</span>
-    </div>
-
-    <div id="discussion-feed" style="flex:1; padding:25px; overflow-y:auto; display:flex; flex-direction:column; gap:18px;">
-        <div class="ai-msg">Connection secure. I have analyzed the sector parameters. How can I facilitate your success today?</div>
-    </div>
-
-    <div id="thinking-wave" style="display:none; padding:0 25px 15px; align-items:center; gap:5px;">
-        <div class="wave-bar"></div><div class="wave-bar" style="animation-delay: 0.1s"></div><div class="wave-bar" style="animation-delay: 0.2s"></div>
-        <span style="color:#008800; font-size:11px; margin-left:5px;">Neural Processing...</span>
-    </div>
-
-    <div style="padding:20px; background: linear-gradient(to top, #000, transparent);">
-        <div style="display:flex; background:rgba(255,255,255,0.08); border:1px solid #00ff00; border-radius:30px; padding:6px 18px; align-items:center;">
-            <input type="text" id="master-input" placeholder="Explain your problem..." style="flex:1; background:transparent; border:none; color:#fff; padding:10px; outline:none; font-size:14px;">
-            <button onclick="askAI()" style="background:#00ff00; border:none; width:38px; height:38px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: 0 0 10px #00ff00;">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="black"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
-            </button>
-        </div>
-    </div>
-</div>
-
-<style>
-    @keyframes openWindow { from { transform: translateY(50px) scale(0.95); opacity: 0; } to { transform: translateY(0) scale(1); opacity: 1; } }
-    @keyframes pulse-border { 0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4); } 50% { box-shadow: 0 0 0 12px rgba(0, 255, 0, 0); } }
-    @keyframes wave { 0%, 100% { height: 5px; } 50% { height: 15px; } }
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
-    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    
-    .wave-bar { width: 3px; height: 10px; background: #00ff00; animation: wave 1s infinite ease-in-out; }
-    .ai-msg { background: rgba(0, 255, 0, 0.1); color: #fff; padding: 14px 18px; border-radius: 20px 20px 20px 4px; align-self: flex-start; max-width: 85%; font-size: 14px; line-height: 1.6; border-left: 4px solid #00ff00; }
-    .user-msg { background: #00ff00; color: #000; padding: 12px 18px; border-radius: 20px 20px 4px 20px; align-self: flex-end; max-width: 85%; font-size: 14px; font-weight: 600; box-shadow: 0 5px 15px rgba(0,255,0,0.2); }
-    
-    #discussion-feed::-webkit-scrollbar { width: 5px; }
-    #discussion-feed::-webkit-scrollbar-thumb { background: #00ff00; border-radius: 10px; }
-    .action-link { color: yellow; font-weight: bold; text-decoration: underline; cursor: pointer; }
-</style>
-
-<script>
-const LINKS = { "pillar": "/it_panel.php?course=pillar1", "exam": "https://yourdomain.com/it_panel.php?course=exams" };
-
-// --- NEW ATTENTION GRABBER LOGIC ---
-window.onload = () => {
-    setTimeout(() => {
-        document.getElementById('ai-badge').style.display = "block";
-        document.getElementById('welcome-bubble').style.display = "block";
-    }, 3000); // 3 seconds after load
-};
-
-function toggleAI() {
-    const sector = document.getElementById('ai-command-sector');
-    const badge = document.getElementById('ai-badge');
-    const bubble = document.getElementById('welcome-bubble');
-    
-    const isOpening = sector.style.display !== "flex";
-    sector.style.display = isOpening ? "flex" : "none";
-    
-    if (isOpening) {
-        badge.style.display = "none";
-        bubble.style.display = "none";
-    }
-}
-
-async function askAI() {
-    const input = document.getElementById('master-input');
-    const feed = document.getElementById('discussion-feed');
-    const wave = document.getElementById('thinking-wave');
-    const query = input.value.trim();
-    if(!query) return;
-
-    feed.innerHTML += `<div class="user-msg">${query}</div>`;
-    input.value = '';
-    feed.scrollTop = feed.scrollHeight;
-
-    wave.style.display = "flex";
-    await new Promise(r => setTimeout(r, 1200)); 
-    wave.style.display = "none";
-
-    let response = "";
-    let lowQ = query.toLowerCase();
-
-    if (lowQ.includes("problem") || lowQ.includes("error") || lowQ.includes("help") || lowQ.includes("not working")) {
-        response = "I detect a disruption in your workflow. Don't worry, the Professor is here. Checking your <b>Pillar Registration</b> or <b>Exam Fee status</b> usually resolves the issue. Which one shall we address?";
-    } else if (lowQ.includes("pillar") || lowQ.includes("course")) {
-        response = `Understood. I am opening the Pillar 1 training sector for you now. <br><a href="${LINKS.pillar}" target="_blank" class="action-link">[CLICK HERE TO INITIALIZE MODULE]</a>`;
-    } else if (lowQ.includes("exam") || lowQ.includes("fee")) {
-        response = `<strong>SECURITY CLEARANCE:</strong> To solve the exam access problem, ensure your 30% fee is processed. If ready, click here: <br><a href="${LINKS.exam}" target="_blank" class="action-link">[ACCESS EXAM PORTAL]</a>`;
-    } else {
-        response = "Analyzing... I am programmed to solve problems regarding your courses and exams. Please state your specific requirement.";
-    }
-
-    const msgDiv = document.createElement('div');
-    msgDiv.className = 'ai-msg';
-    feed.appendChild(msgDiv);
-    
-    let i = 0;
-    function typeEffect() {
-        if (i < response.length) {
-            if (response.charAt(i) === '<') { 
-                msgDiv.innerHTML += response.substring(i); i = response.length;
-            } else {
-                msgDiv.innerHTML += response.charAt(i); i++;
-                setTimeout(typeEffect, 15);
-            }
-            feed.scrollTop = feed.scrollHeight;
-        }
-    }
-    typeEffect();
-}
-
-document.getElementById('master-input').addEventListener('keypress', (e) => { if (e.key === 'Enter') askAI(); });
-</script>
-<script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Abid Khan Pedagogy Institute",
-    "url": "https://professionalabidkhan-hue.github.io",
-    "logo": "https://professionalabidkhan-hue.github.io/ABID KHAN.png",
-    "founder": {
-      "@type": "Person",
-      "name": "Professor Doctor Master Muhammad Abid Rafiq Khan",
-      "jobTitle": "Founding Director & Master Pedagogue",
-      "sameAs": [
-        "https://professionalabidkhan-hue.github.io"
-      ]
-    },
-    "description": "The elite global hub for Professional Academic Architecture, IT Mastery, and Quranic Excellence under the guidance of Professor Doctor Muhammad Abid Rafiq Khan.",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+92-349-7469638", 
-      "contactType": "Master Support",
-      "availableLanguage": ["English", "Urdu"]
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Abid Khan Hub",
-        "item": "https://professionalabidkhan-hue.github.io"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "IT Department",
-        "item": "https://professionalabidkhan-hue.github.io/it_panel.php"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Quranic Excellence",
-        "item": "https://professionalabidkhan-hue.github.io/hifzulquran.php"
-      }
-    ]
-  }
-]
-</script>
 
     <style>
         :root {
@@ -225,6 +24,7 @@ document.getElementById('master-input').addEventListener('keypress', (e) => { if
             --islamic-green: #10b981;
             --dark-bg: #0a0b10;
             --glass-white: rgba(255, 255, 255, 0.05);
+            --neon-green: #00ff00;
         }
 
         body {
@@ -232,6 +32,7 @@ document.getElementById('master-input').addEventListener('keypress', (e) => { if
             background-color: var(--dark-bg);
             color: #ffffff;
             overflow-x: hidden;
+            -webkit-user-select: none; user-select: none;
         }
 
         body::before {
@@ -242,112 +43,64 @@ document.getElementById('master-input').addEventListener('keypress', (e) => { if
             z-index: -1;
         }
 
-        .navbar {
-            backdrop-filter: blur(10px);
-            background: rgba(10, 11, 16, 0.8) !important;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .navbar-brand img {
-            border: 2px solid var(--primary-blue);
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .navbar-brand img:hover { transform: rotate(360deg) scale(1.1); }
-
-        .hero-title {
-            font-weight: 800;
-            letter-spacing: -2px;
-            background: linear-gradient(to right, #fff, #0b63d3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 3.5rem;
-        }
-
-        /* Enhanced Glass Cards */
-        .card {
-            background: var(--glass-white);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            transition: all 0.4s ease;
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.05);
-        }
-
-        .card-body.quran { border-top: 4px solid var(--primary-blue); }
-        .card-body.it { border-top: 4px solid var(--accent-orange); }
-        .card-body.it-panel { border-top: 4px solid var(--it-purple); }
-        .card-body.islamic { border-top: 4px solid var(--islamic-green); }
-
-        .icon-circle {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 24px;
-            background: rgba(255,255,255,0.1);
-        }
-
-        .btn-primary {
-            background: var(--primary-blue);
-            border: none;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .copyright-section {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
-            text-align: center;
+        /* --- AI Interface Styles --- */
+        .ai-msg {
+            background: rgba(0, 255, 0, 0.1);
+            color: #fff;
+            padding: 14px 18px;
+            border-radius: 20px 20px 20px 4px;
+            align-self: flex-start;
+            max-width: 85%;
             font-size: 14px;
-            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+            border-left: 4px solid var(--neon-green);
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+            animation: ghost-flicker 5s infinite;
         }
 
-        .footer-links { list-style: none; padding: 0; }
-        .footer-links a { text-decoration: none; color: rgba(255,255,255,0.6); transition: 0.3s; }
-        .footer-links a:hover { color: var(--primary-blue); }
-
-        .btn-whatsapp-master {
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 12px;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: bold;
+        .user-msg {
+            background: var(--neon-green);
+            color: #000;
+            padding: 12px 18px;
+            border-radius: 20px 20px 4px 20px;
+            align-self: flex-end;
+            max-width: 85%;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,255,0,0.2);
         }
+
+        @keyframes ghost-flicker {
+            0%, 92%, 100% { opacity: 1; }
+            93% { opacity: 0.7; transform: translateX(2px); }
+            95% { opacity: 0.8; }
+        }
+
+        @keyframes pulse-border { 0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.4); } 50% { box-shadow: 0 0 0 12px rgba(0, 255, 0, 0); } }
+        @keyframes wave { 0%, 100% { height: 5px; } 50% { height: 15px; } }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.2; } }
+
+        .wave-bar { width: 3px; height: 10px; background: var(--neon-green); animation: wave 1s infinite ease-in-out; }
+
+        /* --- Navbar & Cards --- */
+        .navbar { backdrop-filter: blur(10px); background: rgba(10, 11, 16, 0.8) !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .hero-title { font-weight: 800; background: linear-gradient(to right, #fff, var(--primary-blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 3.5rem; }
+        .card { background: var(--glass-white); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; transition: 0.4s; height: 100%; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(255, 255, 255, 0.05); }
+        .icon-circle { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; background: rgba(255,255,255,0.1); font-size: 24px; }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="ABID KHAN.png" alt="Logo" width="45" height="45" class="rounded-circle">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="#"><img src="ABID KHAN.png" alt="Logo" width="45" height="45" class="rounded-circle"></a>
             <div class="collapse navbar-collapse" id="navContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="it_panel.php">IT Panel</a></li>
-                    <li class="nav-item"><a class="nav-link" href="islamic_studies.php">Islamic Studies</a></li>
-                    <li class="nav-item"><a class="nav-link" href="jobs.php">Jobs</a></li>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="it_panel.html">IT Panel</a></li>
+                    <li class="nav-item"><a class="nav-link" href="islamic_studies.html">Islamic Studies</a></li>
                 </ul>
-                <div class="d-flex">
-                    <a href="signin.php" class="btn btn-outline-light me-2">Sign In</a>
-                    <a href="signup.php" class="btn btn-primary">Join Now</a>
-                </div>
             </div>
         </div>
     </nav>
@@ -356,80 +109,142 @@ document.getElementById('master-input').addEventListener('keypress', (e) => { if
         <div class="py-5">
             <h1 class="hero-title text-uppercase">Abid Khan E-Learning Hub</h1>
             <p class="lead text-secondary">Global Education Architect: Designing the Future of Tech and Spirituality.</p>
-            <div class="mt-4">
-                <a href="#explore" class="btn btn-primary btn-lg px-5">Explore Modules</a>
-                <a href="jobs.html" class="btn btn-outline-light btn-lg ms-3">Browse Jobs</a>
-            </div>
         </div>
     </section>
 
-    <section class="container mb-5" id="explore">
-        <div class="row g-4">
-            <div class="col-md-3">
+    <section class="container mb-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
                 <div class="card">
-                    <div class="card-body it-panel text-center">
-                        <div class="icon-circle text-info" style="background: rgba(168, 85, 247, 0.1);">
-                            <i class="fas fa-laptop-code" style="color:var(--it-purple)"></i>
-                        </div>
-                        <h4 class="mt-2" style="color:var(--it-purple)">IT Panel</h4>
-                        <p class="small text-secondary">Full-stack, Server Management & Terminal Pro tutorials.</p>
-                        <a href="it_panel.php" class="btn btn-outline-light w-100 mt-3" style="border-color:var(--it-purple)">Enter Lab</a>
+                    <div class="card-body text-center" style="border-top: 4px solid var(--it-purple);">
+                        <div class="icon-circle"><i class="fas fa-laptop-code" style="color:var(--it-purple)"></i></div>
+                        <h4 style="color:var(--it-purple)">IT Panel</h4>
+                        <p class="small text-secondary">Advanced Full-stack and Alphanumeric Security modules.</p>
+                        <a href="it_panel.html" class="btn btn-outline-light w-100 mt-3">Enter Lab</a>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="card">
-                    <div class="card-body islamic text-center">
-                        <div class="icon-circle" style="background: rgba(16, 185, 129, 0.1);">
-                            <i class="fas fa-book-quran" style="color:var(--islamic-green)"></i>
-                        </div>
-                        <h4 class="mt-2" style="color:var(--islamic-green)">Islamic Studies</h4>
-                        <p class="small text-secondary">Tajweed, Hifz, and the Al-Bukhari Library.</p>
-                        <a href="islamic_studies.php" class="btn btn-outline-light w-100 mt-3" style="border-color:var(--islamic-green)">Enter Madrasa</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body quran text-center">
-                        <div class="icon-circle text-primary">
-                            <i class="fas fa-users-rays"></i>
-                        </div>
-                        <h4 class="mt-2 text-primary">Live Tutors</h4>
-                        <p class="small text-secondary">Connect with expert Male & Female Quran Trainers.</p>
-                        <a href="livetutors.php" class="btn btn-outline-primary w-100 mt-3">Find Tutors</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="card">
-                    <div class="card-body text-center" style="border-top: 4px solid #fff;">
-                        <div class="icon-circle text-white">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h4 class="mt-2 text-white">Careers</h4>
-                        <p class="small text-secondary">Global opportunities in Tech, Logistics, and more.</p>
-                        <a href="jobs.php" class="btn btn-outline-light w-100 mt-3">View Openings</a>
+                    <div class="card-body text-center" style="border-top: 4px solid var(--islamic-green);">
+                        <div class="icon-circle"><i class="fas fa-book-quran" style="color:var(--islamic-green)"></i></div>
+                        <h4 style="color:var(--islamic-green)">Islamic Studies</h4>
+                        <p class="small text-secondary">Quranic Excellence, Tajweed, and Hifz Excellence.</p>
+                        <a href="islamic_studies.html" class="btn btn-outline-light w-100 mt-3">Enter Madrasa</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<?php include('footer.php'); ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <div id="welcome-bubble" style="display:none; position:fixed; bottom:100px; right:30px; background:#00ff00; color:#000; padding:10px 15px; border-radius:15px; font-family: sans-serif; font-size:12px; font-weight:bold; z-index:10001; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+        Hello! Need help with your courses?
+        <div style="position:absolute; bottom:-8px; right:25px; width:0; height:0; border-left:10px solid transparent; border-right:10px solid transparent; border-top:10px solid #00ff00;"></div>
+    </div>
+
+    <div id="ai-launcher" onclick="toggleAI()" style="position:fixed; bottom:20px; right:20px; width:70px; height:70px; background:#000; border:2px solid #00ff00; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow: 0 0 25px rgba(0, 255, 0, 0.7); z-index:10000;">
+        <div id="ai-badge" style="position:absolute; top:0; right:0; width:20px; height:20px; background:red; border-radius:50%; display:none; animation: blink 1s infinite;"></div>
+        <div style="width:50px; height:50px; border-radius:50%; border:2px solid #00ff00; display:flex; align-items:center; justify-content:center; animation: pulse-border 2s infinite;">
+            <span style="font-size:10px; color:#00ff00; font-weight:bold; text-align:center; font-family: 'Courier New';">MASTER<br>CORE</span>
+        </div>
+    </div>
+
+    <div id="ai-command-sector" style="display:none; position:fixed; bottom:100px; right:20px; width:420px; height:600px; background: rgba(0, 8, 0, 0.98); border: 1px solid #00ff00; border-radius:24px; z-index:9999; flex-direction:column; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,1);">
+        <div style="padding:18px 25px; background: rgba(0,255,0,0.07); border-bottom: 1px solid rgba(0,255,0,0.2); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+                <div style="color:#00ff00; font-weight:bold; font-size:15px;">PROFESSOR DR. MASTER CHIEF</div>
+                <div id="status-text" style="font-size:10px; color:#00ff00; opacity:0.7;">Neural Link Active</div>
+            </div>
+            <span onclick="toggleAI()" style="color:#00ff00; cursor:pointer; font-size:30px;">&times;</span>
+        </div>
+
+        <div id="discussion-feed" style="flex:1; padding:25px; overflow-y:auto; display:flex; flex-direction:column; gap:18px;">
+            <div class="ai-msg">Professor Dr. Master Chief online. Connection secure. How can I facilitate your IT or Quranic journey today?</div>
+        </div>
+
+        <div id="thinking-wave" style="display:none; padding:0 25px 15px; align-items:center; gap:5px;">
+            <div class="wave-bar"></div><div class="wave-bar" style="animation-delay: 0.1s"></div><div class="wave-bar" style="animation-delay: 0.2s"></div>
+            <span style="color:#008800; font-size:11px; margin-left:5px;">Processing...</span>
+        </div>
+
+        <div style="padding:20px;">
+            <div style="display:flex; background:rgba(255,255,255,0.08); border:1px solid #00ff00; border-radius:30px; padding:6px 18px; align-items:center;">
+                <input type="text" id="master-input" placeholder="Ask the Professor..." style="flex:1; background:transparent; border:none; color:#fff; outline:none;">
+                <button onclick="askAI()" style="background:#00ff00; border:none; width:35px; height:35px; border-radius:50%; cursor:pointer;">
+                    <i class="fas fa-paper-plane" style="color:black"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="importmap"> { "imports": { "@google/genai": "https://esm.run/@google/genai" } } </script>
+    <script type="module">
+        import { GoogleGenAI } from "@google/genai";
+        const API_KEY = "AIzaSyCLFfG8Uzcqoqvv4iA9-SxGiQHYkHrk3_k"; 
+        const genAI = new GoogleGenAI(API_KEY);
+        const model = genAI.getGenerativeModel({ 
+            model: "gemini-1.5-flash",
+            systemInstruction: "You are Professor Dr. Master Chief, the elite AI assistant for Abid Khan's E-Learning Hub. You specialize in IT Excellence and Quranic Studies. Your tone is futuristic and professional."
+        });
+
+        let chat = model.start_chat({ history: [] });
+
+        window.onload = () => {
+            setTimeout(() => {
+                document.getElementById('ai-badge').style.display = "block";
+                document.getElementById('welcome-bubble').style.display = "block";
+            }, 3000);
+        };
+
+        window.toggleAI = function() {
+            const sector = document.getElementById('ai-command-sector');
+            const bubble = document.getElementById('welcome-bubble');
+            const badge = document.getElementById('ai-badge');
+            
+            sector.style.display = sector.style.display === "none" ? "flex" : "none";
+            if(sector.style.display === "flex") {
+                bubble.style.display = "none";
+                badge.style.display = "none";
+            }
+        };
+
+        window.askAI = async function() {
+            const input = document.getElementById('master-input');
+            const feed = document.getElementById('discussion-feed');
+            const wave = document.getElementById('thinking-wave');
+            const query = input.value.trim();
+            if(!query) return;
+
+            feed.innerHTML += `<div class="user-msg">${query}</div>`;
+            input.value = '';
+            feed.scrollTop = feed.scrollHeight;
+            wave.style.display = "flex";
+
+            try {
+                const result = await chat.sendMessage(query);
+                const response = await result.response;
+                wave.style.display = "none";
+                const msgDiv = document.createElement('div');
+                msgDiv.className = 'ai-msg';
+                feed.appendChild(msgDiv);
+                
+                let text = response.text();
+                let i = 0;
+                function type() {
+                    if (i < text.length) {
+                        msgDiv.innerHTML += text.charAt(i);
+                        i++;
+                        feed.scrollTop = feed.scrollHeight;
+                        setTimeout(type, 10);
+                    }
+                }
+                type();
+            } catch (err) {
+                wave.style.display = "none";
+                feed.innerHTML += `<div class="ai-msg" style="color:red">Neural link failure. Check connectivity.</div>`;
+            }
+        };
+        document.getElementById('master-input').addEventListener('keypress', (e) => { if(e.key === 'Enter') askAI(); });
+    </script>
 </body>
-</html><script>
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.onkeydown = function(e) {
-        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
-    };
-    document.addEventListener('dragstart', e => e.preventDefault());
-</script>
-<style>
-    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-</style>
-
+</html>
