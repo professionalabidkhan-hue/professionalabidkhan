@@ -1,0 +1,36 @@
+<?php
+session_start();
+require_once 'connect.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $whatsapp = mysqli_real_escape_string($conn, $_POST['whatsapp']);
+    
+    // Generate code for manual verification
+    $otp = rand(100000, 999999);
+    $expiry = date("Y-m-d H:i:s", strtotime("+15 minutes"));
+
+    $check = mysqli_query($conn, "SELECT full_name FROM ak_users WHERE whatsapp_no = '$whatsapp'");
+    
+    if ($user = mysqli_fetch_assoc($check)) {
+        mysqli_query($conn, "UPDATE ak_users SET otp_code = '$otp', otp_expiry = '$expiry' WHERE whatsapp_no = '$whatsapp'");
+        
+        // Master Teleportation: Send the user to your WhatsApp with a pre-filled request
+        $msg = "Asalamu Alaikum Master Abid. My name is {$user['full_name']}. I am requesting a password reset. My OTP verification code is: $otp";
+        $url = "https://wa.me/923497469638?text=" . urlencode($msg);
+        
+        header("Location: $url");
+        exit();
+    } else {
+        header("Location: forgot_contact.php?error=not_found");
+    }
+}
+?><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>

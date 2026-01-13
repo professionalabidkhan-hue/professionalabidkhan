@@ -1,0 +1,83 @@
+﻿<?php
+// C:\xamppA\htdocs\abidkhan-e-pedagogy-institute\web_dev_pakistan.php
+include('header.php'); 
+include('ai_assistant.php'); 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <style>
+        :root { --royal-gold: #c5a059; --deep-navy: #0f172a; --academic-blue: #1e293b; }
+        body { background: #020617; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .detail-card { background: var(--academic-blue); border: 1px solid rgba(197, 160, 89, 0.2); border-radius: 20px; padding: 40px; margin-top: 50px; }
+        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--royal-gold); object-fit: cover; }
+        .skill-bar { height: 8px; border-radius: 5px; background: #0f172a; margin-bottom: 15px; overflow: hidden; }
+        .skill-progress { height: 100%; background: var(--royal-gold); box-shadow: 0 0 10px var(--royal-gold); }
+        .form-control { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(197, 160, 89, 0.3); color: white; }
+        .form-control:focus { background: #0f172a; border-color: var(--royal-gold); color: white; box-shadow: none; }
+    </style>
+</head>
+<body>
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="detail-card shadow-lg">
+                <h1 class="fw-bold display-6">Full Stack Web Developer</h1>
+                <p style="color: var(--royal-gold);"><i class="fas fa-map-marker-alt me-2"></i> Islamabad / Remote (Domestic)</p>
+                
+                <div class="p-3 my-4" style="background: rgba(197,160,89,0.05); border-left: 4px solid var(--royal-gold);">
+                    <small class="fw-bold text-uppercase text-warning"><i class="fas fa-shield-halved"></i> Sentinel Logic Analysis:</small>
+                    <p class="small mb-0"><?php echo analyzeJobWithAI("Full Stack Web Developer"); ?></p>
+                </div>
+
+                <h5 class="text-white fw-bold">Scope of Work</h5>
+                <p class="text-secondary small">Developing high-end pedagogy platforms using PHP and React. Focus on user experience and secure database management.</p>
+                
+                <hr class="border-secondary my-4">
+
+                <h5 class="text-white fw-bold mb-3">Submit for Identity Verification</h5>
+                <form action="submit_application.php" method="POST">
+                    <input type="hidden" name="job_title" value="Full Stack Web Developer">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="small text-muted">Full Legal Name</label>
+                            <input type="text" name="full_name" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="small text-muted">WhatsApp Contact</label>
+                            <input type="text" name="whatsapp" class="form-control" placeholder="+92..." required>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label class="small text-muted">Institutional Email</label>
+                            <input type="email" name="email" class="form-control" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-warning w-100 rounded-pill fw-bold py-2 mt-2">Initialize Application Vault</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="detail-card text-center">
+                <img src="ABID KHAN.png" class="profile-img mb-3">
+                <h5 class="text-white">Abid Khan</h5>
+                <p class="small text-muted">Founder ID: HUB-MASTER</p>
+                <div class="text-start mt-4">
+                    <label class="small text-muted d-flex justify-content-between"><span>PHP Logic</span> <span>85%</span></label>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include('footer.php'); ?>
+</body>
+</html>

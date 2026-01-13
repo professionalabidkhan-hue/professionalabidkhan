@@ -1,0 +1,35 @@
+<?php
+session_start();
+header("Content-Type: application/json");
+
+// 1. SESSION CHECK: If no session exists, deny access
+if (!isset($_SESSION['user_email'])) {
+    echo json_encode(["success" => false, "message" => "Unauthorized access."]);
+    exit;
+}
+
+$host = "localhost";
+$db_name = "abid_khan_e_learning_hub";
+$username = "root";
+$password = "";
+
+try {
+    // 2. VAULT CONNECTION
+    $conn = new PDO("mysql:host=$host;dbname=$db_name", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // 3. IDENTITY RETRIEVAL
+    $stmt = $conn->prepare("SELECT full_name, role, department, location FROM members WHERE email = :email");
+    $stmt->execute([':email' => $_SESSION['user_email']]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user) {
+        echo json_encode(["success" => true, "data" => $user]);
+    } else {
+        echo json_encode(["success" => false, "message" => "Identity not found in Vault."]);
+    }
+
+} catch(PDOException $e) {
+    echo json_encode(["success" => false, "message" => "Database Connection Failed."]);
+}
+?>

@@ -1,0 +1,125 @@
+﻿<?php
+/**
+ * ABID KHAN HUB - FINAL ACCESS KEY RESET
+ */
+session_start();
+
+// SECURITY CHECK: Kick back to recovery if identity is not verified
+if (!isset($_SESSION['identity_verified']) || $_SESSION['identity_verified'] !== true) {
+    header("Location: forgot_password.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Access Key | ABID KHAN HUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-blue: #4fc3f7; --dark-bg: #07090d; --input-black: #000; --border: rgba(255, 255, 255, 0.1); }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: radial-gradient(circle at top right, #1a1c2c, #07090d); 
+            color: #fff; height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0;
+            -webkit-user-select: none; user-select: none;
+        }
+        .form-container { 
+            background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(25px); 
+            border: 1px solid var(--border); border-radius: 35px; padding: 40px; 
+            width: 100%; max-width: 400px; box-shadow: 0 40px 100px rgba(0,0,0,0.7); 
+            text-align: center;
+        }
+        h2 { font-size: 1.2rem; font-weight: 800; letter-spacing: 1px; color: #fff; margin-bottom: 10px; }
+        .master-label { font-size: 0.7rem; font-weight: 800; color: var(--primary-blue); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; display: block; text-align: left; }
+        input { 
+            width: 100%; background: var(--input-black); border: 1px solid var(--border); 
+            color: #fff; border-radius: 12px; padding: 15px; margin-bottom: 25px; outline: none;
+        }
+        input:focus { border-color: var(--primary-blue); }
+        button { 
+            background: var(--primary-blue); color: #000; font-weight: 800; border: none; 
+            padding: 18px; border-radius: 15px; width: 100%; text-transform: uppercase; 
+            cursor: pointer; transition: 0.5s; 
+        }
+        button:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(79,195,247,0.3); }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+<div class="form-container">
+    <h2>NEW ACCESS KEY</h2>
+    <p style="font-size: 0.75rem; color: #888; margin-bottom: 30px;">Identity verified. Please update your Vault credentials.</p>
+    
+    <span class="master-label">New Password</span>
+    <input type="password" id="new-pass" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
+    
+    <span class="master-label">Confirm New Password</span>
+    <input type="password" id="confirm-pass" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
+    
+    <button id="reset-btn">Update Vault</button>
+</div>
+
+<script>
+    document.getElementById('reset-btn').onclick = async () => {
+        const pass = document.getElementById('new-pass').value;
+        const confirm = document.getElementById('confirm-pass').value;
+
+        if (pass.length < 6) {
+            alert("SENTINEL: Access Key must be at least 6 characters.");
+            return;
+        }
+
+        if (pass !== confirm) {
+            alert("SENTINEL: Keys do not match!");
+            return;
+        }
+
+        try {
+            const res = await fetch('recovery_process.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ 
+                    action: 'reset_password', 
+                    new_password: pass 
+                })
+            });
+            const result = await res.json();
+            
+            if (result.success) {
+                alert("IDENTITY RESTORED: Your Vault access has been updated.");
+                window.location.href = 'signin.php';
+            } else {
+                alert("VAULT ERROR: Could not update identity. Session may have expired.");
+                window.location.href = 'forgot_password.php';
+            }
+        } catch (err) {
+            alert("SENTINEL: Connection failed.");
+        }
+    };
+
+    // Prevent code inspection
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || (e.ctrlKey && e.keyCode == 85)) return false;
+    };
+</script>
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

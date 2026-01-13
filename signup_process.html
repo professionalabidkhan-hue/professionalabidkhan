@@ -1,0 +1,41 @@
+<?php
+require_once 'connect.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Use null coalescing (??) to prevent the "Undefined Index" warning
+    $name     = $_POST['full_name'] ?? 'Unknown';
+    $email    = $_POST['email'] ?? '';
+    $pass     = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $wa       = $_POST['whatsapp'] ?? '';
+    $location = $_POST['location'] ?? 'Not Specified'; // Fixes your Warning
+    $dept     = $_POST['department'] ?? 'IT';
+    $role     = $_POST['role'] ?? 'student';
+    
+    // Default profile picture for new initiates
+    $profile_pic = 'default_avatar.png'; 
+
+    // The SQL must match your table exactly
+    $sql = "INSERT INTO ak_users (full_name, email, password, whatsapp_no, location, department, user_role, profile_pic) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            
+    $stmt = mysqli_prepare($conn, $sql);
+    
+    // "ssssssss" means 8 strings
+    mysqli_stmt_bind_param($stmt, "ssssssss", $name, $email, $pass, $wa, $location, $dept, $role, $profile_pic);
+
+    if (mysqli_stmt_execute($stmt)) {
+        echo "VAULT SECURED: Identity Created. Please Sign In.";
+    } else {
+        echo "CRITICAL ERROR: " . mysqli_error($conn);
+    }
+}
+?><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>

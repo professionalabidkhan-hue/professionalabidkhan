@@ -1,0 +1,213 @@
+﻿<?php
+session_start();
+require_once 'connect.php'; 
+
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['dept'])) {
+    header("Location: signin.php?vault_denied"); exit();
+}
+
+$name = $_SESSION['user_name'];
+$dept = strtoupper($_SESSION['dept']); 
+$accent = ($dept === 'QURAN') ? '#2ecc71' : '#00d4ff';
+$glow = ($dept === 'QURAN') ? 'rgba(46, 204, 113, 0.3)' : 'rgba(0, 212, 255, 0.3)';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $dept; ?> MISSION | <?php echo $name; ?></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/all.min.css">
+    <style>
+        :root { --accent: <?php echo $accent; ?>; --dark: #050608; --glass: rgba(10, 12, 16, 0.85); }
+        
+        body { 
+            background: radial-gradient(circle at 0% 0%, <?php echo ($dept === 'QURAN' ? '#0a2e14' : '#0a1a2e'); ?>, var(--dark));
+            color: #e0e0e0; font-family: 'Inter', sans-serif; height: 100vh; overflow: hidden; margin: 0;
+        }
+
+        .main-layout { display: flex; height: 100vh; padding: 15px; gap: 15px; }
+
+        /* SIDEBAR REDESIGN */
+        .sidebar { 
+            width: 300px; background: var(--glass); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px; display: flex; flex-direction: column; padding: 30px 20px;
+            backdrop-filter: blur(15px); box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .master-profile img {
+            width: 100px; height: 100px; border: 3px solid var(--accent);
+            padding: 5px; box-shadow: 0 0 20px <?php echo $glow; ?>;
+        }
+
+        /* ACTION BUTTONS */
+        .btn-vault {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);
+            color: #fff; padding: 12px; border-radius: 12px; margin-bottom: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-align: left;
+            display: flex; align-items: center; gap: 15px; text-decoration: none;
+        }
+        .btn-vault:hover { 
+            background: var(--accent); color: #000; transform: scale(1.05); 
+            box-shadow: 0 0 15px var(--accent);
+        }
+
+        /* CONTENT HUB */
+        .content-hub { flex-grow: 1; display: flex; flex-direction: column; gap: 15px; }
+
+        .vault-card {
+            background: var(--glass); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px; padding: 20px; backdrop-filter: blur(15px);
+        }
+
+        #msgVault { flex-grow: 1; overflow-y: auto; scrollbar-width: thin; }
+
+        /* TERMINAL REDESIGN */
+        .terminal-box {
+            background: rgba(0,0,0,0.6); border-radius: 15px; padding: 15px;
+            font-family: 'Fira Code', monospace; font-size: 0.85rem; height: 180px;
+            overflow-y: auto; border-left: 4px solid var(--accent);
+        }
+
+        .input-area {
+            background: var(--glass); padding: 15px; border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px;
+        }
+
+        .input-area input {
+            background: transparent; border: none; color: white; flex-grow: 1; outline: none;
+        }
+
+        .rec-active { color: #ff3e3e !important; animation: blink 1s infinite; }
+        @keyframes blink { 50% { opacity: 0.3; } }
+    </style>
+</head>
+<body>
+
+<div style="background: rgba(0,0,0,0.4); font-size: 0.9rem;" class="py-2 text-center text-success border-bottom border-success border-opacity-25">
+    Ø¨ÙØ³Ù’Ù…Ù Ø§Ù„Ù„ÙŽÙ‘Ù‡Ù Ø§Ù„ÙŽÙ‘Ø°ÙÙŠ Ù„ÙŽØ§ ÙŠÙŽØ¶ÙØ±ÙÙ‘ Ù…ÙŽØ¹ÙŽ Ø§Ø³Ù’Ù…ÙÙ‡Ù Ø´ÙŽÙŠÙ’Ø¡ÙŒ ÙÙÙŠ Ø§Ù„Ù’Ø£ÙŽØ±Ù’Ø¶Ù ÙˆÙŽÙ„ÙŽØ§ ÙÙÙŠ Ø§Ù„Ø³ÙŽÙ‘Ù…ÙŽØ§Ø¡Ù ÙˆÙŽÙ‡ÙÙˆÙŽ Ø§Ù„Ø³ÙŽÙ‘Ù…ÙÙŠØ¹Ù Ø§Ù„Ù’Ø¹ÙŽÙ„ÙÙŠÙ…Ù
+</div>
+
+<div class="main-layout">
+    <div class="sidebar">
+        <div class="master-profile text-center mb-5">
+            <img src="ABID KHAN.png" class="rounded-circle mb-3" alt="Master Abid Khan">
+            <h5 class="fw-bold mb-0">MASTER ABID KHAN</h5>
+            <small class="text-secondary">Chief Mentor & Architect</small>
+        </div>
+
+        <div class="nav-links">
+            <button class="btn-vault w-100" onclick="startVoiceCall()">
+                <i class="fas fa-phone-volume fs-4"></i>
+                <div><small class="d-block opacity-50">Voice Link</small><b>SECURE CALL</b></div>
+            </button>
+            <button class="btn-vault w-100" id="recBtn" onclick="toggleRecording()">
+                <i class="fas fa-compact-disc fs-4"></i>
+                <div><small class="d-block opacity-50">Session Log</small><b>LOCAL REC</b></div>
+            </button>
+        </div>
+
+        <div class="mt-auto pt-4 border-top border-secondary border-opacity-25">
+            <div class="d-flex align-items-center gap-3">
+                <div class="p-2 rounded bg-dark border border-secondary border-opacity-50">
+                    <i class="fas fa-shield-halved" style="color: var(--accent)"></i>
+                </div>
+                <div>
+                    <small class="text-secondary d-block small">Status</small>
+                    <span class="fw-bold small"><?php echo $dept; ?> PROTOCOL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-hub">
+        <div class="d-flex justify-content-between align-items-center px-2">
+            <div>
+                <h2 class="mb-0 fw-bold">Mission: <span style="color: var(--accent)"><?php echo $dept; ?></span></h2>
+                <small class="text-secondary">Connected as: <?php echo $name; ?></small>
+            </div>
+            <div class="text-end">
+                <span class="badge rounded-pill px-3 py-2" style="background: var(--accent); color: #000">UPLINK ACTIVE</span>
+            </div>
+        </div>
+
+        <div class="vault-card flex-grow-1" id="msgVault">
+            <div class="text-center text-secondary py-5">
+                <i class="fas fa-lock mb-3 fa-2x opacity-25"></i>
+                <p>Waiting for Master Abid's Command...</p>
+            </div>
+        </div>
+
+        <div class="terminal-box" id="terminal">
+            <div class="text-success">[OK] System integrity verified...</div>
+            <div class="text-info">[OK] Secure encryption bridge active...</div>
+            <div class="text-secondary">[OK] Hardware: Ready for <?php echo $dept; ?> Mission...</div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="userMsg" placeholder="Report to Master...">
+            <button class="btn p-0 text-info" onclick="sendMessage()"><i class="fas fa-paper-plane fs-4"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function logTerminal(msg, colorClass) {
+        const term = document.getElementById('terminal');
+        term.innerHTML += `<div class="${colorClass}">> ${msg}</div>`;
+        term.scrollTop = term.scrollHeight;
+    }
+
+    // 1. SECURE VOICE CALL
+    function startVoiceCall() {
+        logTerminal("Initiating secure audio gateway...", "text-warning");
+        let ringtone = new Audio('https://www.soundjay.com/phone/phone-calling-1.mp3'); 
+        ringtone.play();
+        
+        setTimeout(() => {
+            alert("VOICE LINK: Standby. Master Abid Khan is reviewing your activity.");
+            ringtone.pause();
+        }, 4000);
+    }
+
+    // 2. HARDWARE RECORDING
+    let recorder; let chunks = [];
+    async function toggleRecording() {
+        const btn = document.getElementById('recBtn');
+        if (!recorder || recorder.state === "inactive") {
+            try {
+                const stream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true });
+                recorder = new MediaRecorder(stream);
+                recorder.ondataavailable = e => chunks.push(e.data);
+                recorder.onstop = () => {
+                    const blob = new Blob(chunks, { type: 'video/webm' });
+                    const a = document.createElement('a');
+                    a.href = URL.createObjectURL(blob);
+                    a.download = "<?php echo $dept; ?>_SESSION_LOG.webm";
+                    a.click();
+                };
+                recorder.start();
+                btn.querySelector('i').classList.add('rec-active');
+                logTerminal("Session Recording: ACTIVE", "text-danger");
+            } catch (err) { logTerminal("Hardware Access Denied", "text-secondary"); }
+        } else {
+            recorder.stop();
+            btn.querySelector('i').classList.remove('rec-active');
+            logTerminal("Session Recording: SAVED", "text-success");
+        }
+    }
+
+    // SECURITY PROTOCOLS
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = e => { if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode))) return false; };
+</script>
+</body>
+</html>

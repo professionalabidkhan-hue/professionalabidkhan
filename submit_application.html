@@ -1,0 +1,26 @@
+<?php
+// submit_application.php - UPDATED WITH SENTINEL ALERTS
+include('connect.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $job_title = mysqli_real_escape_string($conn, $_POST['job_title']);
+    $name = mysqli_real_escape_string($conn, $_POST['full_name']);
+    $whatsapp = mysqli_real_escape_string($conn, $_POST['whatsapp']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+
+    $sql = "INSERT INTO job_applications (job_title, candidate_name, email, whatsapp) 
+            VALUES ('$job_title', '$name', '$email', '$whatsapp')";
+
+    if (mysqli_query($conn, $sql)) {
+        // --- SENTINEL ALERT LOGIC ---
+        $to = "your-admin-email@domain.com"; // Set your email here
+        $subject = "MASTER ALERT: New Candidacy for $job_title";
+        $body = "Founder, a new identity profile ($name) has been logged for the position of $job_title.\nContact: $whatsapp";
+        $headers = "From: sentinel@abidkhan-pedagogy-institute.com";
+        
+        @mail($to, $subject, $body, $headers); // Attempts to send alert
+        
+        echo "<script>alert('VAULT UPDATED: Your candidacy is secured.'); window.location.href='jobs.php';</script>";
+    }
+}
+?>

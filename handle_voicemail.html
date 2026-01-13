@@ -1,0 +1,30 @@
+<?php
+require_once 'connect.php';
+
+// 1. Capture Data from Twilio's Automated Post
+$recordingUrl = $_POST['RecordingUrl']; // The link to the audio file
+$callerNumber = $_POST['From'];         // The visitor's number
+$duration     = $_POST['RecordingDuration'];
+
+// 2. AI INVESTIGATOR: Log the missed call in the Vault
+$sql = "INSERT INTO virtual_orders (user_id, country_name, service_type, virtual_number, otp_code, price_gbp) 
+        VALUES (1, 'VOICEMAIL', 'AI Sentinel Recording', '$callerNumber', 'LISTEN', 0.00)";
+mysqli_query($conn, $sql);
+
+// 3. MASTER NOTIFICATION LOGIC
+$report = "MASTER ALERT: A visitor left a voicemail.\n";
+$report .= "From: $callerNumber\n";
+$report .= "Duration: $duration seconds\n";
+$report .= "Listen Here: $recordingUrl";
+
+// Generate the WhatsApp Link for your Telenor line
+$wa_link = "https://wa.me/923497469638?text=" . urlencode($report);
+
+// 4. Respond to Twilio
+header("Content-Type: text/xml");
+echo '<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+    <Say voice="Polly.Brian">Thank you. The Master has been notified of your message.</Say>
+    <Hangup/>
+</Response>';
+?>

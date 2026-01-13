@@ -1,0 +1,53 @@
+<?php
+// --- MASTER BRIDGE: ABID KHAN HUB ---
+$host = "localhost";
+$user = "root";
+$pass = ""; 
+$dbname = "abidkhan-e-pedagogy-institute"; 
+
+// Establishing the secure link
+$conn = mysqli_connect($host, $user, $pass, $dbname);
+
+// The Sentinel: Checks if the Vault is Online
+if (!$conn) {
+    echo "<script>console.error('CRITICAL ERROR: DATABASE VAULT OFFLINE');</script>";
+    die("<div style='background:#020617; color:#c5a059; height:100vh; display:flex; align-items:center; justify-content:center; font-family:Consolas,monospace; text-align:center;'>
+            <div>
+                <h1 style='border: 1px solid #c5a059; padding: 20px;'>CONNECTION OFFLINE</h1>
+                <p>MASTER CHECK: ENSURE MYSQL IS ACTIVE IN XAMPP CONTROL PANEL</p>
+            </div>
+         </div>");
+}
+
+// Set Character Set for multi-language and Quranic support
+mysqli_set_charset($conn, "utf8mb4");
+?>
+
+<script>
+    // 1. Sentinel Anti-Inspection (Disable Right-Click)
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // 2. Block Master Keys (F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S)
+    document.onkeydown = function(e) {
+        if(
+            e.keyCode == 123 || 
+            (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || 
+            (e.ctrlKey && [85, 83].includes(e.keyCode))
+        ) {
+            return false;
+        }
+    };
+
+    // 3. Prevent Dragging
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+
+<style>
+    /* 4. Professor Master Text Protection */
+    body { 
+        -webkit-user-select: none; 
+        -moz-user-select: none; 
+        -ms-user-select: none; 
+        user-select: none; 
+    }
+</style>

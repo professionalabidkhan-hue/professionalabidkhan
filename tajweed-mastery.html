@@ -1,0 +1,234 @@
+﻿<?php include('header.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tajweed Mastery - AbidKhan E-Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-gold: #b2945e;
+            --brand-dark: #151515;
+            --brand-red: #D03000;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #fdfdfd;
+            color: #333;
+        }
+
+        /* Navbar & Branding */
+        .navbar {
+            background-color: var(--brand-dark);
+            border-bottom: 3px solid var(--brand-gold);
+            padding: 15px 0;
+        }
+        .navbar-brand img {
+            max-height: 60px;
+            width: auto;
+            border-radius: 4px;
+        }
+        .nav-link {
+            color: #fff !important;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin: 0 10px;
+        }
+        .nav-link:hover { color: var(--brand-gold) !important; }
+
+        /* Hero Header */
+        .course-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1585036156171-3839efc4894c?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .course-header h1 {
+            font-family: 'Prata', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Course Info Tiles */
+        .info-card {
+            background: white;
+            border-top: 4px solid var(--brand-gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 25px;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        /* Syllabus Section */
+        .syllabus-accordion .accordion-button:not(.collapsed) {
+            background-color: #fcf8f2;
+            color: var(--brand-dark);
+            font-weight: bold;
+        }
+
+        .btn-enrol {
+            background-color: var(--brand-red);
+            color: white;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-enrol:hover {
+            background-color: #000;
+            color: var(--brand-gold);
+            transform: scale(1.05);
+        }
+
+        .badge-live { background-color: var(--brand-gold); color: #000; }
+    </style>
+</head>
+<body>
+      
+  <main class="container my-5">
+
+    <header class="course-header">
+        <div class="container">
+            <span class="badge badge-live mb-3 px-3 py-2">NOW ENROLLING - JANUARY 2026</span>
+            <h1>Tajweed Masterclass</h1>
+            <p class="lead">The traditional discipline of reciting the Holy Qurâ€™an with perfection.</p>
+        </div>
+    </header>
+       <a href="tajweedrules.pdf" target="_blank" class="btn btn-danger mt-3">
+    <i class="fas fa-file-pdf me-2"></i> Open Original PDF
+</a>
+
+<a href="tajweedrules.pdf" download="Tajweedh_Qaida_Book" class="btn btn-outline-dark mt-3">
+    <i class="fas fa-download me-2"></i> Download PDF
+</a><br> <br> 
+    <main class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <section id="synopsis" class="mb-5">
+                    <h2 class="display-6 fw-bold mb-4">Synopsis</h2>
+                    <p class="fs-5 text-muted">The 'Tajweed Masterclass' is an all-encompassing flagship programme that specialises in teaching the traditional discipline of Qurâ€™anic recitation with the requisite elocution and enunciation.</p>
+                    <p>Ideal for any level of student, from absolute beginners to seasoned Qurra. Certificates are awarded upon completion, providing a clear road map to <strong>Ijaza</strong> (classical license to transmit).</p>
+                </section>
+
+                <section id="programme" class="mb-5">
+                    <h2 class="display-6 fw-bold mb-4">Syllabus Breakdown</h2>
+                    <div class="accordion syllabus-accordion" id="tajweedAccordion">
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#stage1">
+                                    Stage One: Beginner
+                                </button>
+                            </h2>
+                            <div id="stage1" class="accordion-collapse collapse show" data-bs-parent="#tajweedAccordion">
+                                <div class="accordion-body">
+                                    A "back to basic" approach covering:
+                                    <ul>
+                                        <li>Full Qurâ€™anic Arabic Qaida</li>
+                                        <li>Makharijul Huruf (Articulation points)</li>
+                                        <li>Correct recitation of last 10 Surahs</li>
+                                        <li>Weekly one-to-one recitals</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stage2">
+                                    Stage Two: Pre-Intermediate
+                                </button>
+                            </h2>
+                            <div id="stage2" class="accordion-collapse collapse" data-bs-parent="#tajweedAccordion">
+                                <div class="accordion-body">
+                                    Building fluency and practical Tajweed:
+                                    <ul>
+                                        <li>Focus on Sifatul Huruf (Manners of articulation)</li>
+                                        <li>Practical reading of Juz Amma</li>
+                                        <li>Correcting common fluency mistakes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#stage3">
+                                    Stage Three: Intermediate & Advanced
+                                </button>
+                            </h2>
+                            <div id="stage3" class="accordion-collapse collapse" data-bs-parent="#tajweedAccordion">
+                                <div class="accordion-body">
+                                    Advanced nuances and Traditional Methodology:
+                                    <ul>
+                                        <li>Intricate rules of the science of Tajweed</li>
+                                        <li>"Listen, recite, and correct" methodology</li>
+                                        <li>Full recitation of the Qur'an under supervision</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="info-card mb-4">
+                    <h4 class="fw-bold">Course Details</h4>
+                    <hr>
+                    <p><strong>Starts:</strong> Jan 3rd, 2026</p>
+                    <p><strong>Sessions:</strong> 25 - 30 Weeks</p>
+                    <p><strong>Delivery:</strong> On-Campus & Live via Zoom</p>
+                    <p><strong>Tuition:</strong> Â£150.00</p>
+                    <hr>
+                    <h6 class="fw-bold">Schedule:</h6>
+                    <ul class="small list-unstyled">
+                        <li><strong>Beginners:</strong> Sun | 2-3pm</li>
+                        <li><strong>Intermediate:</strong> Sun | 4-5pm</li>
+                        <li><strong>Advanced:</strong> Sun | 4-9pm</li>
+                        <li><strong>Sisters Only:</strong> Sat | 10am-1pm</li>
+                    </ul>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-enrol shadow-sm">ENROL NOW</button>
+                    <p class="mt-3 text-muted small">Only 83 seats remaining</p>
+                </div>
+            </div>
+        </div>
+    </main><br>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 AbidKhan E-Learning. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

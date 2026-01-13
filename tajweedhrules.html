@@ -1,0 +1,343 @@
+﻿<?php 
+// Include your existing header
+include('header.php'); 
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+</head>
+<body>
+<div class="container my-5 dhikr-strong">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold portal-title">Rules of Tajweed</h1>
+        <p class="urdu-strong text-success">ØªØ¬ÙˆÛŒØ¯ Ú©Û’ Ù‚ÙˆØ§Ø¹Ø¯</p>
+        <hr class="w-25 mx-auto border-danger border-2">
+    </div>
+
+    <div class="card shadow-sm mb-4 border-0">
+        <div class="card-header bg-dark text-white">
+            <h2 class="h4 mb-0">1. Throatal Letters (Huroof-e-Halqi)</h2>
+        </div>
+        <div class="card-body">
+            [cite_start]<p>There are six (6) throatal letters pronounced from three levels of the throat[cite: 3, 4]:</p>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="p-3 border rounded bg-light">
+                        <span class="translation-label">Bottom (Nearest to Chest)</span>
+                        <div class="arabic-strong">Ø¡ Ù‡Ù€</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border rounded bg-light">
+                        <span class="translation-label">Middle (Centre)</span>
+                        <div class="arabic-strong">Ø¹ Ø­</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border rounded bg-light">
+                        <span class="translation-label">Top (Nearest to Mouth)</span>
+                        <div class="arabic-strong">Øº Ø®</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4 border-0">
+        <div class="card-header bg-danger text-white">
+            <h2 class="h4 mb-0">2. Bold Letters (Huroof-e-Mustaliyah)</h2>
+        </div>
+        <div class="card-body">
+            [cite_start]<p>There are seven (7) bold letters pronounced with a heavy and strong tone[cite: 20]:</p>
+            <div class="arabic-strong text-center p-3 border rounded mb-3">
+                Ø® Øµ Ø¶ Øº Ø· Ù‚ Ø¸
+            </div>
+            [cite_start]<p class="mb-1"><strong>Group Form:</strong> <span class="arabic-strong" style="font-size: 24px;">Ø®ÙØµÙ‘ÙŽ Ø¶ÙŽØºÙ’Ø·Ù Ù‚ÙØ¸Ù’</span> [cite: 24]</p>
+            <div class="alert alert-warning">
+                [cite_start]<strong>Note on Ra (Ø±):</strong> It is bold with Fathah/Dammah (Ø±ÙŽ Ø±Ù) and light with Kasrah (Ø±Ù)[cite: 26, 29].
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="h4 mb-0">3. Harakaat (Movements)</h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Fathah (Zabr) <span class="arabic-strong">ÙŽ </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Kasrah (Zer) <span class="arabic-strong">Ù </span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Dammah (Pesh) <span class="arabic-strong">Ù </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-header bg-secondary text-white">
+                    <h2 class="h4 mb-0">4. Sukoon & Silent Letters</h2>
+                </div>
+                <div class="card-body">
+                    [cite_start]<p><strong>Sukoon (Jazm):</strong> A sign ( Ù’ ) indicating a resting letter[cite: 52].</p>
+                    [cite_start]<p><strong>Silent Letters:</strong> Empty letters (no sign) that produce no sound, often occurring with Alif, Waw, and Ya[cite: 55, 57].</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4 border-0">
+        <div class="card-header bg-info text-dark">
+            <h2 class="h4 mb-0">5. Tanween & Ghunnah</h2>
+        </div>
+        <div class="card-body">
+            [cite_start]<p><strong>Tanween:</strong> Doubled harakaat (Ù‹ Ù ÙŒ) resulting in a hidden Noon Saakin sound[cite: 60, 62].</p>
+            [cite_start]<p><strong>Ghunnah:</strong> Vibrating the voice of <strong>Meem</strong> or <strong>Noon</strong> completely into the nose[cite: 77].</p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4 border-0 border-start border-4 border-success">
+        <div class="card-body">
+            <h2 class="h4 fw-bold">6. Maddah & Leen (Prolongation)</h2>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h5>Maddah Letters (Ø§ Ùˆ ÙŠ)</h5>
+                    [cite_start]<p class="small text-muted">Stretched for 2 seconds[cite: 81, 95, 105].</p>
+                    <ul>
+                        <li>Alif Maddah: (Ù€ÙŽ Ø§)</li>
+                        <li>Waw Maddah: (Ù€Ù ÙˆÙ’)</li>
+                        <li>Ya Maddah: (Ù€Ù ÙŠÙ’)</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Leen Letters</h5>
+                    [cite_start]<p class="small text-muted">Stretched softly[cite: 115, 118].</p>
+                    <ul>
+                        <li>Waw Leen: (Ù€ÙŽ ÙˆÙ’)</li>
+                        <li>Ya Leen: (Ù€ÙŽ ÙŠÙ’)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4 border-0">
+        <div class="card-header bg-dark text-white">
+            <h2 class="h4 mb-0">7. Types of Madd (4-6 Seconds)</h2>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Rule</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Madd-e-Muttasil</strong></td>
+                            [cite_start]<td>Hamza is in the same word[cite: 130].</td>
+                            <td class="arabic-strong">Ø¬ÙŽØ§Ø¡ÙŽ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Madd-e-Munfasil</strong></td>
+                            [cite_start]<td>Hamza is in the next word[cite: 135].</td>
+                            <td class="arabic-strong">Ù„ÙŽØ§ Ø¥ÙÙ„ÙŽÙ‡ÙŽ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Madd-e-Lazim</strong></td>
+                            [cite_start]<td>Followed by original sukoon/shaddah[cite: 143].</td>
+                            <td class="arabic-strong">Ø¶ÙŽØ§Ù„Ù‘ÙÙŠÙ†ÙŽ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-4">
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 border-top border-4 border-danger">
+                <div class="card-body text-center">
+                    <h2 class="h4 fw-bold">8. Qalqalah (Echo)</h2>
+                    [cite_start]<p>Letters: <span class="arabic-strong">Ù‚ Ø· Ø¨ Ø¬ Ø¯</span> [cite: 150]</p>
+                    [cite_start]<p>Make an echo sound when these letters have a sukoon[cite: 148].</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm border-0 border-top border-4 border-primary">
+                <div class="card-body text-center">
+                    <h2 class="h4 fw-bold">9. Shaddah (Tashdid)</h2>
+                    [cite_start]<p>Sign: <span class="arabic-strong"> Ù‘ </span> [cite: 151]</p>
+                    [cite_start]<p>The letter is recited twice: first with sukoon, second with harakat[cite: 153].</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-4 border-0">
+        <div class="card-header bg-success text-white">
+            <h2 class="h4 mb-0">10. Noon Saakin & Tanween Rules</h2>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <div class="p-2 border rounded text-center">
+                        <strong>Izhaar</strong><br><small>Saying Clearly</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-2 border rounded text-center">
+                        <strong>Idgham</strong><br><small>Merging</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-2 border rounded text-center">
+                        <strong>Iqlab</strong><br><small>Converting to Meem</small>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-2 border rounded text-center">
+                        <strong>Ikhfaa</strong><br><small>Hiding</small>
+                    </div>
+                </div>
+            </div>
+            [cite_start]<p class="mt-3"><strong>Iqlab Example:</strong> If <span class="arabic-strong">Ø¨</span> follows Noon Saakin, it changes to a tiny Meem[cite: 200, 201].</p>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mb-5 border-0 bg-light">
+        <div class="card-body">
+            <h2 class="h4 fw-bold">11. Waqf (How to Pause)</h2>
+            [cite_start]<p>Generally, the last letter of a word must be made <strong>Saakin</strong> when pausing[cite: 226].</p>
+            [cite_start]<p><strong>Exception:</strong> Fathatain (Ù‹) and the rounded Taa (Ø©)[cite: 227].</p>
+            <div class="alert alert-info py-2">
+                [cite_start]Common Signs: Ø¬ (Optional), Ù… (Required), Ù„Ø§ (Do not stop)[cite: 234, 235].
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="mt-5 pt-5 pb-4" style="background: rgba(10, 11, 16, 0.95); border-top: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="ABID KHAN.png" width="65" height="65" class="rounded-circle me-3" 
+                         style="border: 2px solid var(--primary-blue); box-shadow: 0 0 20px rgba(11, 99, 211, 0.4); object-fit: cover;">
+                    <div>
+                        <h5 class="fw-bold mb-0" style="letter-spacing: 1px;">Abid Khan Hub</h5>
+                        <small class="text-primary fw-bold">Global Education Architect</small>
+                    </div>
+                </div>
+                <p class="text-secondary small pr-lg-5">
+                    Merging high-end IT excellence with authentic spiritual growth. Providing 24/7 global education modules in Cybersecurity, AI, and Quranic Studies.
+                </p>
+                <div class="mt-3">
+                    <a href="#" class="text-secondary me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="text-secondary me-3"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a href="#" class="text-secondary"><i class="fab fa-facebook fa-lg"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4" style="font-size: 0.85rem; color: var(--primary-blue);">Education</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="it_panel.php" class="text-secondary text-decoration-none footer-link">IT Laboratory</a></li>
+                    <li class="mb-2"><a href="islamic_studies.php" class="text-decoration-none text-secondary footer-link">Islamic Studies</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4" style="font-size: 0.85rem; color: var(--primary-blue);">Support</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="jobs.php" class="text-decoration-none text-secondary footer-link">Career Portal</a></li>
+                    <li class="mb-2"><a href="privacy.html" class="text-decoration-none text-secondary footer-link">Privacy Policy</a></li>
+                    <li class="mb-2"><a href="terms.html" class="text-decoration-none text-secondary footer-link">Terms & Rules</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary footer-link">Contact Admin</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-4 mb-4 text-lg-end">
+                <h6 class="text-uppercase fw-bold mb-4" style="font-size: 0.85rem; color: var(--primary-blue);">Global Connect</h6>
+                <p class="small text-secondary mb-3">Questions? Contact our office via WhatsApp for instant support.</p>
+                <a href="https://wa.me/923497469638" class="btn-whatsapp-master shadow-lg">
+                    <i class="fab fa-whatsapp me-2"></i> WhatsApp Office
+                </a>
+                <p class="mt-4 small text-secondary">
+                    <i class="fas fa-location-dot me-2 text-primary"></i> Islamabad, Pakistan (Global Hub)
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-4 pt-4 border-top border-secondary">
+            <div class="col-md-12 text-center">
+                <p class="small text-secondary mb-0">
+                    &copy; 2026 <strong>Abid Khan E-Learning Hub</strong>. All Rights Reserved. <br>
+                    <span style="color: var(--primary-blue); font-size: 0.75rem;">Design & Architecture by Abid Khan Technical Team.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer-link { transition: 0.3s ease; display: inline-block; }
+    .footer-link:hover { color: var(--primary-blue) !important; transform: translateX(5px); }
+    .btn-whatsapp-master {
+        background: linear-gradient(45deg, #25D366, #128C7E);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .btn-whatsapp-master:hover { color: white; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>
+    <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
+    </script>
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

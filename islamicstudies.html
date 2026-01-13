@@ -1,0 +1,143 @@
+<?php 
+// Include your existing header
+include('header.php'); 
+?>
+
+<style>
+    :root {
+        --primary-gold: #ffb606;
+        --secondary-purple: #442e66;
+        --text-dark: #333;
+        --bg-light: #f4f4f4;
+    }
+
+    .course-hero {
+        background: linear-gradient(rgba(68, 46, 102, 0.9), rgba(68, 46, 102, 0.9)), url('assets/images/islamic-pattern.jpg');
+        background-size: cover;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        border-bottom: 5px solid var(--primary-gold);
+    }
+
+    .section-title {
+        color: var(--secondary-purple);
+        font-weight: 700;
+        margin-bottom: 30px;
+        border-bottom: 2px solid var(--primary-gold);
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .info-card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-radius: 12px;
+        transition: 0.3s;
+    }
+
+    .table-academic thead {
+        background-color: var(--secondary-purple);
+        color: white;
+    }
+
+    .syllabus-list li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        list-style: none;
+    }
+
+    .syllabus-list li:before {
+        content: "✓";
+        color: var(--primary-gold);
+        margin-left: 10px;
+        font-weight: bold;
+    }
+</style>
+
+<div class="course-hero">
+    <div class="container">
+        <h1 class="display-4">Islamic Studies Program</h1>
+        <p class="lead">Comprehensive Classical Learning at Abidkhan E-Pedagogy Institute</p>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <h3 class="section-title">Course Syllabus</h3>
+            <ul class="syllabus-list p-0">
+                <li><strong>Module 1:</strong> Quranic Sciences & Tajweed Essentials</li>
+                <li><strong>Module 2:</strong> Hadith Studies (Selection of Arba'in Nawawi)</li>
+                <li><strong>Module 3:</strong> Fiqh (Jurisprudence) - Daily Worship</li>
+                <li><strong>Module 4:</strong> Islamic History & Seerah of the Prophet ﷺ</li>
+                <li><strong>Module 5:</strong> Arabic Language Foundations</li>
+            </ul>
+
+            <h3 class="section-title mt-5">Academic Schedule</h3>
+            <div class="table-responsive">
+                <table class="table table-academic table-hover">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time (GMT+5)</th>
+                            <th>Subject</th>
+                            <th>Instructor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>06:00 PM - 07:30 PM</td>
+                            <td>Tafseer-ul-Quran</td>
+                            <td>Prof. Khan</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>06:00 PM - 07:30 PM</td>
+                            <td>Arabic Grammar</td>
+                            <td>Dr. Abid</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>05:00 PM - 06:30 PM</td>
+                            <td>Fiqh & Sunnah</td>
+                            <td>Scholar-in-Residence</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card info-card p-4 bg-white">
+                <h4 class="text-center mb-4" style="color: var(--secondary-purple);">Quick Facts</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><strong>Duration:</strong> 6 Months (Online)</li>
+                    <li class="mb-3"><strong>Total Credits:</strong> 12 Credits</li>
+                    <li class="mb-3"><strong>Medium:</strong> English / Arabic</li>
+                    <li class="mb-3"><strong>Certification:</strong> Yes (Digital & Print)</li>
+                </ul>
+                <button class="btn btn-warning w-100 fw-bold" style="background-color: var(--primary-gold); border: none;">ENROLL NOW</button>
+            </div>
+
+            <div class="mt-4 text-center">
+                <p class="text-muted small">Need help? Contact our pedagogy department at support@abidkhan-institute.edu</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php 
+// Include your existing footer
+include('footer.php'); 
+?><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>

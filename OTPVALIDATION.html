@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <title>AK HUB - Vault Connectivity Test</title>
+</head>
+<body>
+    <h2>Sovereign OTP Test</h2>
+    <input type="email" id="testEmail" placeholder="Enter Email to Test">
+    <button onclick="triggerOtpStrike()">Strike the Vault</button>
+
+    <p id="result"></p>
+
+    <script>
+        async function triggerOtpStrike() {
+            const email = document.getElementById('testEmail').value;
+            const response = await fetch('connect_hub.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    action: 'send_otp',
+                    email: email
+                })
+            });
+            const result = await response.json();
+            document.getElementById('result').innerText = JSON.stringify(result, null, 2);
+        }
+    </script>
+<script>
+    // DISABLE RIGHT CLICK
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // DISABLE KEYBOARD SHORTCUTS (F12, Ctrl+Shift+I, Ctrl+U)
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123) return false; // F12
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Inspect
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; // Elements
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; // Console
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; // View Source
+    };
+</script>
+<style>
+    /* PREVENT TEXT SELECTION */
+    body {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

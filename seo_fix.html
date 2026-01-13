@@ -1,0 +1,70 @@
+﻿<?php
+// 1. Your Custom 2026 Meta Tags
+$metaTags = '
+    <title>Abid Khan Pedagogy | Online Quran with Tajweed & IT Courses</title>
+    <meta name="description" content="Learn Holy Quran with Tajweed and professional IT Online Courses. Abid Khan Pedagogy offers a unique e-learning experience for spiritual and digital growth.">
+    <meta name="keywords" content="Holy Quran, Holy Quran with Tajweed, Tajweed Teacher, Online Quran, Online Quran Learning, Online Quran Teaching, E Learning, Abid Khan, IT Online Courses, IT Courses, Abid Khan Pedagogy">
+    <meta name="author" content="Abid Khan">
+    
+    <meta property="og:title" content="Abid Khan Pedagogy - Quran & IT Learning">
+    <meta property="og:description" content="Unique online tutorials for Quran Tajweed and IT professional skills.">
+    <meta property="og:type" content="website">
+    ';
+
+// 2. Scan for all PHP and HTML files
+$files = glob("*.{php,html}", GLOB_BRACE);
+
+echo "<h2>Starting SEO Injection...</h2>";
+
+foreach ($files as $file) {
+    if ($file == 'seo_fix.php') continue; // Don't touch this script itself
+
+    $content = file_get_contents($file);
+
+    // If SEO block isn't already there, inject it
+    if (strpos($content, 'SEO 2026 UNIQUE INJECTION START') === false) {
+        // Insert right after the <head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io"> tag or at the top of the file
+        if (strpos($content, '<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">') !== false) {
+            $newContent = str_replace('<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">', "<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">\n" . $metaTags, $content);
+        } else {
+            $newContent = $metaTags . "\n" . $content;
+        }
+        
+        file_put_contents($file, $newContent);
+        echo "<span style='color:green;'>[SUCCESS]</span> Injected keywords into: <strong>$file</strong><br>";
+    } else {
+        echo "<span style='color:orange;'>[SKIPPED]</span> Already protected: $file<br>";
+    }
+}
+
+echo "<h3>Insha Allah, your website is now SEO-Ready!</h3>";
+echo "<p style='color:red;'><strong>SECURITY ALERT:</strong> Delete 'seo_fix.php' from your htdocs immediately after running.</p>";
+?>

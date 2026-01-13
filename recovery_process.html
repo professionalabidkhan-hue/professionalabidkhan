@@ -1,0 +1,42 @@
+<?php
+// recovery_process.php - MUST NOT HAVE ANY HTML OR INCLUDES AT THE TOP
+header('Content-Type: application/json');
+
+// Stop errors from printing as HTML (this prevents the <script> error)
+error_reporting(0); 
+
+require_once 'connect.php';
+
+// Capture the JSON payload
+$input = json_decode(file_get_contents('php://input'), true);
+$email = isset($input['email']) ? mysqli_real_escape_string($conn, $input['email']) : '';
+
+if (empty($email)) {
+    echo json_encode(['success' => false, 'message' => 'Email identity is blank.']);
+    exit;
+}
+
+// Search the Registry
+$sql = "SELECT full_name, user_role FROM ak_users WHERE email = '$email' LIMIT 1";
+$result = mysqli_query($conn, $sql);
+
+if ($result && mysqli_num_rows($result) > 0) {
+    $user = mysqli_fetch_assoc($result);
+    $name = $user['full_name'];
+    $role = strtoupper($user['user_role']);
+
+    // Generate the Master's WhatsApp Gateway Link
+    $wa_msg = urlencode("VAULT ACCESS REQUEST\n------------------\nName: $name\nEmail: $email\nRole: $role\n\nMaster, I cannot access my account. Please reset my Access Key.");
+    $wa_link = "https://wa.me/923497469638?text=$wa_msg";
+
+    echo json_encode([
+        'success' => true, 
+        'wa_link' => $wa_link
+    ]);
+} else {
+    echo json_encode([
+        'success' => false, 
+        'message' => 'IDENTITY NOT FOUND: This email is not in our records.'
+    ]);
+}
+?>

@@ -1,0 +1,206 @@
+﻿<?php include('header.php'); ?>
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tafseer Studies & IT Portal | ABID KHAN HUB</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Noto+Nastaliq+Urdu:wght@700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #0b63d3;
+            --dark-bg: #0a0b10;
+            --cyber-green: #00ff88;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body { background-color: #0f111a; color: #e0e0e0; font-family: 'Inter', sans-serif; }
+
+        /* Header / Navbar */
+        .navbar-custom {
+            background: rgba(10, 11, 16, 0.98);
+            backdrop-filter: blur(15px);
+            border-bottom: 2px solid var(--primary-blue);
+            direction: ltr;
+        }
+
+        /* Professor Mode: Bold & Large */
+        .master-title {
+            font-size: 4rem !important;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 0 20px rgba(11, 99, 211, 0.5);
+        }
+
+        .arabic-verse {
+            font-family: 'Amiri', serif;
+            font-size: 4.5rem !important; /* Extremely Large */
+            font-weight: 900;
+            color: var(--cyber-green);
+            line-height: 1.8;
+            text-align: center;
+            background: rgba(0,0,0,0.3);
+            border: 2px solid var(--primary-blue);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .urdu-explanation {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 2rem !important; /* Master Size */
+            font-weight: 800 !important;
+            line-height: 3;
+            color: #ffffff;
+            text-align: justify;
+        }
+
+        /* IT Portal Table */
+        .portal-card {
+            background: var(--glass);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .table-dark-custom {
+            background: transparent !important;
+            color: white;
+            font-size: 1.4rem;
+        }
+        .table-dark-custom th { color: var(--primary-blue); text-transform: uppercase; font-weight: 900; }
+        .table-dark-custom td { font-weight: 700; border-color: rgba(255,255,255,0.05) !important; padding: 20px !important; }
+
+        .fee-tag {
+            background: var(--primary-blue);
+            padding: 5px 15px;
+            border-radius: 8px;
+            font-weight: 900;
+        }
+
+        /* IT Related Components */
+        .tech-badge {
+            font-family: 'Fira Code', monospace;
+            background: #1a1c23;
+            color: var(--cyber-green);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 4px solid var(--cyber-green);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    
+    <div class="text-center mb-5">
+        <h1 class="master-title mb-3">Tafseer Studies Portal</h1>
+        <p class="fs-3 text-primary fw-bold">Advanced Quranic Exegesis & Analytical IT Modules</p>
+    </div>
+
+    <div class="portal-card mb-5">
+        <h3 class="fw-bold mb-4 text-white"><i class="fas fa-calendar-alt me-2 text-primary"></i> CLASS SCHEDULE & FEE STRUCTURE</h3>
+        <div class="table-responsive">
+            <table class="table table-dark-custom align-middle">
+                <thead>
+                    <tr>
+                        <th>Course (Ú©ÙˆØ±Ø³)</th>
+                        <th>Duration</th>
+                        <th>Timing (PKT)</th>
+                        <th>Monthly Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="urdu-explanation" style="font-size: 1.5rem !important;">ØªÙØ³ÛŒØ± Ø§Ù„Ù‚Ø±Ø§Ù† (Master Class)</td>
+                        <td>60 Mins</td>
+                        <td class="text-info fw-bold">09:00 PM - 10:00 PM</td>
+                        <td><span class="fee-tag">$50 / Month</span></td>
+                    </tr>
+                    <tr>
+                        <td class="urdu-explanation" style="font-size: 1.5rem !important;">IT & Quran Integration</td>
+                        <td>45 Mins</td>
+                        <td class="text-info fw-bold">10:30 PM - 11:15 PM</td>
+                        <td><span class="fee-tag">$40 / Month</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="portal-card">
+        <div class="d-flex justify-content-between align-items-center border-bottom border-secondary pb-3">
+            <h2 class="fw-bold text-primary">SURAH AL-FATIHA [AL-HAMD]</h2>
+            <span class="badge bg-danger p-2 fs-6">MASTER LEVEL</span>
+        </div>
+
+        <div class="arabic-verse" dir="rtl">
+            Ø¨ÙØ³Ù’Ù…Ù Ø§Ù„Ù„Ù‘Ù°Ù‡Ù Ø§Ù„Ø±Ù‘ÙŽØ­Ù’Ù…Ù°Ù†Ù Ø§Ù„Ø±Ù‘ÙŽØ­ÙÙŠÙ’Ù…Ù
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="tech-badge h-100">
+                    <span class="text-secondary">// Linguistic Variable Analysis</span><br>
+                    <strong class="text-white">Root Word:</strong> Ø± - Ø­ - Ù… (Rehm)<br>
+                    <strong class="text-white">Properties:</strong> Intense Mercy, Perpetual Mercy.<br>
+                    <strong class="text-white">Logic:</strong> Comprehensive for all creation.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tech-badge h-100">
+                    <span class="text-secondary">// Grammatical Function</span><br>
+                    <strong class="text-white">Status:</strong> Jar (Prepositional Phrase)<br>
+                    <strong class="text-white">Impact:</strong> Establishing the Source before Action.<br>
+                    <strong class="text-white">Output:</strong> Spiritual Protection & Barakah.
+                </div>
+            </div>
+        </div>
+
+        <div class="urdu-explanation p-4" style="background: rgba(255,255,255,0.02); border-radius: 15px;">
+            <strong>Ù¾Ø±ÙˆÙÛŒØ³Ø± Ù…Ø§Ø³Ù¹Ø± Ø±ÛŒØ³Ø±Ú† Ù†ÙˆÙ¹:</strong> <br>
+            ØªÙØ³ÛŒØ± Ø§Ø¨Ù† Ú©Ø«ÛŒØ± Ø§ÙˆØ± Ù…Ø¹Ø§Ø±Ù Ø§Ù„Ù‚Ø±Ø¢Ù† Ú©ÛŒ Ø±ÙˆØ´Ù†ÛŒ Ù…ÛŒÚºØŒ "Ø¨Ø³Ù… Ø§Ù„Ù„Û" Ø³Û’ ÛØ± Ú©Ø§Ù… Ú©Ø§ Ø¢ØºØ§Ø² Ú©Ø±Ù†Ø§ Ø³Ù†ØªÙ Ø§Ù„Ù°ÛÛŒÛ ÛÛ’Û” ÛŒÛ ØµØ±Ù ØªØ¨Ø±Ú© Ù†ÛÛŒÚº Ø¨Ù„Ú©Û Ø§Ø³ Ø¨Ø§Øª Ú©Ø§ Ø§Ø¹ØªØ±Ø§Ù ÛÛ’ Ú©Û ÛÙ… Ø§Ù¾Ù†ÛŒ Ø¹Ù„Ù…ÛŒ Ø§ÙˆØ± Ø¹Ù…Ù„ÛŒ Ú©ÙˆØ´Ø´ÙˆÚº Ù…ÛŒÚº Ø§Ù„Ù„Û Ú©Û’ Ù…Ø­ØªØ§Ø¬ ÛÛŒÚºÛ” IT Ø§ÙˆØ± Ø³Ø§Ø¦Ù†Ø³ Ú©Û’ Ø·Ø§Ù„Ø¨ Ø¹Ù„Ù…ÙˆÚº Ú©Û’ Ù„ÛŒÛ’ Ø§Ø³ Ù…ÛŒÚº ÛŒÛ Ø³Ø¨Ù‚ ÛÛ’ Ú©Û Ú©Ø§Ø¦Ù†Ø§Øª Ú©Ø§ "Source Code" Ø§Ù„Ù„Û Ú©Û’ Ø­Ú©Ù… Ø³Û’ Ú†Ù„ Ø±ÛØ§ ÛÛ’Û”
+        </div>
+
+        <div class="mt-5 d-flex gap-3">
+            <a href="noorani_qaida.pdf" target="_blank" class="btn btn-primary btn-lg fw-bold px-5 rounded-pill">
+                <i class="fas fa-file-pdf me-2"></i> Download Tafseer Notes
+            </a>
+            <a href="https://wa.me/923497469638" class="btn btn-outline-success btn-lg fw-bold px-5 rounded-pill">
+                <i class="fab fa-whatsapp me-2"></i> Instant Academic Help
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<?php include('footer.php'); ?>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

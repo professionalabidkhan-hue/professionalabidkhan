@@ -1,0 +1,95 @@
+﻿<?php
+session_start();
+require_once 'connect.php';
+
+// SECURITY SHIELD: Only allow access if OTP was verified
+if (!isset($_SESSION['verified_email'])) {
+    header("Location: signin.php");
+    exit();
+}
+
+$message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $pass = mysqli_real_escape_string($conn, $_POST['new_password']);
+    $confirm = mysqli_real_escape_string($conn, $_POST['confirm_password']);
+    $email = $_SESSION['verified_email'];
+
+    if ($pass === $confirm) {
+        $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+        
+        // Update Vault and Clear the OTP Chambers
+        $update = mysqli_query($conn, "UPDATE ak_users SET password = '$hashed_pass', otp_code = NULL, otp_expiry = NULL WHERE email = '$email'");
+
+        if ($update) {
+            $message = "<div class='alert alert-success border-0 bg-success text-white py-3 mb-4'><i class='fas fa-check-circle me-2'></i> ACCESS KEY UPDATED. Redirecting to Gateway...</div>";
+            // Clear the reset session
+            unset($_SESSION['verified_email']);
+            echo "<script>setTimeout(function(){ window.location.href = 'signin.php'; }, 2500);</script>";
+        }
+    } else {
+        $message = "<div class='alert alert-danger border-0 bg-danger text-white py-3 mb-4'>Keys do not match! Retype carefully.</div>";
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <title>Reset Access Key | ABID KHAN HUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --accent: #4fc3f7; --glass: rgba(13, 17, 23, 0.9); }
+        body, html { height: 100%; margin: 0; background: #07090d; display: flex; align-items: center; justify-content: center; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-card { background: var(--glass); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; padding: 50px; width: 100%; max-width: 450px; box-shadow: 0 40px 100px rgba(0,0,0,0.8); text-align: center; }
+        .master-input { background: rgba(0, 0, 0, 0.5) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: #fff !important; border-radius: 15px !important; padding: 15px !important; }
+        .btn-reset { background: var(--accent) !important; color: #000 !important; font-weight: 800; border-radius: 15px; padding: 15px; width: 100%; border: none; text-transform: uppercase; transition: 0.4s; }
+        .btn-reset:hover { transform: scale(1.03); box-shadow: 0 0 20px var(--accent); background: #fff !important; }
+    </style>
+</head>
+<body>
+
+<div class="glass-card">
+    <div class="mb-4">
+        <i class="fas fa-shield-alt fa-3x text-info mb-3"></i>
+        <h3 class="text-white fw-bold">Define New Access Key</h3>
+        <p class="text-secondary small">Your identity is verified. Secure your vault now.</p>
+    </div>
+
+    <?php echo $message; ?>
+
+    <form method="POST">
+        <div class="text-start mb-3">
+            <label class="small text-secondary fw-bold ms-2 mb-2">NEW PASSWORD</label>
+            <input type="password" name="new_password" class="form-control master-input mb-3" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required>
+            
+            <label class="small text-secondary fw-bold ms-2 mb-2">CONFIRM PASSWORD</label>
+            <input type="password" name="confirm_password" class="form-control master-input" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" required>
+        </div>
+        
+        <button type="submit" class="btn btn-reset mt-3">
+            Update Vault Key
+        </button>
+    </form>
+</div>
+
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

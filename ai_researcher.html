@@ -1,0 +1,99 @@
+﻿<?php
+// ai_researcher.php
+include('header.php'); 
+include('ai_assistant.php'); // Ensure this is included for the analysis
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <style>
+        :root {
+            --royal-gold: #c5a059;
+            --deep-navy: #0f172a;
+            --academic-blue: #1e293b;
+        }
+        body { background: #020617; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .detail-card { 
+            background: var(--academic-blue); 
+            border: 1px solid rgba(197, 160, 89, 0.2); 
+            border-radius: 20px; 
+            padding: 40px; 
+            margin-top: 50px; 
+        }
+        .status-badge { 
+            background: rgba(197, 160, 89, 0.1); 
+            color: var(--royal-gold); border: 1px solid var(--royal-gold);
+            padding: 5px 15px; border-radius: 50px; font-size: 0.75rem; font-weight: bold;
+        }
+        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 2px solid var(--royal-gold); object-fit: cover; }
+        .skill-bar { height: 8px; border-radius: 5px; background: #0f172a; margin-bottom: 15px; overflow: hidden; }
+        .skill-progress { height: 100%; background: var(--royal-gold); box-shadow: 0 0 10px var(--royal-gold); }
+        .ai-insight-box {
+            background: rgba(197, 160, 89, 0.05);
+            border-left: 4px solid var(--royal-gold);
+            padding: 15px; border-radius: 4px 12px 12px 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="detail-card shadow-lg">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <a href="jobs.php" class="btn btn-sm btn-outline-warning rounded-pill px-3">
+                        <i class="fas fa-arrow-left me-2"></i> Return to Vault
+                    </a>
+                    <span class="status-badge">JUNIOR RESEARCH OPPORTUNITY</span>
+                </div>
+
+                <h1 class="fw-bold text-white display-6 mb-2">Junior AI Researcher</h1>
+                <p style="color: var(--royal-gold);"><i class="fas fa-microchip me-2"></i> Sentinel Tech Labs | Domestic</p>
+                
+                <div class="ai-insight-box mb-4">
+                    <small class="text-uppercase fw-bold text-warning"><i class="fas fa-brain"></i> Sentinel Academic Insight:</small>
+                    <p class="mb-0 mt-1 small"><?php echo analyzeJobWithAI("Junior AI Researcher"); ?></p>
+                </div>
+
+                <h5 class="text-white fw-bold mt-4 mb-3">Project Scope</h5>
+                <p class="text-secondary">Assisting in the architectural development of Large Language Model (LLM) integrations for advanced pedagogical platforms. Focus on prompt engineering, dataset curation, and model fine-tuning.</p>
+
+                <h5 class="text-white fw-bold mt-4 mb-3">Academic Requirements</h5>
+                <ul class="text-secondary small">
+                    <li class="mb-2">Strong Python fundamentals and library management (PyTorch/TensorFlow).</li>
+                    <li>Theoretical understanding of Transformers and Neural Network architecture.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="detail-card shadow-lg text-center">
+                <img src="ABID KHAN.png" alt="Abid Khan" class="profile-img mb-3">
+                <h5 class="text-white">Abid Khan</h5>
+                <p class="small text-muted mb-4">Founder ID: HUB-MASTER</p>
+
+                <div class="text-start mt-4">
+                    <label class="small text-muted d-flex justify-content-between"><span>PHP Logic</span> <span>85%</span></label>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+
+                    <label class="small text-muted d-flex justify-content-between"><span>Architecture</span> <span>70%</span></label>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+                </div>
+                <button class="btn btn-outline-warning btn-sm w-100 mt-4 rounded-pill">Verify Identity</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include('footer.php'); ?>
+</body>
+</html>

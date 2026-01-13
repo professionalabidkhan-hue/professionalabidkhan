@@ -1,0 +1,67 @@
+﻿<?php
+// C:\xamppA\htdocs\abidkhan-e-pedagogy-institute\admin_panel.php
+include('header.php'); 
+include('connect.php'); // Includes database link and Sentinel security
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <style>
+        :root { --royal-gold: #c5a059; --deep-navy: #0f172a; --academic-blue: #1e293b; }
+        body { background: #020617; color: #f8fafc; }
+        .admin-card { background: var(--academic-blue); border: 1px solid rgba(197, 160, 89, 0.3); border-radius: 15px; padding: 30px; margin-top: 50px; }
+        .table { color: #d1d5db; border-color: rgba(255,255,255,0.1); }
+        .table thead { background: rgba(197, 160, 89, 0.1); color: var(--royal-gold); }
+        .status-pill { font-size: 0.7rem; padding: 4px 12px; border-radius: 50px; background: rgba(0, 210, 255, 0.1); color: #00d2ff; border: 1px solid #00d2ff; }
+    </style>
+</head>
+<body>
+<div class="container pb-5">
+    <div class="admin-card shadow-lg">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold mb-0">FOUNDER'S <span style="color: var(--royal-gold);">APPLICATION VAULT</span></h2>
+            <span class="badge border border-warning text-warning px-3 py-2">SECURE ADMIN ACCESS</span>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>CANDIDATE NAME</th>
+                        <th>APPLIED POSITION</th>
+                        <th>WHATSAPP</th>
+                        <th>TIMESTAMP</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $result = mysqli_query($conn, "SELECT * FROM job_applications ORDER BY applied_at DESC");
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>#{$row['id']}</td>";
+                        echo "<td class='text-white fw-bold'>{$row['candidate_name']}</td>";
+                        echo "<td>{$row['job_title']}</td>";
+                        echo "<td><a href='https://wa.me/{$row['whatsapp']}' class='text-info'>{$row['whatsapp']}</a></td>";
+                        echo "<td class='small text-muted'>{$row['applied_at']}</td>";
+                        echo "<td><span class='status-pill'>{$row['status']}</span></td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<?php include('footer.php'); ?>
+</body>
+</html>

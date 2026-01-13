@@ -1,0 +1,80 @@
+<?php
+// fetch_rozee_jobs.php - Enhanced Hybrid Version (Flat Structure Fix)
+
+function getRozeeJobs($customUrl = null) {
+    // 1. MANUAL FALLBACK: Used when no URL is provided or scraping fails
+    // Links updated to remove 'jobs/' because files are now in the root folder.
+    $manualJobs = [
+        [
+            "title"   => "Junior AI Researcher", 
+            "company" => "Sentinel Tech Labs", 
+            "link"    => "ai_researcher.php", 
+            "type"    => "Domestic"
+        ],
+        [
+            "title"   => "Cloud Security Architect", 
+            "company" => "Global Vault Systems", 
+            "link"    => "cloud_arch.php", 
+            "type"    => "International"
+        ],
+        [
+            "title"   => "UI/UX Designer", 
+            "company" => "Creative Pedagogy", 
+            "link"    => "designer.php", 
+            "type"    => "Domestic"
+        ]
+    ];
+
+    // If no custom URL is requested, return the manual list immediately
+    if (!$customUrl) {
+        return $manualJobs;
+    }
+
+    // 2. DYNAMIC FETCHING: This part handles external URL requests
+    $ch = curl_init($customUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+    // User-Agent tells the website you are a browser, not a bot
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Sentinel/1.0');
+    
+    $html = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    // If the website doesn't respond (404, 500, etc.), return the manual jobs instead
+    if (!$html || $httpCode !== 200) {
+        return $manualJobs;
+    }
+
+    // 3. PARSING LOGIC: Extracting data from the HTML
+    $dom = new DOMDocument();
+    @$dom->loadHTML($html);
+    $xpath = new DOMXPath($dom);
+    
+    $jobs = [];
+    // Searches for common job title tags like <h3> or elements with 'job-title' class
+    $nodes = $xpath->query("//h3 | //div[contains(@class, 'job-title')]");
+
+    foreach ($nodes as $i => $node) {
+        if ($i >= 6) break; // Limit to 6 results to keep the UI clean
+        $jobs[] = [
+            "title"   => trim($node->nodeValue),
+            "company" => "Verified Partner",
+            "link"    => "#", // Replace with real link logic if targeting a specific site
+            "type"    => "Live Update"
+        ];
+    }
+
+    // If the scraper found nothing, return the manual backup
+    return !empty($jobs) ? $jobs : $manualJobs;
+}
+?><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>

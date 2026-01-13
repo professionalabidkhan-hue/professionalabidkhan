@@ -1,0 +1,49 @@
+<?php
+// cloud_arch.php
+include('header.php'); // Fixed: Removed ../
+?>
+
+<div class="container">
+    <div class="detail-card shadow-lg">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <a href="jobs.php" class="btn btn-sm btn-outline-secondary rounded-pill"> <i class="fas fa-arrow-left me-2"></i> Back to Vault
+            </a>
+            <span class="identity-badge">LEVEL 4 SECURITY CLEARANCE REQUIRED</span>
+        </div>
+        </div>
+</div>
+
+<?php include('footer.php'); ?> ```
+
+### 2. Update `jobs.php`
+The links in your **Vault Jobs** array need to be updated because the `jobs/` folder no longer exists.
+
+```php
+// 1. VAULT JOBS
+$vault_jobs = [
+    [
+        "title" => "Senior Cyber Security Analyst",
+        "location" => "Remote (USA/Global)",
+        "type" => "International",
+        "icon" => "fa-user-shield",
+        "link" => "job_detail_template.php", // Fixed: Removed jobs/
+        "desc" => "Elite threat monitoring and cloud infrastructure security."
+    ],
+    [
+        "title" => "Full Stack Web Developer",
+        "location" => "Islamabad / Remote",
+        "type" => "Domestic",
+        "icon" => "fa-code",
+        "link" => "web_dev_pakistan.php", // Fixed: Removed jobs/
+        "desc" => "Developing high-end pedagogy platforms using PHP and React."
+    ]
+];<script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>

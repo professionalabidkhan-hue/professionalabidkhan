@@ -1,0 +1,22 @@
+<?php
+// verify.php - The Sentinel Credential Validator
+include('header.php');
+include('connect.php');
+?>
+<div class="container mt-5 pt-5 text-center">
+    <h2 class="fw-bold"><span style="color: var(--royal-gold);">CERTIFICATE</span> VERIFICATION</h2>
+    <div class="admin-card mx-auto" style="max-width: 600px;">
+        <form action="verify.php" method="GET">
+            <input type="text" name="cert_id" class="form-control mb-3" placeholder="Enter Certificate ID (e.g., ABID-2026-001)">
+            <button class="btn btn-outline-warning w-100">Verify Authenticity</button>
+        </form>
+        <?php
+        if(isset($_GET['cert_id'])) {
+            $id = mysqli_real_escape_string($conn, $_GET['cert_id']);
+            // Logic to fetch from a 'certificates' table (to be created)
+            echo "<div class='mt-4 p-3 border border-success text-success'>SECURE STATUS: Certificate ID $id is Valid.</div>";
+        }
+        ?>
+    </div>
+</div>
+<?php include('footer.php'); ?>

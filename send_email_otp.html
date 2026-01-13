@@ -1,0 +1,53 @@
+<?php
+session_start();
+require_once 'connect.php';
+
+// Load PHPMailer (Ensure these files are in your project folder)
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require 'vendor/autoload.php'; 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $otp = rand(100000, 999999);
+    $expiry = date("Y-m-d H:i:s", strtotime("+15 minutes"));
+
+    $check = mysqli_query($conn, "SELECT full_name FROM ak_users WHERE email = '$email'");
+    if ($user = mysqli_fetch_assoc($check)) {
+        mysqli_query($conn, "UPDATE ak_users SET otp_code = '$otp', otp_expiry = '$expiry' WHERE email = '$email'");
+
+        $mail = new PHPMailer(true);
+        try {
+            // Server settings
+            $mail->isSMTP();
+            $mail->Host       = 'smtp.gmail.com'; // Use your SMTP host
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'your-email@gmail.com'; // Your Master Email
+            $mail->Password   = 'your-app-password';   // Your App Password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port       = 587;
+
+            $mail->setFrom('vault@abidkhanhub.com', 'ABID KHAN HUB');
+            $mail->addAddress($email);
+            $mail->isHTML(true);
+            $mail->Subject = 'Identity Access Key: ' . $otp;
+            $mail->Body    = "Master <b>{$user['full_name']}</b>, your Vault Access Code is: <h1 style='color:#4fc3f7'>$otp</h1>";
+
+            $mail->send();
+            $_SESSION['reset_email'] = $email;
+            header("Location: verify_otp.php");
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    }
+}
+?><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>

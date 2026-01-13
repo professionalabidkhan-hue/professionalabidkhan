@@ -1,0 +1,60 @@
+<?php
+session_start();
+error_reporting(0); // Prevents warnings from corrupting the JSON output
+header('Content-Type: application/json');
+
+// 1. Safety Check for Connection
+if (!file_exists('connect.php')) {
+    echo json_encode(['success' => false, 'message' => 'Connection module missing.']);
+    exit();
+}
+require_once 'connect.php';
+
+// 2. Decode Input
+$input = json_decode(file_get_contents('php://input'), true);
+
+if (isset($input['email']) && isset($input['password'])) {
+    $email = trim($input['email']);
+    
+    // 3. Secure Prepared Statement
+    $sql = "SELECT id, full_name, password, user_role, department, profile_pic FROM ak_users WHERE email = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    
+    if (!$stmt) {
+        echo json_encode(['success' => false, 'message' => 'Database Query Error.']);
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $user = mysqli_fetch_assoc($result);
+
+    // 4. Verify Identity
+    if ($user && password_verify($input['password'], $user['password'])) {
+        // Store Normalized Session Data
+        $_SESSION['user_id']     = $user['id'];
+        $_SESSION['user_name']   = $user['full_name'];
+        $_SESSION['user_role']   = strtolower(trim($user['user_role'])); 
+        $_SESSION['dept']        = strtoupper(trim($user['department']));
+        $_SESSION['profile_pic'] = $user['profile_pic'];
+
+        $role = $_SESSION['user_role'];
+
+        // 5. UNIFIED ROUTING LOGIC (The Master Update)
+        // No matter the department, we route based on ROLE to your unified files
+        if ($role === 'trainer') {
+            $redirect = 'DASHBOARD_MENTOR.php';
+        } else {
+            $redirect = 'DASHBOARD_STUDENT.php';
+        }
+
+        echo json_encode(['success' => true, 'redirect' => $redirect]);
+    } else {
+        echo json_encode(['success' => false, 'message' => 'Invalid Access Key or Identity.']);
+    }
+} else {
+    echo json_encode(['success' => false, 'message' => 'Empty Credentials Received.']);
+}
+exit();
+?>

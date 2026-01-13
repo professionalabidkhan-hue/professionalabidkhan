@@ -1,0 +1,28 @@
+<?php
+require_once 'connect.php';
+
+// The AI Sentinel looks for the most recent registration
+$sql = "SELECT * FROM ak_users ORDER BY id DESC LIMIT 1";
+$result = mysqli_query($conn, $sql);
+$latest_user = mysqli_fetch_assoc($result);
+
+if ($latest_user) {
+    $name = $latest_user['full_name'];
+    $fee = $latest_user['proposed_fee'];
+    $role = $latest_user['user_role'];
+    
+    // AI LOGIC: Format the report for the Professor Doctor Master
+    $report = "AI INVESTIGATOR REPORT: New Identity Detected. \n";
+    $report .= "Name: $name \n";
+    $report .= "Role: $role \n";
+    $report .= "Proposed Fee: £$fee \n";
+    $report .= "Status: Vault Entrance Pending Review.";
+
+    // Link for your WhatsApp
+    $wa_alert = "https://wa.me/923497469638?text=" . urlencode($report);
+    
+    // In a live environment, the AI would trigger this automatically
+    echo "AI Investigator Status: Active. Latest Target: $name.";
+}
+
+?>

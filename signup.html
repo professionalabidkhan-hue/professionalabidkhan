@@ -1,0 +1,181 @@
+﻿<?php
+require_once 'connect.php'; 
+$message = ""; 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name          = mysqli_real_escape_string($conn, $_POST['full_name']);
+    $email         = mysqli_real_escape_string($conn, $_POST['email']);
+    $whatsapp      = mysqli_real_escape_string($conn, $_POST['whatsapp']);
+    $location      = mysqli_real_escape_string($conn, $_POST['location'] ?? 'Remote');
+    $dept          = $_POST['department']; 
+    $role          = $_POST['role'];       
+    $timing        = mysqli_real_escape_string($conn, $_POST['timing']);
+    $fee           = mysqli_real_escape_string($conn, $_POST['proposed_fee']);
+    $qualification = mysqli_real_escape_string($conn, $_POST['qualification'] ?? 'N/A');
+    $experience    = mysqli_real_escape_string($conn, $_POST['experience'] ?? 'N/A');
+    $expected_rev  = mysqli_real_escape_string($conn, $_POST['expected_revenue'] ?? '0%');
+    $hashed_pass   = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    $profilePic = "default_avatar.png";
+    if(isset($_FILES['profile_pic']) && $_FILES['profile_pic']['error'] == 0){
+        $target_dir = "uploads/";
+        if (!file_exists($target_dir)) { mkdir($target_dir, 0777, true); }
+        $profilePic = $target_dir . time() . "_" . uniqid() . "." . pathinfo($_FILES["profile_pic"]["name"], PATHINFO_EXTENSION);
+        move_uploaded_file($_FILES["profile_pic"]["tmp_name"], $profilePic);
+    }
+
+    $sql = "INSERT INTO ak_users (full_name, email, password, whatsapp_no, location, department, user_role, preferred_timing, proposed_fee, qualification, experience, expected_revenue, profile_pic) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "sssssssssssss", $name, $email, $hashed_pass, $whatsapp, $location, $dept, $role, $timing, $fee, $qualification, $experience, $expected_rev, $profilePic);
+
+    if (mysqli_stmt_execute($stmt)) {
+        $wa_text = urlencode("Asalamu Alaikum Master Abid Khan. New Identity Registered.\nName: $name\nRole: $role");
+        $wa_link = "https://api.whatsapp.com/send?phone=923497469638&text=$wa_text";
+        echo "<script>alert('Identity Logged.'); window.open('$wa_link', '_blank'); window.location.href='signin.php?success';</script>";
+    } else {
+        $message = "<div class='alert alert-danger'>Vault Error: " . mysqli_error($conn) . "</div>";
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background: #07090d; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .master-input { background: rgba(0,0,0,0.5); border: 1px solid #1a1c2c; color: white; border-radius: 12px; padding: 12px; margin-bottom: 15px; width: 100%; transition: 0.3s; }
+        .master-input:focus { border-color: #4fc3f7; outline: none; box-shadow: 0 0 10px rgba(79, 195, 247, 0.3); }
+        
+        /* TWO PATH CARDS */
+        .role-selection-wrapper { display: flex; gap: 20px; margin-bottom: 30px; }
+        .path-card { flex: 1; background: rgba(255, 255, 255, 0.03); border: 2px solid rgba(79, 195, 247, 0.1); border-radius: 20px; padding: 25px; text-align: center; cursor: pointer; transition: 0.4s; position: relative; }
+        .path-card.active.trainer-path { border-color: #4fc3f7; background: rgba(79, 195, 247, 0.1); }
+        .path-card.active.student-path { border-color: #2196f3; background: rgba(33, 150, 243, 0.1); }
+        .path-card i { font-size: 2rem; margin-bottom: 10px; display: block; }
+        
+        /* THE BUTTON LOGIC */
+        .btn-sentinel { background: #4fc3f7; color: black; font-weight: bold; border-radius: 15px; padding: 18px; width: 100%; border: none; transition: 0.3s; opacity: 0.3; cursor: not-allowed; }
+        .btn-active { opacity: 1 !important; cursor: pointer !important; box-shadow: 0 5px 20px rgba(79, 195, 247, 0.4); }
+<style>
+    .master-avatar-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .master-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%; /* This creates the perfect round shape */
+        border: 3px solid #4fc3f7; /* Hub Cyan Border */
+        object-fit: cover;
+        padding: 5px;
+        background: rgba(79, 195, 247, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .master-avatar:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(79, 195, 247, 0.6);
+        border-color: #ffffff;
+    }
+</style>   
+ </style>
+</head>
+<body>
+<div class="container py-5">
+
+    <div class="mx-auto" style="max-width: 750px; background: #0d1117; padding: 45px; border-radius: 35px; border: 1px solid #1a1c2c; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+<div class="text-center mb-4">
+    <div class="master-avatar-container">
+        <img src="ABID KHAN.png" alt="Professor Doctor Master Abid Khan" class="master-avatar shadow-lg">
+    </div>
+</div>     
+   <h2 class="text-center fw-bold mb-4" style="letter-spacing: 2px;">ABID KHAN HUB</h2>
+        <?php echo $message; ?>
+
+        <div class="role-selection-wrapper">
+            <div class="path-card trainer-path" onclick="selectPath(this, 'trainer')">
+                <i class="fas fa-user-tie text-info"></i>
+                <h6 class="text-info m-0">MASTER TRAINER</h6>
+            </div>
+            <div class="path-card student-path" onclick="selectPath(this, 'student')">
+                <i class="fas fa-user-graduate text-primary"></i>
+                <h6 class="text-primary m-0">DISCIPLE STUDENT</h6>
+            </div>
+        </div>
+
+        <form method="POST" enctype="multipart/form-data" id="signupForm">
+            <input type="hidden" name="role" id="selectedRole" value="student">
+            
+            <input type="text" name="full_name" class="master-input" placeholder="Full Identity Name" required>
+            <input type="email" name="email" class="master-input" placeholder="Email Address" required>
+            
+            <div class="row">
+                <div class="col-md-6"><input type="text" name="whatsapp" class="master-input" placeholder="WhatsApp No" required></div>
+                <div class="col-md-6"><input type="password" name="password" class="master-input" placeholder="Access Key" required></div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <select name="department" class="master-input">
+                        <option value="IT">IT Mastery</option>
+                        <option value="QURAN">Quranic Studies</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="timing" class="master-input" placeholder="Preferred Timing">
+                </div>
+            </div>
+
+            <div id="trainerFields" style="display: none;">
+                <input type="text" name="qualification" class="master-input" placeholder="Professional Qualification">
+                <div class="row">
+                    <div class="col-md-6"><input type="text" name="experience" class="master-input" placeholder="Years of Experience"></div>
+                    <div class="col-md-6"><input type="text" name="expected_revenue" class="master-input" placeholder="Expected Revenue %"></div>
+                </div>
+            </div>
+
+            <input type="text" name="proposed_fee" class="master-input" placeholder="Proposed Fee (Optional)">
+
+            <div class="form-check mb-4 mt-2">
+                <input type="checkbox" id="agree" class="form-check-input" onchange="toggleButton()">
+                <label for="agree" class="small text-secondary">I solemnly accept the 30% Law & Hub Rules</label>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-sentinel" disabled>INITIALIZE IDENTITY</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function selectPath(element, role) {
+        document.querySelectorAll('.path-card').forEach(c => c.classList.remove('active'));
+        element.classList.add('active');
+        document.getElementById('selectedRole').value = role;
+        
+        const trainerFields = document.getElementById('trainerFields');
+        trainerFields.style.display = (role === 'trainer') ? 'block' : 'none';
+    }
+
+    function toggleButton() {
+        const checkbox = document.getElementById('agree');
+        const btn = document.getElementById('submitBtn');
+        if(checkbox.checked) {
+            btn.disabled = false;
+            btn.classList.add('btn-active');
+        } else {
+            btn.disabled = true;
+            btn.classList.remove('btn-active');
+        }
+    }
+</script>
+</body>
+</html>

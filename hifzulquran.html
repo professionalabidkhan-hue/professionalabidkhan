@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | Tajweed Masterclass - AbidKhan E-Learning</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #b2945e;
+            --dark-bg: #151515;
+            --accent-red: #D03000;
+        }
+
+        body { font-family: 'Nunito', sans-serif; background-color: #fdfdfd; }
+
+        /* Navbar */
+        .navbar { background-color: var(--dark-bg); border-bottom: 2px solid var(--primary-gold); }
+        .navbar-brand img { max-height: 50px; }
+
+        /* Admission Header */
+        .admission-hero {
+            background: linear-gradient(rgba(21, 21, 21, 0.8), rgba(21, 21, 21, 0.8)), url('https://images.unsplash.com/photo-1590076215667-875d452d3f71?auto=format&fit=crop&q=80');
+            background-size: cover;
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+        }
+        .admission-hero h1 { font-family: 'Prata', serif; font-size: 3rem; }
+
+        /* Cards */
+        .requirement-card {
+            border: none;
+            border-left: 5px solid var(--primary-gold);
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .requirement-card:hover { transform: translateX(10px); }
+
+        .deadline-box {
+            background-color: #fcf8f2;
+            border: 1px dashed var(--primary-gold);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .btn-apply {
+            background-color: var(--accent-red);
+            color: white;
+            font-weight: bold;
+            padding: 15px 35px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+        .btn-apply:hover { background-color: #000; color: var(--primary-gold); }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.php">
+                <img src="your-logo-here.png" alt="AbidKhan E-Learning">
+            </a>
+            <div class="ms-auto">
+                <a href="index.php" class="text-white text-decoration-none me-3">Back to Course</a>
+                <a href="signup.php" class="btn btn-outline-light btn-sm">Enroll Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="admission-hero">
+        <div class="container">
+            <h1>Admission Requirements</h1>
+            <p class="lead italic text-warning">"Those to whom We have given the Book, recite it in the manner it should be read"</p>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="row g-5">
+            <div class="col-lg-8">
+                <h2 class="mb-4">Who is This Course For?</h2>
+                <p>Whether youâ€™ve already had extensive experience with the science of Qur'anic recitation, or youâ€™re longing to build an attachment with the Noble Qur'an, our Tajweed Masterclass will help shape you into a leader in this field.</p>
+
+                <h3 class="mt-5 mb-4 border-bottom pb-2">Entry Requirements</h3>
+                
+                <div class="card requirement-card mb-3 p-3">
+                    <h5>Beginner Programme</h5>
+                    <p class="mb-0 text-muted">No requirements. Open to those who wish to learn how to read or correct basic mistakes in understanding.</p>
+                </div>
+
+                <div class="card requirement-card mb-3 p-3">
+                    <h5>Pre-Intermediate</h5>
+                    <p class="mb-0 text-muted">Students must be able to read and recite the Holy Qur'an with a basic level of proficiency.</p>
+                </div>
+
+                <div class="card requirement-card mb-3 p-3">
+                    <h5>Intermediate & Advanced</h5>
+                    <p class="mb-0 text-muted">Requires understanding of Tajweed rules and good fluency. Assessment may include an interview or audio passage reading.</p>
+                </div>
+
+                <div class="alert alert-danger mt-4">
+                    <strong>Attendance Policy:</strong> Attendance is mandatory. Students will be withdrawn for missing three lessons or failing to submit three consecutive homework assignments.
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="deadline-box sticky-top" style="top: 100px;">
+                    <h4 class="fw-bold">Deadlines & Cohorts</h4>
+                    <hr>
+                    <p><strong>Next Cohort:</strong> 3rd January 2026</p>
+                    <p><strong>Early Admission:</strong> 1st December 2025</p>
+                    <p class="small text-muted mb-4">We anticipate a high volume of applications. Submit early to secure your seat.</p>
+                    
+                    <a href="signup.php" class="btn btn-apply w-100">Proceed to Application</a>
+                    
+                    <div class="mt-4 p-3 bg-white rounded shadow-sm border text-center">
+                        <p class="mb-1 small">Need help with assessment?</p>
+                        <p class="fw-bold mb-0">WhatsApp Support</p>
+                        <p class="text-primary">0345 2222 786</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2026 AbidKhan E-Learning - Tajweed Mastery Division</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

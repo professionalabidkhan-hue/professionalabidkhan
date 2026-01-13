@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning & Evening Azkaar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Aref+Ruqaa&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fdfaf0;
+            font-family: 'Amiri', serif;
+            color: #333;
+        }
+        .azkaar-card {
+            background: #fff;
+            border: 2px solid #c5a059;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .arabic-text {
+            font-size: 1.6rem;
+            line-height: 2.5;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .reference {
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+            display: block;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        .title-header {
+            color: #1a4d6b;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-family: 'Aref Ruqaa', serif;
+        }
+        .instruction {
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+        }
+        hr {
+            border-top: 1px solid #c5a059;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="title-header">Ø£Ø°ÙƒØ§Ø± Ø§Ù„ØµØ¨Ø§Ø­ ÙˆØ§Ù„Ù…Ø³Ø§Ø¡<br><small class="text-muted">Morning and Evening Azkar</small></h1>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="azkaar-card">
+                
+                <p class="arabic-text">Ø±ÙŽØ¶ÙÙŠØªÙ Ø¨ÙØ§Ù„Ù„ÙŽÙ‘Ù‡Ù Ø±ÙŽØ¨ÙŽÙ‘Ø§Ù‹ ÙˆÙŽØ¨ÙØ§Ù„Ù’Ø¥ÙØ³Ù’Ù„ÙŽØ§Ù…Ù Ø¯ÙÙŠÙ†Ø§Ù‹ ÙˆÙŽØ¨ÙÙ…ÙØ­ÙŽÙ…ÙŽÙ‘Ø¯Ù ï·º Ù†ÙŽØ¨ÙÙŠÙ‘Ø§Ù‹.</p>
+                <span class="reference">(Ø£Ø®Ø±Ø¬Ù‡ Ø£Ø­Ù…Ø¯ ÙˆØ§Ù„ØªØ±Ù…Ø°ÙŠ)</span>
+                <hr>
+
+                <p class="arabic-text">Ø³ÙØ¨Ù’Ø­ÙŽØ§Ù†ÙŽ Ø§Ù„Ù„ÙŽÙ‘Ù‡Ù ÙˆÙŽØ¨ÙØ­ÙŽÙ…Ù’Ø¯ÙÙ‡Ù: Ø¹ÙŽØ¯ÙŽØ¯ÙŽ Ø®ÙŽÙ„Ù’Ù‚ÙÙ‡ÙØŒ ÙˆÙŽØ±ÙØ¶ÙŽØ§ Ù†ÙŽÙÙ’Ø³ÙÙ‡ÙØŒ ÙˆÙŽØ²ÙÙ†ÙŽØ©ÙŽ Ø¹ÙŽØ±Ù’Ø´ÙÙ‡ÙØŒ ÙˆÙŽÙ…ÙØ¯ÙŽØ§Ø¯ÙŽ ÙƒÙŽÙ„ÙÙ…ÙŽØ§ØªÙÙ‡Ù.</p>
+                <span class="reference">(Ù…Ø³Ù„Ù…)</span>
+                <hr>
+
+                <p class="arabic-text">ÙŠÙŽØ§ Ø­ÙŽÙŠÙÙ‘ ÙŠÙŽØ§ Ù‚ÙŽÙŠÙÙ‘ÙˆÙ…Ù Ø¨ÙØ±ÙŽØ­Ù’Ù…ÙŽØªÙÙƒÙŽ Ø£ÙŽØ³Ù’ØªÙŽØºÙÙŠØ«Ù Ø£ÙŽØµÙ’Ù„ÙØ­Ù’ Ù„ÙÙŠ Ø´ÙŽØ£Ù’Ù†ÙÙŠ ÙƒÙÙ„ÙŽÙ‘Ù‡Ù ÙˆÙŽÙ„ÙŽØ§ ØªÙŽÙƒÙÙ„Ù’Ù†ÙÙŠ Ø¥ÙÙ„ÙŽÙ‰ Ù†ÙŽÙÙ’Ø³ÙÙŠ Ø·ÙŽØ±Ù’ÙÙŽØ©ÙŽ Ø¹ÙŽÙŠÙ’Ù†Ù.</p>
+                <span class="reference">(Ø§Ù„Ù†Ø³Ø§Ø¦ÙŠ)</span>
+                <hr>
+
+                <p class="arabic-text">Ø¨ÙØ³Ù’Ù…Ù Ø§Ù„Ù„ÙŽÙ‘Ù‡Ù Ø§Ù„ÙŽÙ‘Ø°ÙÙŠ Ù„ÙŽØ§ ÙŠÙŽØ¶ÙØ±ÙÙ‘ Ù…ÙŽØ¹ÙŽ Ø§Ø³Ù’Ù…ÙÙ‡Ù Ø´ÙŽÙŠÙ’Ø¡ÙŒ ÙÙÙŠ Ø§Ù„Ù’Ø£ÙŽØ±Ù’Ø¶Ù ÙˆÙŽÙ„ÙŽØ§ ÙÙÙŠ Ø§Ù„Ø³ÙŽÙ‘Ù…ÙŽØ§Ø¡Ù ÙˆÙŽÙ‡ÙÙˆÙŽ Ø§Ù„Ø³ÙŽÙ‘Ù…ÙÙŠØ¹Ù Ø§Ù„Ù’Ø¹ÙŽÙ„ÙÙŠÙ…Ù.</p>
+                <span class="reference">(Ø£Ø¨Ùˆ Ø¯Ø§ÙˆØ¯ ÙˆØ§Ù„ØªØ±Ù…Ø°ÙŠ ÙˆØ§Ø¨Ù† Ù…Ø§Ø¬Ù‡)</span>
+                <hr>
+
+               <div class="azkaar-card p-4 mb-4" style="border: 2px solid #c5a059; border-radius: 15px; background-color: #fff;">
+    
+    <div class="dhikr-section mb-4">
+        <h5 class="text-muted mb-3" style="font-family: 'sans-serif'; border-bottom: 1px solid #eee; padding-bottom: 5px;">Morning / Ø§Ù„ØµØ¨Ø§Ø­</h5>
+        <p class="arabic-text" style="font-size: 1.7rem; line-height: 2.5; text-align: right; direction: rtl; color: #1a4d6b;">
+            Ø§Ù„Ù„ÙŽÙ‘Ù‡ÙÙ…ÙŽÙ‘ Ø¨ÙÙƒÙŽ Ø£ÙŽØµÙ’Ø¨ÙŽØ­Ù’Ù†ÙŽØ§ØŒ ÙˆÙŽØ¨ÙÙƒÙŽ Ø£ÙŽÙ…Ù’Ø³ÙŽÙŠÙ’Ù†ÙŽØ§ØŒ ÙˆÙŽØ¨ÙÙƒÙŽ Ù†ÙŽØ­Ù’ÙŠÙŽØ§ØŒ ÙˆÙŽØ¨ÙÙƒÙŽ Ù†ÙŽÙ…ÙÙˆØªÙØŒ ÙˆÙŽØ¥ÙÙ„ÙŽÙŠÙ’ÙƒÙŽ **Ø§Ù„Ù†ÙÙ‘Ø´ÙÙˆØ±Ù**.
+        </p>
+    </div>
+
+    <hr style="border-top: 2px dashed #c5a059; opacity: 0.2;">
+
+    <div class="dhikr-section mt-4">
+        <h5 class="text-muted mb-3" style="font-family: 'sans-serif'; border-bottom: 1px solid #eee; padding-bottom: 5px;">Evening / Ø§Ù„Ù…Ø³Ø§Ø¡</h5>
+        <p class="arabic-text" style="font-size: 1.7rem; line-height: 2.5; text-align: right; direction: rtl; color: #444;">
+            Ø§Ù„Ù„Ù‘ÙŽÙ‡ÙÙ…Ù‘ÙŽ Ø¨ÙÙƒÙŽ Ø£ÙŽÙ…Ù’Ø³ÙŽÙŠÙ’Ù†ÙŽØ§ØŒ ÙˆÙŽØ¨ÙÙƒÙŽ Ø£ÙŽØµÙ’Ø¨ÙŽØ­Ù’Ù†ÙŽØ§ØŒ ÙˆÙŽØ¨ÙÙƒÙŽ Ù†ÙŽØ­Ù’ÙŠÙŽØ§ØŒ ÙˆÙŽØ¨ÙÙƒÙŽ Ù†ÙŽÙ…ÙÙˆØªÙØŒ ÙˆÙŽØ¥ÙÙ„ÙŽÙŠÙ’ÙƒÙŽ **Ø§Ù„Ù’Ù…ÙŽØµÙÙŠØ±Ù**.
+        </p>
+    </div>
+
+    <span class="reference d-block text-center mt-3" style="color: #888; font-size: 0.85rem;">(Ø±ÙˆØ§Ù‡ Ø§Ù„ØªØ±Ù…Ø°ÙŠ)</span>
+</div>
+<div class="azkaar-card p-4 mb-4" style="border: 2px solid #c5a059; border-radius: 15px; background-color: #fff;">
+    <div class="dhikr-section mb-4">
+        <h5 class="text-muted mb-3" style="font-family: 'sans-serif'; border-bottom: 1px solid #eee; padding-bottom: 5px;">Morning / Ø§Ù„ØµØ¨Ø§Ø­</h5>
+        <p class="arabic-text" style="font-size: 1.7rem; line-height: 2.5; text-align: right; direction: rtl;">
+            Ø£ÙŽØµÙ’Ø¨ÙŽØ­Ù’Ù†ÙŽØ§ ÙˆÙŽØ£ÙŽØµÙ’Ø¨ÙŽØ­ÙŽ Ø§Ù„Ù’Ù…ÙÙ„Ù’ÙƒÙ Ù„ÙÙ„Ù‘ÙŽÙ‡ÙØŒ ÙˆÙŽØ§Ù„Ù’Ø­ÙŽÙ…Ù’Ø¯Ù Ù„ÙÙ„Ù‘ÙŽÙ‡ÙØŒ Ù„ÙŽØ§ Ø¥ÙÙ„ÙŽÙ‡ÙŽ Ø¥ÙÙ„Ù‘ÙŽØ§ Ø§Ù„Ù„Ù‡Ù ÙˆÙŽØ­Ù’Ø¯ÙŽÙ‡Ù Ù„ÙŽØ§ Ø´ÙŽØ±ÙÙŠÙƒÙŽ Ù„ÙŽÙ‡ÙØŒ Ù„ÙŽÙ‡Ù Ø§Ù„Ù’Ù…ÙÙ„Ù’ÙƒÙ ÙˆÙŽÙ„ÙŽÙ‡Ù Ø§Ù„Ù’Ø­ÙŽÙ…Ù’Ø¯Ù ÙˆÙŽÙ‡ÙÙˆÙŽ Ø¹ÙŽÙ„ÙŽÙ‰ ÙƒÙÙ„Ù‘Ù Ø´ÙŽÙŠÙ’Ø¡Ù Ù‚ÙŽØ¯ÙÙŠØ±ÙŒØŒ Ø±ÙŽØ¨Ù‘Ù Ø£ÙŽØ³Ù’Ø£ÙŽÙ„ÙÙƒÙŽ Ø®ÙŽÙŠÙ’Ø±ÙŽ Ù…ÙŽØ§ ÙÙÙŠ Ù‡ÙŽØ°ÙŽØ§ Ø§Ù„Ù’ÙŠÙŽÙˆÙ’Ù…Ù ÙˆÙŽØ®ÙŽÙŠÙ’Ø±ÙŽ Ù…ÙŽØ§ Ø¨ÙŽØ¹Ù’Ø¯ÙŽÙ‡ÙØŒ ÙˆÙŽØ£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙÙƒÙŽ Ù…ÙÙ†Ù’ Ø´ÙŽØ±Ù‘Ù Ù…ÙŽØ§ ÙÙÙŠ Ù‡ÙŽØ°ÙŽØ§ Ø§Ù„Ù’ÙŠÙŽÙˆÙ’Ù…Ù ÙˆÙŽØ´ÙŽØ±Ù‘Ù Ù…ÙŽØ§ Ø¨ÙŽØ¹Ù’Ø¯ÙŽÙ‡ÙØŒ Ø±ÙŽØ¨Ù‘Ù Ø£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙÙƒÙŽ Ù…ÙÙ†ÙŽ Ø§Ù„Ù’ÙƒÙŽØ³ÙŽÙ„Ù ÙˆÙŽØ³ÙÙˆØ¡Ù Ø§Ù„Ù’ÙƒÙØ¨ÙŽØ±ÙØŒ Ø±ÙŽØ¨Ù‘Ù Ø£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙÙƒÙŽ Ù…ÙÙ†Ù’ Ø¹ÙŽØ°ÙŽØ§Ø¨Ù ÙÙÙŠ Ø§Ù„Ù†Ù‘ÙŽØ§Ø±Ù ÙˆÙŽØ¹ÙŽØ°ÙŽØ§Ø¨Ù ÙÙÙŠ Ø§Ù„Ù’Ù‚ÙŽØ¨Ù’Ø±Ù.
+        </p>
+    </div>
+
+    <hr style="border-top: 2px dashed #c5a059; opacity: 0.2;">
+
+    <div class="dhikr-section mt-4">
+        <h5 class="text-muted mb-3" style="font-family: 'sans-serif'; border-bottom: 1px solid #eee; padding-bottom: 5px;">Evening / Ø§Ù„Ù…Ø³Ø§Ø¡</h5>
+        <p class="arabic-text" style="font-size: 1.7rem; line-height: 2.5; text-align: right; direction: rtl; color: #444;">
+            Ø£ÙŽÙ…Ù’Ø³ÙŽÙŠÙ’Ù†ÙŽØ§ ÙˆÙŽØ£ÙŽÙ…Ù’Ø³ÙŽÙ‰ Ø§Ù„Ù’Ù…ÙÙ„Ù’ÙƒÙ Ù„ÙÙ„Ù‘ÙŽÙ‡ÙØŒ ÙˆÙŽØ§Ù„Ù’Ø­ÙŽÙ…Ù’Ø¯Ù Ù„ÙÙ„Ù‘ÙŽÙ‡ÙØŒ Ù„ÙŽØ§ Ø¥ÙÙ„ÙŽÙ‡ÙŽ Ø¥ÙÙ„Ù‘ÙŽØ§ Ø§Ù„Ù„Ù‡Ù ÙˆÙŽØ­Ù’Ø¯ÙŽÙ‡Ù Ù„ÙŽØ§ Ø´ÙŽØ±ÙÙŠÙƒÙŽ Ù„ÙŽÙ‡ÙØŒ Ù„ÙŽÙ‡Ù Ø§Ù„Ù’Ù…ÙÙ„Ù’ÙƒÙ ÙˆÙŽÙ„ÙŽÙ‡Ù Ø§Ù„Ù’Ø­ÙŽÙ…Ù’Ø¯Ù ÙˆÙŽÙ‡ÙÙˆÙŽ Ø¹ÙŽÙ„ÙŽÙ‰ ÙƒÙÙ„Ù‘Ù Ø´ÙŽÙŠÙ’Ø¡Ù Ù‚ÙŽØ¯ÙÙŠØ±ÙŒØŒ Ø±ÙŽØ¨Ù‘Ù Ø£ÙŽØ³Ù’Ø£ÙŽÙ„ÙÙƒÙŽ Ø®ÙŽÙŠÙ’Ø±ÙŽ Ù…ÙŽØ§ ÙÙÙŠ Ù‡ÙŽØ°ÙÙ‡Ù Ø§Ù„Ù„Ù‘ÙŽÙŠÙ’Ù„ÙŽØ©Ù ÙˆÙŽØ®ÙŽÙŠÙ’Ø±ÙŽ Ù…ÙŽØ§ Ø¨ÙŽØ¹Ù’Ø¯ÙŽÙ‡ÙŽØ§ØŒ ÙˆÙŽØ£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙÙƒÙŽ Ù…ÙÙ†Ù’ Ø´ÙŽØ±Ù‘Ù Ù…ÙŽØ§ ÙÙÙŠ Ù‡ÙŽØ°ÙÙ‡Ù Ø§Ù„Ù„Ù‘ÙŽÙŠÙ’Ù„ÙŽØ©Ù ÙˆÙŽØ´ÙŽØ±Ù‘Ù Ù…ÙŽØ§ Ø¨ÙŽØ¹Ù’Ø¯ÙŽÙ‡ÙŽØ§ØŒ Ø±ÙŽØ¨Ù‘Ù Ø£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙÙƒÙŽ Ù…ÙÙ†ÙŽ Ø§Ù„Ù’ÙƒÙŽØ³ÙŽÙ„Ù ÙˆÙŽØ³ÙÙˆØ¡Ù Ø§Ù„Ù’ÙƒÙØ¨ÙŽØ±ÙØŒ Ø±ÙŽØ¨Ù‘Ù Ø£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙÙƒÙŽ Ù…ÙÙ†Ù’ Ø¹ÙŽØ°ÙŽØ§Ø¨Ù ÙÙÙŠ Ø§Ù„Ù†Ù‘ÙŽØ§Ø±Ù ÙˆÙŽØ¹ÙŽØ°ÙŽØ§Ø¨Ù ÙÙÙŠ Ø§Ù„Ù’Ù‚ÙŽØ¨Ù’Ø±Ù.
+        </p>
+    </div>
+
+    <span class="reference d-block text-center mt-3" style="color: #888; font-size: 0.85rem;">(Ø£Ø®Ø±Ø¬Ù‡ Ù…Ø³Ù„Ù…)</span>
+</div>
+
+                <p class="arabic-text">Ù„ÙŽØ§ Ø¥ÙÙ„ÙŽÙ‡ÙŽ Ø¥ÙÙ„ÙŽÙ‘Ø§ Ø§Ù„Ù„ÙŽÙ‘Ù‡Ù ÙˆÙŽØ­Ù’Ø¯ÙŽÙ‡Ù Ù„ÙŽØ§ Ø´ÙŽØ±ÙÙŠÙƒÙŽ Ù„ÙŽÙ‡ÙØŒ Ù„ÙŽÙ‡Ù Ø§Ù„Ù’Ù…ÙÙ„Ù’ÙƒÙ ÙˆÙŽÙ„ÙŽÙ‡Ù Ø§Ù„Ù’Ø­ÙŽÙ…Ù’Ø¯ÙØŒ ÙˆÙŽÙ‡ÙÙˆÙŽ Ø¹ÙŽÙ„ÙŽÙ‰ ÙƒÙÙ„ÙÙ‘ Ø´ÙŽÙŠÙ’Ø¡Ù Ù‚ÙŽØ¯ÙÙŠØ±ÙŒ.</p>
+                <span class="reference">(Ø£Ø¨Ùˆ Ø¯Ø§ÙˆØ¯ ÙˆØ§Ù„ØªØ±Ù…Ø°ÙŠ ÙˆØ§Ø¨Ù† Ù…Ø§Ø¬Ù‡)</span>
+                <hr>
+
+                <p class="arabic-text">Ø£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙÙƒÙŽÙ„ÙÙ…ÙŽØ§ØªÙ Ø§Ù„Ù„ÙŽÙ‘Ù‡Ù Ø§Ù„ØªÙŽÙ‘Ø§Ù…ÙŽÙ‘Ø§ØªÙ Ù…ÙÙ†Ù’ Ø´ÙŽØ±ÙÙ‘ Ù…ÙŽØ§ Ø®ÙŽÙ„ÙŽÙ‚ÙŽ.</p>
+                <span class="reference">(Ù…Ø³Ù„Ù…)</span>
+                <hr>
+
+                <p class="arabic-text">Ø§Ù„Ù„ÙŽÙ‘Ù‡ÙÙ…ÙŽÙ‘ Ø£ÙŽÙ†Ù’ØªÙŽ Ø±ÙŽØ¨ÙÙ‘ÙŠ Ù„ÙŽØ§ Ø¥ÙÙ„ÙŽÙ‡ÙŽ Ø¥ÙÙ„ÙŽÙ‘Ø§ Ø£ÙŽÙ†Ù’ØªÙŽØŒ Ø®ÙŽÙ„ÙŽÙ‚Ù’ØªÙŽÙ†ÙÙŠ ÙˆÙŽØ£ÙŽÙ†ÙŽØ§ Ø¹ÙŽØ¨Ù’Ø¯ÙÙƒÙŽØŒ ÙˆÙŽØ£ÙŽÙ†ÙŽØ§ Ø¹ÙŽÙ„ÙŽÙ‰ Ø¹ÙŽÙ‡Ù’Ø¯ÙÙƒÙŽ ÙˆÙŽÙˆÙŽØ¹Ù’Ø¯ÙÙƒÙŽ Ù…ÙŽØ§ Ø§Ø³Ù’ØªÙŽØ·ÙŽØ¹Ù’ØªÙØŒ Ø£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙÙƒÙŽ Ù…ÙÙ†Ù’ Ø´ÙŽØ±ÙÙ‘ Ù…ÙŽØ§ ØµÙŽÙ†ÙŽØ¹Ù’ØªÙØŒ Ø£ÙŽØ¨ÙÙˆØ¡Ù Ù„ÙŽÙƒÙŽ Ø¨ÙÙ†ÙØ¹Ù’Ù…ÙŽØªÙÙƒÙŽ Ø¹ÙŽÙ„ÙŽÙŠÙŽÙ‘ØŒ ÙˆÙŽØ£ÙŽØ¨ÙÙˆØ¡Ù Ù„ÙŽÙƒÙŽ Ø¨ÙØ°ÙŽÙ†Ù’Ø¨ÙÙŠ ÙÙŽØ§ØºÙ’ÙÙØ±Ù’ Ù„ÙÙŠ ÙÙŽØ¥ÙÙ†ÙŽÙ‘Ù‡Ù Ù„ÙŽØ§ ÙŠÙŽØºÙ’ÙÙØ±Ù Ø§Ù„Ø°ÙÙ‘Ù†ÙÙˆØ¨ÙŽ Ø¥ÙÙ„ÙŽÙ‘Ø§ Ø£ÙŽÙ†Ù’ØªÙŽ.</p>
+                <span class="reference">(Ø§Ù„Ø¨Ø®Ø§Ø±ÙŠ)</span>
+                <hr>
+
+                <p class="arabic-text">Ø³ÙØ¨Ù’Ø­ÙŽØ§Ù†ÙŽ Ø§Ù„Ù„ÙŽÙ‘Ù‡Ù ÙˆÙŽØ¨ÙØ­ÙŽÙ…Ù’Ø¯ÙÙ‡Ù.</p>
+                <span class="reference">(100 Ù…Ø±Ø©)</span>
+                <hr>
+
+              <div class="surah-section p-3 mb-2" style="background-color: #f9f4e8; border-radius: 10px;">
+    <h4 class="text-center mb-4" style="color: #c5a059; font-family: 'Aref Ruqaa', serif;">Ø§Ù„Ù…Ø¹ÙˆØ°Ø§Øª (The Three Quls)</h4>
+
+    <div class="mb-4">
+        <p class="arabic-text" style="font-size: 1.4rem; color: #1a4d6b;">
+            Ù‚ÙÙ„Ù’ Ù‡ÙÙˆÙŽ Ø§Ù„Ù„Ù‘ÙŽÙ‡Ù Ø£ÙŽØ­ÙŽØ¯ÙŒ Û Ø§Ù„Ù„Ù‘ÙŽÙ‡Ù Ø§Ù„ØµÙ‘ÙŽÙ…ÙŽØ¯Ù Û Ù„ÙŽÙ…Ù’ ÙŠÙŽÙ„ÙØ¯Ù’ ÙˆÙŽÙ„ÙŽÙ…Ù’ ÙŠÙÙˆÙ„ÙŽØ¯Ù’ Û ÙˆÙŽÙ„ÙŽÙ…Ù’ ÙŠÙŽÙƒÙÙ† Ù„Ù‘ÙŽÙ‡Ù ÙƒÙÙÙÙˆÙ‹Ø§ Ø£ÙŽØ­ÙŽØ¯ÙŒ
+        </p>
+    </div>
+
+    <div class="mb-4">
+        <p class="arabic-text" style="font-size: 1.4rem; color: #1a4d6b;">
+            Ù‚ÙÙ„Ù’ Ø£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙØ±ÙŽØ¨ÙÙ‘ Ø§Ù„Ù’ÙÙŽÙ„ÙŽÙ‚Ù Û Ù…ÙÙ† Ø´ÙŽØ±ÙÙ‘ Ù…ÙŽØ§ Ø®ÙŽÙ„ÙŽÙ‚ÙŽ Û ÙˆÙŽÙ…ÙÙ† Ø´ÙŽØ±ÙÙ‘ ØºÙŽØ§Ø³ÙÙ‚Ù Ø¥ÙØ°ÙŽØ§ ÙˆÙŽÙ‚ÙŽØ¨ÙŽ Û ÙˆÙŽÙ…ÙÙ† Ø´ÙŽØ±ÙÙ‘ Ø§Ù„Ù†Ù‘ÙŽÙÙ‘ÙŽØ§Ø«ÙŽØ§ØªÙ ÙÙÙŠ Ø§Ù„Ù’Ø¹ÙÙ‚ÙŽØ¯Ù Û ÙˆÙŽÙ…ÙÙ† Ø´ÙŽØ±ÙÙ‘ Ø­ÙŽØ§Ø³ÙØ¯Ù Ø¥ÙØ°ÙŽØ§ Ø­ÙŽØ³ÙŽØ¯ÙŽ
+        </p>
+    </div>
+
+    <div class="mb-4">
+        <p class="arabic-text" style="font-size: 1.4rem; color: #1a4d6b;">
+            Ù‚ÙÙ„Ù’ Ø£ÙŽØ¹ÙÙˆØ°Ù Ø¨ÙØ±ÙŽØ¨ÙÙ‘ Ø§Ù„Ù†Ù‘ÙŽØ§Ø³Ù Û Ù…ÙŽÙ„ÙÙƒÙ Ø§Ù„Ù†Ù‘ÙŽØ§Ø³Ù Û Ø¥ÙÙ„ÙŽÙ‡Ù Ø§Ù„Ù†Ù‘ÙŽØ§Ø³Ù Û Ù…ÙÙ† Ø´ÙŽØ±ÙÙ‘ Ø§Ù„Ù’ÙˆÙŽØ³Ù’ÙˆÙŽØ§Ø³Ù Ø§Ù„Ù’Ø®ÙŽÙ†Ù‘ÙŽØ§Ø³Ù Û Ø§Ù„Ù‘ÙŽØ°ÙÙŠ ÙŠÙÙˆÙŽØ³Ù’ÙˆÙØ³Ù ÙÙÙŠ ØµÙØ¯ÙÙˆØ±Ù Ø§Ù„Ù†Ù‘ÙŽØ§Ø³Ù Û Ù…ÙÙ†ÙŽ Ø§Ù„Ù’Ø¬ÙÙ†Ù‘ÙŽØ©Ù ÙˆÙŽØ§Ù„Ù†Ù‘ÙŽØ§Ø³Ù
+        </p>
+    </div>
+
+    <hr>
+    
+    <div class="text-center">
+        <span class="badge bg-secondary mb-2">Repeat 3 Times</span>
+        <p class="instruction" style="font-weight: bold; color: #d9534f;">
+            (Recite each surah three times in the morning and in the evening)
+        </p>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

@@ -1,0 +1,47 @@
+<?php
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *'); // Essential for Fetch API
+session_start();
+
+// 1. VAULT GUARD: Ensure the user is authorized
+if (!isset($_SESSION['user_name'])) {
+    echo json_encode(['success' => false, 'message' => 'Unauthorized: Please Sign In.']);
+    exit;
+}
+
+// 2. IDENTITY VERIFICATION: The exact keys sent by your JavaScript
+// We check $_POST['lesson_title'] and $_FILES['lesson_file']
+if (!isset($_POST['lesson_title']) || !isset($_FILES['lesson_file'])) {
+    echo json_encode(['success' => false, 'message' => 'Master, identity of lesson is incomplete.']);
+    exit;
+}
+
+$lessonTitle = $_POST['lesson_title'];
+$file = $_FILES['lesson_file'];
+
+// 3. ERROR TRAP: Check if the file actually arrived
+if ($file['error'] !== UPLOAD_ERR_OK) {
+    echo json_encode(['success' => false, 'message' => 'Vault Error: File upload failed at the gate.']);
+    exit;
+}
+
+// 4. DIRECTORY SANCTUM: Ensure the 'uploads' folder exists
+$targetDir = "uploads/";
+if (!is_dir($targetDir)) {
+    mkdir($targetDir, 0777, true);
+}
+
+// 5. SECURE RENAMING: Protecting the file name
+$extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+$cleanTitle = preg_replace("/[^a-zA-Z0-9]/", "_", $lessonTitle);
+$newFileName = time() . "_" . $cleanTitle . "." . $extension;
+$destination = $targetDir . $newFileName;
+
+// 6. THE FINAL STRIKE: Moving the file to the Vault
+if (move_uploaded_file($file['tmp_name'], $destination)) {
+    // Optional: If you have a 'curriculum' table, you can add a DB query here
+    echo json_encode(['success' => true, 'message' => 'STRIKE SUCCESSFUL: Curriculum Node is Live!']);
+} else {
+    echo json_encode(['success' => false, 'message' => 'Vault Rejection: Move failed. Check folder permissions.']);
+}
+?>

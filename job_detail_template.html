@@ -1,0 +1,155 @@
+﻿<?php 
+/**
+ * ABID KHAN HUB - MASTER JOB DETAIL TEMPLATE
+ */
+include('../header.php'); 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { 
+            --primary-blue: #4fc3f7; 
+            --dark-bg: #07090d; 
+            --glass-border: rgba(255, 255, 255, 0.1); 
+            --text-secondary: #b0b3b8;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-user-select: none; user-select: none; /* Security: Prevent text copying */
+        }
+
+        .job-detail-card {
+            background: rgba(13, 17, 23, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 40px;
+        }
+
+        .sticky-apply-box {
+            top: 100px;
+            background: rgba(79, 195, 247, 0.05);
+            border: 1px solid var(--primary-blue);
+            border-radius: 25px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .sticky-apply-box:hover {
+            box-shadow: 0 10px 30px rgba(79, 195, 247, 0.15);
+        }
+
+        .text-info { color: var(--primary-blue) !important; }
+        .breadcrumb-item a { text-decoration: none; font-weight: 600; }
+        
+        /* Custom Button */
+        .btn-whatsapp-apply {
+            background: var(--primary-blue);
+            color: #000;
+            font-weight: 800;
+            border-radius: 50px;
+            transition: 0.5s;
+        }
+        .btn-whatsapp-apply:hover {
+            background: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(79, 195, 247, 0.3);
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+<div class="container mt-5 mb-5">
+    <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../jobs.php" class="text-info">Career Hub</a></li>
+            <li class="breadcrumb-item active text-white" aria-current="page">Job Details</li>
+        </ol>
+    </nav>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="job-detail-card shadow-lg">
+                <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">INTERNATIONAL</span>
+                <h1 class="fw-bold mb-4">Senior Cyber Security Analyst</h1>
+                
+                <h5 class="text-info mt-4 fw-bold">Job Description</h5>
+                <p class="text-secondary leading-relaxed">
+                    We are looking for an elite Cybersecurity expert to join our global monitoring team. 
+                    You will be responsible for threat detection, incident response, and securing 
+                    cloud infrastructure for high-level pedagogy systems.
+                </p>
+
+                <h5 class="text-info mt-4 fw-bold">Technical Requirements</h5>
+                <ul class="text-secondary">
+                    <li class="mb-2">5+ Years experience in Ethical Hacking or Security Operations.</li>
+                    <li class="mb-2">Deep expertise in Linux environments, Python scripting, and Network Security.</li>
+                    <li class="mb-2">Relevant Certifications (CISSP, CEH, or Abid Khan Hub Advanced Cert).</li>
+                </ul>
+
+                <h5 class="text-info mt-4 fw-bold">Exclusive Benefits</h5>
+                <p class="text-secondary">
+                    Fully Remote work, Competitive Global Salary in USD, and unlimited access 
+                    to Abid Khan Master Class modules.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="sticky-apply-box sticky-top">
+                <h4 class="fw-bold mb-3">Apply Now</h4>
+                <p class="small text-secondary mb-4">Interested candidates should submit their Vault Identity Profile for verification.</p>
+                
+                <div class="mb-3">
+                    <small class="text-info d-block fw-bold text-uppercase" style="font-size: 0.65rem;">Location</small>
+                    <strong class="text-white">Remote / Global</strong>
+                </div>
+                
+                <div class="mb-4">
+                    <small class="text-info d-block fw-bold text-uppercase" style="font-size: 0.65rem;">Salary Range</small>
+                    <strong class="text-white">$4,000 - $6,500 / month</strong>
+                </div>
+
+                <a href="https://wa.me/923497469638" class="btn btn-whatsapp-apply w-100 py-3 mb-3">
+                    <i class="fab fa-whatsapp me-2"></i> Submit via WhatsApp
+                </a>
+                
+                <p class="text-center text-secondary mb-0" style="font-size: 0.7rem;">
+                    <i class="fas fa-shield-halved me-1"></i> Verified by Sentinel Security
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php include('../footer.php'); ?>
+
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

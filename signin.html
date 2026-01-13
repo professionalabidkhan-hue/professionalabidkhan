@@ -1,0 +1,89 @@
+﻿<?php
+session_start();
+require_once 'connect.php';
+$error = "";
+
+// MASTER OVERRIDE: If already logged in, skip the gate
+if (isset($_SESSION['user_id'])) {
+    if ($_SESSION['user_role'] === 'trainer') {
+        header("Location: DASHBOARD_MENTOR.php");
+    } else {
+        header("Location: DASHBOARD_STUDENT.php");
+    }
+    exit();
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $pass = $_POST['password'];
+
+    $sql = "SELECT * FROM ak_users WHERE email = ?";
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user && password_verify($pass, $user['password'])) {
+        // Log Identity to Session
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['user_name'] = $user['full_name'];
+        $_SESSION['user_role'] = strtolower(trim($user['user_role']));
+        $_SESSION['dept'] = strtoupper(trim($user['department']));
+        $_SESSION['profile_pic'] = $user['profile_pic'];
+
+        $role = $_SESSION['user_role'];
+        
+        // UNIFIED ROUTING: Mentor or Student
+        if ($role === 'trainer') {
+            header("Location: DASHBOARD_MENTOR.php");
+        } else {
+            header("Location: DASHBOARD_STUDENT.php");
+        }
+        exit();
+    } else {
+        $error = "Access Key Invalid.";
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <title>The Gatekeeper | ABID KHAN HUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: radial-gradient(circle at center, #1a1c2c, #07090d); height: 100vh; display: flex; align-items: center; justify-content: center; color: white; font-family: 'Inter', sans-serif; }
+        .gate-card { background: rgba(13, 17, 23, 0.95); border: 1px solid #4fc3f7; border-radius: 35px; padding: 50px; width: 420px; text-align: center; box-shadow: 0 0 50px rgba(79, 195, 247, 0.2); }
+        .master-input { background: #000; border: 1px solid #1a1c2c; color: white; border-radius: 12px; padding: 15px; width: 100%; margin-bottom: 20px; transition: 0.3s; }
+        .master-input:focus { border-color: #4fc3f7; outline: none; box-shadow: 0 0 15px rgba(79, 195, 247, 0.3); }
+        .btn-open { background: #4fc3f7; color: black; font-weight: 800; border-radius: 15px; padding: 15px; width: 100%; border: none; letter-spacing: 1px; transition: 0.4s; }
+        .btn-open:hover { background: #ffffff; transform: translateY(-3px); box-shadow: 0 5px 20px rgba(79, 195, 247, 0.5); }
+    </style>
+</head>
+<body>
+<div class="gate-card">
+    <img src="ABID KHAN.png" style="width:110px; height:110px; border-radius:50%; border:3px solid #4fc3f7; margin-bottom:25px; object-fit: cover;">
+    <h4 class="fw-bold">ABID KHAN HUB</h4>
+    <p class="text-info small mb-4" style="letter-spacing: 2px;">SECURE VAULT ACCESS</p>
+    
+    <?php if($error) echo "<div class='alert alert-danger py-2 small border-0' style='background:rgba(255,0,0,0.1); color:#ff4b2b;'>$error</div>"; ?>
+    
+    <form method="POST">
+        <input type="email" name="email" class="master-input" placeholder="Registered Email" required>
+        <input type="password" name="password" class="master-input" placeholder="Access Key" required>
+        <button type="submit" class="btn-open">OPEN VAULT</button>
+    </form>
+    
+    <div class="mt-4">
+        <a href="signup.php" class="text-secondary small text-decoration-none">New Identity? <span class="text-info">Register Here</span></a>
+    </div>
+</div>
+</body>
+</html>

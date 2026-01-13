@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABID KHAN HUB | Master Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0b63d3;
+            --cyber-cyan: #00d4ff;
+            --it-purple: #a855f7;
+            --dark-bg: #030407;
+            --gold: #FFD700;
+        }
+
+        body { 
+            background-color: var(--dark-bg); 
+            color: #fff; 
+            font-family: 'Inter', sans-serif;
+            -webkit-user-select: none; user-select: none;
+        }
+
+        /* --- CLEAN COMMAND NAVIGATION --- */
+        .navbar-custom {
+            background: rgba(3, 4, 7, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 3px solid var(--it-purple);
+            padding: 20px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+        }
+
+        .navbar-brand {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            color: #fff !important;
+            letter-spacing: 2px;
+        }
+
+        .navbar-brand img { 
+            border: 2px solid var(--gold); 
+            padding: 3px;
+            box-shadow: 0 0 15px var(--gold);
+        }
+
+        /* --- ULTRA-WHITE STRONG LINKS --- */
+        .nav-link { 
+            color: #FFFFFF !important; /* Pure White */
+            font-weight: 800 !important; /* Ultra Strong */
+            font-size: 1.2rem !important; /* Large Font */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 20px;
+            transition: 0.4s ease;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-link:hover { 
+            color: var(--cyber-cyan) !important; 
+            text-shadow: 0 0 20px var(--cyber-cyan);
+            transform: scale(1.1);
+        }
+
+        .nav-link i {
+            margin-right: 8px;
+            color: var(--gold);
+        }
+
+        /* Hide the hamburger on desktop, style it for mobile */
+        .navbar-toggler { border: 2px solid #fff; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.php">
+            <img src="ABID KHAN.png" alt="Abid Khan" width="55" height="55" class="rounded-circle me-3">
+            <span class="fw-bold">ABID KHAN HUB</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">
+                        <i class="fas fa-home"></i> HOME
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="it_panel.php">
+                        <i class="fas fa-microchip"></i> IT ACADEMY
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="islamic_studies.php">
+                        <i class="fas fa-book-open"></i> HADEECE ARCHIVE
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="jobs.php">
+                        <i class="fas fa-briefcase"></i> CAREERS
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

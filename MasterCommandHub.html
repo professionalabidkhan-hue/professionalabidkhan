@@ -1,0 +1,224 @@
+﻿<?php
+session_start();
+if(!isset($_SESSION['user_role']) || $_SESSION['user_role'] != 'trainer') { 
+    header("Location: signin.php?unauthorized_access"); exit(); 
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <title>MASTER COMMAND HUB | ABID KHAN VAULT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/all.min.css">
+    <style>
+        :root { --quran-green: #2ecc71; --accent: #00d4ff; --dark-bg: #07090d; --glass: rgba(13, 17, 23, 0.95); }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark-bg); color: #fff;
+            height: 100vh; overflow: hidden; margin: 0; user-select: none; 
+        }
+
+        /* FLEXBOX ARCHITECTURE */
+        .wrapper { display: flex; flex-direction: column; height: 100vh; }
+        
+        .shield-header { 
+            background: rgba(0,0,0,0.9); padding: 10px; border-bottom: 2px solid var(--quran-green);
+            flex-shrink: 0; z-index: 1000;
+        }
+
+        .hub-container { display: flex; flex: 1; overflow: hidden; }
+
+        /* LEFT SIDEBAR: INTERNAL SCROLL */
+        .sidebar-left { 
+            width: 320px; background: var(--glass); border-right: 1px solid rgba(255,255,255,0.1); 
+            display: flex; flex-direction: column; 
+        }
+        .registry-scroll { flex: 1; overflow-y: auto; padding: 20px; scrollbar-width: thin; }
+
+        /* MIDDLE PANEL: INTERNAL SCROLL */
+        .main-workspace { 
+            flex: 1; display: flex; flex-direction: column; 
+            background: radial-gradient(circle at bottom, #0d2b1a, #07090d); 
+            padding: 20px; border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        #chatBox { 
+            flex: 1; overflow-y: auto; background: rgba(0,0,0,0.3); 
+            border-radius: 15px; padding: 20px; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* RIGHT TOOLS: FIXED */
+        .sidebar-right { width: 220px; background: var(--glass); padding: 20px; flex-shrink: 0; }
+
+        /* UI ELEMENTS */
+        .student-item { 
+            padding: 15px; border-radius: 12px; background: rgba(255,255,255,0.03); 
+            margin-bottom: 12px; cursor: pointer; border: 1px solid transparent; transition: 0.3s;
+        }
+        .student-item:hover { border-color: var(--accent); background: rgba(0, 212, 255, 0.05); }
+        .active-target { border-color: var(--accent); background: rgba(0, 212, 255, 0.1) !important; box-shadow: 0 0 15px var(--accent); }
+
+        .tool-btn { 
+            width: 100%; padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05); margin-bottom: 15px; text-align: center; cursor: pointer; color: #fff;
+        }
+        .tool-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .rec-active { color: #ff4b2b !important; animation: blink 1.5s infinite; }
+        @keyframes blink { 50% { opacity: 0.5; } }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="shield-header text-center">
+        <h6 class="text-success mb-0 fw-bold">Ø¨ÙØ³Ù’Ù…Ù Ø§Ù„Ù„ÙŽÙ‘Ù‡Ù Ø§Ù„ÙŽÙ‘Ø°ÙÙŠ Ù„ÙŽØ§ ÙŠÙŽØ¶ÙØ±ÙÙ‘ Ù…ÙŽØ¹ÙŽ Ø§Ø³Ù’Ù…ÙÙ‡Ù Ø´ÙŽÙŠÙ’Ø¡ÙŒ ÙÙÙŠ Ø§Ù„Ù’Ø£ÙŽØ±Ù’Ø¶Ù ÙˆÙŽÙ„ÙŽØ§ ÙÙÙŠ Ø§Ù„Ø³ÙŽÙ‘Ù…ÙŽØ§Ø¡Ù ÙˆÙŽÙ‡ÙÙˆÙŽ Ø§Ù„Ø³ÙŽÙ‘Ù…ÙÙŠØ¹Ù Ø§Ù„Ù’Ø¹ÙŽÙ„ÙÙŠÙ…Ù</h6>
+    </div>
+
+    <div class="hub-container">
+        <div class="sidebar-left">
+            <div class="p-3 border-bottom border-secondary"><h5 class="mb-0">REGISTRY</h5></div>
+            <div class="registry-scroll">
+                <?php for($i=1; $i<=15; $i++): ?>
+                <div class="student-item" onclick="selectStudent('Disciple <?php echo $i; ?>', 'QURAN')">
+                    <small class="text-success">QURAN</small><br><b>Disciple <?php echo $i; ?></b>
+                </div>
+                <?php endfor; ?>
+            </div>
+        </div>
+
+        <div class="main-workspace">
+            <h4 id="chatHeader" class="mb-3 text-info">Select Disciple</h4>
+            <div id="chatBox">
+                <div class="text-secondary">[GATEWAY]: Secure connection standby...</div>
+            </div>
+            <div class="input-group">
+                <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Type command...">
+                <button class="btn btn-info"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <div class="sidebar-right">
+            <h6 class="text-center mb-4 text-secondary">COMMAND TOOLS</h6>
+            <div class="tool-btn" onclick="toggleScreenShare()" id="shareBtn">
+                <i class="fas fa-desktop fa-lg mb-2"></i><br><small>SCREEN</small>
+            </div>
+            <div class="tool-btn" onclick="toggleRecording()" id="recBtn">
+                <i class="fas fa-circle fa-lg mb-2 text-danger"></i><br><small>RECORD</small>
+            </div>
+            <div class="tool-btn" onclick="startVoiceCall()">
+                <i class="fas fa-phone-alt fa-lg mb-2 text-success"></i><br><small>VOICE</small>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let selectedStudent = null;
+    let recorder;
+    let chunks = [];
+
+    // 1. DYNAMIC REGISTRY SELECTION
+    function selectStudent(name, dept) {
+        selectedStudent = name;
+        document.getElementById('chatHeader').innerText = "Commanding: " + name + " [" + dept + "]";
+        
+        // Visual indicator logic
+        document.querySelectorAll('.student-item').forEach(el => el.classList.remove('active-target'));
+        if(event) event.currentTarget.classList.add('active-target');
+        
+        const chatBox = document.getElementById('chatBox');
+        chatBox.innerHTML += `<div class='text-info' style='border-left: 2px solid var(--accent); padding-left: 10px; margin-top: 5px;'>
+            [SYSTEM]: Focal Point shifted to ${name}. Gateway Ready.
+        </div>`;
+        
+        // Auto-scroll to bottom of chat
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    // 2. ACTIVATING SECURE VOICE LINK
+    async function startVoiceCall() {
+        if(!selectedStudent) {
+            alert("COMMAND DENIED: Select a Disciple from the Registry.");
+            return;
+        }
+        
+        try {
+            // Requesting Hardware Access
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            const ringtone = new Audio('https://www.soundjay.com/phone/phone-calling-1.mp3'); 
+            ringtone.play();
+            
+            document.getElementById('chatBox').innerHTML += `<div class='text-success'>[VOICE]: Secure audio uplink initiated with ${selectedStudent}...</div>`;
+        } catch (err) {
+            alert("SECURITY BLOCK: Microphone access denied. Ensure you are using HTTPS or a secure tunnel.");
+        }
+    }
+
+    // 3. MASTER SCREEN BROADCAST
+    async function toggleScreenShare() {
+        if(!selectedStudent) return alert("TARGET REQUIRED.");
+        
+        try {
+            const screenStream = await navigator.mediaDevices.getDisplayMedia({ video: true });
+            document.getElementById('shareBtn').classList.add('rec-active');
+            document.getElementById('chatBox').innerHTML += `<div class='text-info'>[UPLINK]: Broadcasting Master Screen to ${selectedStudent}.</div>`;
+            
+            // Handle when you stop sharing via browser button
+            screenStream.getVideoTracks()[0].onended = () => {
+                document.getElementById('shareBtn').classList.remove('rec-active');
+                document.getElementById('chatBox').innerHTML += `<div class='text-secondary'>[UPLINK]: Broadcast terminated.</div>`;
+            };
+        } catch (err) {
+            console.error("Screen Share Error: ", err);
+        }
+    }
+
+    // 4. SECURE SESSION RECORDING
+    async function toggleRecording() {
+        const btn = document.getElementById('recBtn');
+        if (!recorder || recorder.state === "inactive") {
+            try {
+                const stream = await navigator.mediaDevices.getDisplayMedia({ video: true, audio: true });
+                recorder = new MediaRecorder(stream);
+                chunks = [];
+                
+                recorder.ondataavailable = e => chunks.push(e.data);
+                recorder.onstop = () => {
+                    const blob = new Blob(chunks, { type: 'video/webm' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `LECTURE_${selectedStudent}_${new Date().getTime()}.webm`;
+                    a.click();
+                };
+                
+                recorder.start();
+                btn.querySelector('i').classList.add('rec-active');
+                document.getElementById('chatBox').innerHTML += `<div class='text-danger'>[REC]: Recording Master Lecture for ${selectedStudent}...</div>`;
+            } catch (err) { alert("Recording failed: Check permissions."); }
+        } else {
+            recorder.stop();
+            btn.querySelector('i').classList.remove('rec-active');
+        }
+    }
+
+    // 5. STEALTH & SECURITY PROTOCOLS
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = e => {
+        // Disable F12, Ctrl+Shift+I, Ctrl+U (View Source)
+        if (e.keyCode == 123 || 
+           (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || 
+           (e.ctrlKey && e.keyCode == 85)) {
+            return false;
+        }
+    };
+</script>
+
+</body>
+</html>

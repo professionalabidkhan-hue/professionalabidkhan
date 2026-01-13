@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <title>Verify Identity | ABID KHAN HUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html { height: 100%; margin: 0; background: #07090d; display: flex; align-items: center; justify-content: center; }
+        .glass-card { background: rgba(13, 17, 23, 0.85); border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; padding: 50px; text-align: center; max-width: 400px; }
+        .otp-input { background: #000 !important; color: #4fc3f7 !important; font-size: 2.5rem !important; border-radius: 15px !important; border: 1px solid #4fc3f7 !important; letter-spacing: 10px; font-weight: bold; }
+        .btn-verify { background: #4fc3f7 !important; color: #000 !important; font-weight: 800; border-radius: 15px; padding: 15px; width: 100%; border: none; }
+    </style>
+</head>
+<body>
+
+<div class="glass-card">
+    <h3 class="text-white mb-3">Verify Key</h3>
+    <p class="text-secondary small mb-4">Enter the 6-digit code sent to your email.</p>
+    
+    <form action="process_verification.php" method="POST">
+        <input type="text" name="otp" class="form-control otp-input mb-4" maxlength="6" required placeholder="000000">
+        <button type="submit" class="btn btn-verify">VALIDATE IDENTITY</button>
+    </form>
+</div>
+
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

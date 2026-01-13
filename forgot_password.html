@@ -1,0 +1,97 @@
+﻿<?php
+require_once 'connect.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <title>Vault Recovery | ABID KHAN HUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary-blue: #4fc3f7; --dark-bg: #07090d; --border: rgba(255, 255, 255, 0.1); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: radial-gradient(circle at top right, #1a1c2c, #07090d); color: #fff; height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0; }
+        .recovery-card { background: rgba(13, 17, 23, 0.85); backdrop-filter: blur(25px); border: 1px solid var(--border); border-radius: 35px; padding: 40px; width: 450px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .master-label { font-size: 0.7rem; color: var(--primary-blue); text-transform: uppercase; letter-spacing: 1.5px; }
+        .form-control { background-color: #000 !important; border: 1px solid var(--border); color: #fff !important; border-radius: 12px; margin-bottom: 20px; padding: 12px; }
+        .btn-recovery { background: linear-gradient(45deg, #4fc3f7, #2196f3); color: #000; font-weight: 800; border: none; padding: 15px; border-radius: 15px; width: 100%; transition: 0.3s; text-transform: uppercase; }
+        .btn-recovery:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(79, 195, 247, 0.4); }
+    </style>
+</head>
+<body>
+<div class="recovery-card text-center">
+    <i class="fas fa-user-shield fa-3x text-info mb-4"></i>
+    <h3 class="fw-bold">IDENTITY RECOVERY</h3>
+    <p class="text-secondary small mb-4">Verification required to bypass Access Key encryption.</p>
+    
+    <div id="recovery-ui">
+        <div class="text-start">
+            <span class="master-label">Registered Email</span>
+            <input type="email" id="recovery-email" class="form-control" placeholder="master@example.com">
+        </div>
+        <button type="button" onclick="verifyAndRequest()" id="recovery-btn" class="btn-recovery">Verify & Request Unlock</button>
+    </div>
+
+    <div id="response-area" class="mt-3"></div>
+
+    <div class="mt-4">
+        <a href="signin.php" class="text-info text-decoration-none small"><i class="fas fa-arrow-left me-2"></i>Return to Gate</a>
+    </div>
+</div>
+<script>
+    async function verifyAndRequest() {
+        const email = document.getElementById('recovery-email').value;
+        const btn = document.getElementById('recovery-btn');
+        const area = document.getElementById('response-area');
+
+        if(!email) { alert("Identity Email is required."); return; }
+
+        btn.disabled = true;
+        btn.innerText = "SEARCHING VAULT...";
+
+        try {
+            // Ensure this filename matches EXACTLY with the file created below
+            const response = await fetch('recovery_process.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email })
+            });
+            
+            // If the server returns 404 or 500, catch it here
+            if (!response.ok) throw new Error('Server responded with ' + response.status);
+
+            const data = await response.json();
+
+            if(data.success) {
+                area.innerHTML = `
+                    <div class='alert alert-success border-0 bg-success text-white small py-3'>
+                        <i class="fas fa-check-circle me-2"></i> IDENTITY CONFIRMED.
+                    </div>
+                    <p class="small text-secondary mb-3">WhatsApp Gateway is ready for manual unlock.</p>
+                    <a href="${data.wa_link}" target="_blank" class="btn btn-light w-100 py-3 fw-bold rounded-3 shadow">
+                        <i class="fab fa-whatsapp me-2 text-success"></i> REQUEST ACCESS FROM MASTER
+                    </a>`;
+                document.getElementById('recovery-ui').style.display = 'none';
+            } else {
+                area.innerHTML = `<div class='alert alert-danger border-0 bg-danger text-white small'>${data.message}</div>`;
+                btn.disabled = false;
+                btn.innerText = "Verify & Request Unlock";
+            }
+        } catch (e) {
+            console.error("Sentinel Debug Info:", e);
+            alert("Sentinel Connection Error: " + e.message);
+            btn.disabled = false;
+            btn.innerText = "Verify & Request Unlock";
+        }
+    }
+</script>
+
+</body>
+</html>

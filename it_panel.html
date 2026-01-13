@@ -1,0 +1,213 @@
+﻿<?php 
+// Include your existing header
+include('header.php'); 
+?>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IT Panel | Abid Khan Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@600;800&display=swap" rel="stylesheet">
+
+<style>
+/* --- MASTER CHIEF SUPREME IT PANEL CSS --- */
+:root {
+    --dark-bg: #030508;
+    --primary-blue: #0b63d3;
+    --it-purple: #a855f7;
+    --cyber-blue: #00d4ff;
+    --neon-green: #00ff00;
+    --glass-white: rgba(255, 255, 255, 0.03);
+    --gold: #FFD700;
+}
+
+body {
+    background: radial-gradient(circle at center, #0a0b1e 0%, #030508 100%) !important;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+
+/* --- ENHANCED WHITE TYPOGRAPHY --- */
+.course-title-master {
+    color: #FFFFFF !important;
+    font-size: 1.5rem !important; /* Increased font size */
+    font-weight: 800 !important;   /* Stronger weight */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    display: block;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.it-btn {
+    background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-decoration: none;
+    display: block;
+    height: 100%;
+}
+
+.it-btn:hover {
+    background: rgba(168, 85, 247, 0.25);
+    border-color: #ffffff; /* White border on hover for strength */
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+}
+
+.it-btn i {
+    font-size: 3.5rem; /* Massive icons */
+    margin-bottom: 20px;
+    color: var(--cyber-blue);
+    filter: drop-shadow(0 0 12px var(--cyber-blue));
+    transition: 0.4s;
+}
+
+.it-btn:hover .course-title-master {
+    text-shadow: 0 0 15px #ffffff; /* Glowing white text on hover */
+}
+
+/* --- COMMAND BUTTON --- */
+.btn-return-dashboard {
+    background: transparent;
+    border: 3px solid var(--gold);
+    color: var(--gold) !important;
+    padding: 18px 45px;
+    font-weight: 900;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-return-dashboard:hover {
+    background: var(--gold);
+    color: #000 !important;
+}
+
+.blink { animation: blinker 1.5s linear infinite; }
+@keyframes blinker { 50% { opacity: 0; } }
+
+/* --- AI INTERFACE --- */
+#ai-command-sector {
+    border: 2px solid var(--neon-green) !important;
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.3);
+}
+
+.ai-msg {
+    font-family: 'Courier New', monospace;
+    background: rgba(0, 255, 0, 0.08) !important;
+    border: 1px solid rgba(0, 255, 0, 0.4) !important;
+}
+</style>
+</head>
+<body>
+
+<div class="container mt-5 pt-4">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-8">
+            <h1 class="fw-bold text-uppercase" style="color: #ffffff; font-family: 'Orbitron', sans-serif; letter-spacing: 5px;">
+                Technical Excellence Laboratory
+            </h1>
+            <p class="text-secondary fs-4">Select a specialized IT module below</p>
+            <a href="DASHBOARD_IT_MENTOR.php" class="btn-return-dashboard">
+                <i class="fas fa-th-large"></i> COMMAND BRIDGE
+            </a>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="p-4 rounded border-2 border border-info bg-dark text-center shadow-lg">
+                <small class="text-info fw-bold text-uppercase" style="letter-spacing: 2px;">Live Global Nodes</small>
+                <h1 class="text-white fw-bold display-4 mb-0" id="userCount">38</h1>
+                <span class="badge bg-success blink p-2 mt-2">SYSTEM ONLINE</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-5 mb-5">
+    <?php
+    $courses = [
+        "MS Office" => ["fa-file-word", "3 Months"],
+        "Graphic Designing" => ["fa-palette", "6 Months"],
+        "Website Development" => ["fa-code", "6 Months"],
+        "Android App Development" => ["fa-android", "2 Years"],
+        "Advance Excel & Spreadsheets" => ["fa-file-excel", "3 Months"],
+        "Ethical Hacking" => ["fa-user-secret", "6 Months"],
+        "Network Security" => ["fa-shield-halved", "6 Months"],
+        "IT Security Architecture" => ["fa-sitemap", "2 Years"],
+        "Data Science" => ["fa-database", "2 Years"],
+        "Data Analytics" => ["fa-chart-pie", "6 Months"],
+        "Big Data" => ["fa-server", "6 Months"],
+        "Cloud Infrastructure" => ["fa-cloud", "6 Months"],
+        "Python" => ["fa-brands fa-python", "3 Months"],
+        "AI Fundamentals" => ["fa-brain", "6 Months"],
+        "Machine Learning" => ["fa-robot", "2 Years"],
+        "Full Stack Development" => ["fa-layer-group", "2 Years"],
+        "UI UX Design" => ["fa-pen-nib", "3 Months"],
+        "Digital Marketing & SEO" => ["fa-magnifying-glass-chart", "6 Months"]
+    ];
+
+    foreach ($courses as $name => $data) {
+        $icon = $data[0];
+        $duration = $data[1];
+        $file_link = str_replace([' ', '&'], ['_', 'and'], strtolower($name)) . ".php";
+        
+        echo '
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="courses/'.$file_link.'" class="it-btn position-relative">
+                <span class="badge position-absolute top-0 end-0 m-3 p-2 fs-6" style="background-color: var(--it-purple) !important;">
+                    '.$duration.'
+                </span>
+                <i class="fas '.$icon.'"></i>
+                <span class="course-title-master">'.$name.'</span>
+            </a>
+        </div>';
+    }
+    ?>
+    </div>
+</div>
+
+<div id="ai-launcher" onclick="toggleAI()" style="position:fixed; bottom:20px; right:20px; width:80px; height:80px; background:#000; border:3px solid #00ff00; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow: 0 0 30px rgba(0, 255, 0, 0.8); z-index:10000;">
+    <div id="launcher-inner" style="width:60px; height:60px; border-radius:50%; border:2px solid #00ff00; display:flex; align-items:center; justify-content:center; animation: pulse-border 2s infinite;">
+        <span style="font-size:12px; color:#00ff00; font-weight:bold; text-align:center;">DR. MASTER<br>CHIEF</span>
+    </div>
+</div>
+
+
+
+<script>
+    // Real-time Node Monitoring
+    setInterval(() => {
+        let count = Math.floor(Math.random() * (48 - 38 + 1)) + 38;
+        let el = document.getElementById('userCount');
+        if(el) el.innerText = count;
+    }, 4000);
+
+    // Disable Inspect Element for Security
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+﻿<?php 
+if (file_exists('../header.php')) {
+    include('../header.php'); 
+}
+?>
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noorani Qaida Tutorials & Ahadith | Abid Khan Hub</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Noto+Nastaliq+Urdu&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --it-purple: #6f42c1; --gold: #ffd700; --cyber-cyan: #00f2ff; --emerald: #198754; }
+        body { font-family: 'Noto Nastaliq Urdu', serif; background-color: #f4f7f6; -webkit-user-select: none; user-select: none; }
+        
+        .pdf-dashboard {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 100%);
+            border-radius: 20px; padding: 40px; border-bottom: 5px solid var(--gold);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .btn-action { font-family: 'Orbitron', sans-serif; letter-spacing: 1px; padding: 15px 30px; border-radius: 50px; font-weight: bold; transition: 0.4s; }
+        .btn-view { border: 2px solid var(--cyber-cyan); color: var(--cyber-cyan); background: transparent; }
+        .btn-view:hover { background: var(--cyber-cyan); color: #000; }
+        
+        .table-custom { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .table-custom thead { background: var(--it-purple); color: white; font-family: 'Orbitron', sans-serif; }
+        
+        .hadith-card { background: #fff; border-radius: 15px; border-right: 5px solid var(--emerald); margin-bottom: 20px; transition: 0.3s; }
+        .arabic-text { font-family: 'Amiri', serif; font-size: 2rem; color: #1a1a1a; }
+        .ref-badge { background: #e9f7ef; color: var(--emerald); padding: 4px 12px; border-radius: 10px; font-size: 0.8rem; font-weight: bold; }
+        .price-tag { display: block; font-size: 0.9rem; color: var(--it-purple); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-5">
+        <button onclick="openMyPdf()" class="btn btn-action btn-view w-100">
+            <i class="fas fa-eye me-2"></i> OPEN PDF
+        </button>
+    </div>
+    <div class="col-md-5">
+        <a href="../noorani_qaida.pdf" download="noorani_qaida.pdf" class="btn btn-action btn-view w-100" style="border-color: var(--gold); color: var(--gold);">
+            <i class="fas fa-download me-2"></i> DOWNLOAD PDF
+        </a>
+    </div>
+</div>
+
+    <section class="mb-5">
+        <h3 class="text-center mb-4 fw-bold" style="font-family: 'Orbitron', sans-serif; color: var(--it-purple);">TUTORIAL SCHEDULE & FEES</h3>
+        <div class="table-responsive table-custom">
+            <table class="table table-hover text-center align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>Course Level</th>
+                        <th>Duration</th>
+                        <th>Timing (PKT)</th>
+                        <th>Monthly Fee</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Beginner (Qaida)</strong></td>
+                        <td>3 Months</td>
+                        <td>04:00 PM - 05:00 PM</td>
+                        <td>
+                            2000 PKR 
+                            <span class="price-tag">(Â£100 GBP)</span>
+                        </td>
+                        <td><span class="badge bg-success">Enrolling</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Intermediate (Tajweed)</strong></td>
+                        <td>4 Months</td>
+                        <td>05:30 PM - 06:30 PM</td>
+                        <td>
+                            3000 PKR 
+                            <span class="price-tag">(Â£100 GBP)</span>
+                        </td>
+                        <td><span class="badge bg-success">Enrolling</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advanced (Hifz)</strong></td>
+                        <td>Ongoing</td>
+                        <td>07:00 PM - 09:00 PM</td>
+                        <td>
+                            5000 PKR 
+                            <span class="price-tag">(Â£170 GBP)</span>
+                        </td>
+                        <td><span class="badge bg-warning">Waitlist</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="mt-5">
+        <h3 class="text-center mb-5 fw-bold" style="font-family: 'Orbitron', sans-serif; color: var(--emerald);">SAHIH AL-BUKHARI: SELECTED AHADITH</h3>
+        
+        <?php
+        $ahadith = [
+            ["Ø¥ÙÙ†ÙŽÙ‘Ù…ÙŽØ§ Ø§Ù„Ø£ÙŽØ¹Ù’Ù…ÙŽØ§Ù„Ù Ø¨ÙØ§Ù„Ù†ÙÙ‘ÙŠÙŽÙ‘Ø§ØªÙ", "Ø§Ø¹Ù…Ø§Ù„ Ú©Ø§ Ø¯Ø§Ø±ÙˆÙ…Ø¯Ø§Ø± Ù†ÛŒØªÙˆÚº Ù¾Ø± ÛÛ’Û”", "Actions are judged by intentions.", "Bukhari: 1"],
+            ["Ø§Ù„Ù…Ø³Ù„Ù… Ù…Ù† Ø³Ù„Ù… Ø§Ù„Ù…Ø³Ù„Ù…ÙˆÙ† Ù…Ù† Ù„Ø³Ø§Ù†Ù‡ ÙˆÙŠØ¯Ù‡", "Ù…Ø³Ù„Ù…Ø§Ù† ÙˆÛ ÛÛ’ Ø¬Ø³ Ú©ÛŒ Ø²Ø¨Ø§Ù† Ø§ÙˆØ± ÛØ§ØªÚ¾ Ø³Û’ Ø¯ÙˆØ³Ø±Û’ Ù…Ø³Ù„Ù…Ø§Ù† Ù…Ø­ÙÙˆØ¸ Ø±ÛÛŒÚºÛ”", "A Muslim is one from whose tongue and hands others are safe.", "Bukhari: 10"],
+            ["Ù„Ø§ ÙŠØ¤Ù…Ù† Ø£Ø­Ø¯ÙƒÙ… Ø­ØªÙ‰ ÙŠØ­Ø¨ Ù„Ø£Ø®ÙŠÙ‡ Ù…Ø§ ÙŠØ­Ø¨ Ù„Ù†ÙØ³Ù‡", "ØªÙ… Ù…ÛŒÚº Ø³Û’ Ú©ÙˆØ¦ÛŒ Ù…ÙˆÙ…Ù† Ù†ÛÛŒÚº ÛÙˆ Ø³Ú©ØªØ§ Ø¬Ø¨ ØªÚ© ÙˆÛ Ø§Ù¾Ù†Û’ Ø¨Ú¾Ø§Ø¦ÛŒ Ú©Û’ Ù„ÛŒÛ’ ÙˆÛÛŒ Ù¾Ø³Ù†Ø¯ Ù†Û Ú©Ø±Û’ Ø¬Ùˆ Ø§Ù¾Ù†Û’ Ù„ÛŒÛ’ Ú©Ø±ØªØ§ ÛÛ’Û”", "None of you has faith until he loves for his brother what he loves for himself.", "Bukhari: 13"],
+            ["Ø®ÙŽÙŠÙ’Ø±ÙÙƒÙÙ…Ù’ Ù…ÙŽÙ†Ù’ ØªÙŽØ¹ÙŽÙ„ÙŽÙ‘Ù…ÙŽ Ø§Ù„Ù’Ù‚ÙØ±Ù’Ø¢Ù†ÙŽ ÙˆÙŽØ¹ÙŽÙ„ÙŽÙ‘Ù…ÙŽÙ‡Ù", "ØªÙ… Ù…ÛŒÚº Ø³Û’ Ø¨ÛØªØ±ÛŒÙ† ÙˆÛ ÛÛ’ Ø¬Ùˆ Ù‚Ø±Ø¢Ù† Ø³ÛŒÚ©Ú¾Û’ Ø§ÙˆØ± Ø³Ú©Ú¾Ø§Ø¦Û’Û”", "The best among you are those who learn the Quran and teach it.", "Bukhari: 5027"],
+            ["Ù…ÙŽÙ†Ù’ Ù„Ø§ ÙŠÙŽØ±Ù’Ø­ÙŽÙ…Ù Ù„Ø§ ÙŠÙØ±Ù’Ø­ÙŽÙ…Ù", "Ø¬Ùˆ Ø±Ø­Ù… Ù†ÛÛŒÚº Ú©Ø±ØªØ§ Ø§Ø³ Ù¾Ø± Ø±Ø­Ù… Ù†ÛÛŒÚº Ú©ÛŒØ§ Ø¬Ø§ØªØ§Û”", "He who is not merciful will not be shown mercy.", "Bukhari: 5997"],
+            ["Ø§Ù„Ø¯ÙÙ‘ÙŠÙ†Ù Ø§Ù„Ù†ÙŽÙ‘ØµÙÙŠØ­ÙŽØ©Ù", "Ø¯ÛŒÙ† Ø®ÛŒØ± Ø®ÙˆØ§ÛÛŒ Ú©Ø§ Ù†Ø§Ù… ÛÛ’Û”", "Religion is sincerity.", "Muslim"],
+            ["Ø§Ù„Ù’ÙƒÙŽÙ„ÙÙ…ÙŽØ©Ù Ø§Ù„Ø·ÙŽÙ‘ÙŠÙÙ‘Ø¨ÙŽØ©Ù ØµÙŽØ¯ÙŽÙ‚ÙŽØ©ÙŒ", "Ù¾Ø§Ú©ÛŒØ²Û Ø¨Ø§Øª Ú©Ø±Ù†Ø§ ØµØ¯Ù‚Û ÛÛ’Û”", "A good word is charity.", "Bukhari: 2989"],
+            ["Ø¨ÙŽÙ„ÙÙ‘ØºÙÙˆØ§ Ø¹ÙŽÙ†ÙÙ‘ÙŠ ÙˆÙŽÙ„ÙŽÙˆÙ’ Ø¢ÙŠÙŽØ©Ù‹", "Ù…ÛŒØ±ÛŒ Ø·Ø±Ù Ø³Û’ Ù¾ÛÙ†Ú†Ø§ Ø¯Ùˆ Ø®ÙˆØ§Û Ø§ÛŒÚ© ÛÛŒ Ø¢ÛŒØª ÛÙˆÛ”", "Convey from me even if it is one verse.", "Bukhari: 3461"],
+            ["Ø§Ù„Ù’Ø­ÙŽÙŠÙŽØ§Ø¡Ù Ø´ÙØ¹Ù’Ø¨ÙŽØ©ÙŒ Ù…ÙÙ†ÙŽ Ø§Ù„Ø¥ÙÙŠÙ…ÙŽØ§Ù†Ù", "Ø­ÛŒØ§ Ø§ÛŒÙ…Ø§Ù† Ú©ÛŒ Ø§ÛŒÚ© Ø´Ø§Ø® ÛÛ’Û”", "Modesty is a branch of faith.", "Bukhari: 9"],
+            ["ÙŠÙŽØ³ÙÙ‘Ø±ÙÙˆØ§ ÙˆÙŽÙ„Ø§ ØªÙØ¹ÙŽØ³ÙÙ‘Ø±ÙÙˆØ§", "Ø¢Ø³Ø§Ù†ÛŒ Ù¾ÛŒØ¯Ø§ Ú©Ø±Ùˆ Ø§ÙˆØ± ØªÙ†Ú¯ÛŒ Ù…ÛŒÚº Ù†Û ÚˆØ§Ù„ÙˆÛ”", "Make things easy and do not make them difficult.", "Bukhari: 6125"]
+        ];
+
+        foreach ($ahadith as $h) {
+            echo '
+            <div class="card hadith-card p-4 shadow-sm">
+                <div class="text-center">
+                    <span class="ref-badge mb-2 d-inline-block">'.$h[3].'</span>
+                    <p class="arabic-text">'.$h[0].'</p>
+                    <p class="urdu-text mt-3">'.$h[1].'</p>
+                    <p class="english-text">'.$h[2].'</p>
+                </div>
+            </div>';
+        }
+        ?>
+    </div>
+</div>
+
+<script>
+    // Security Script
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode))) return false;
+    };
+</script>
+
+<?php 
+    if (file_exists('../footer.php')) {
+        include('../footer.php'); 
+    } else {
+        echo '<footer class="text-center py-4 text-muted border-top">Â© 2026 ABID KHAN HUB</footer>';
+    }
+?>
+</body>
+</html>

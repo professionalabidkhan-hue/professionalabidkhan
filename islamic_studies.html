@@ -1,0 +1,184 @@
+﻿<?php include('header.php'); ?>
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+                                   initial-scale=1.0">
+    <title>ABID KHAN E PEDAGOGY HUB</title>
+    <link rel="stylesheet" href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+<style>
+    /* Styling for the Course Portal */
+    :root {
+        --abid-gold: #ffd600;
+        --paletteColor2: #0e132b;
+        --paletteColor3: #f21d44;
+    }
+
+    .course-card {
+        border-radius: 20px;
+        border: 2px solid #eee;
+        transition: all 0.4s ease;
+        background: #fff;
+        height: 100%;
+        overflow: hidden;
+        cursor: pointer; /* Makes the whole card feel like a button */
+    }
+
+    .course-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--abid-gold);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    .course-icon {
+        font-size: 50px;
+        color: var(--paletteColor3);
+        margin-bottom: 20px;
+    }
+
+    .portal-title {
+        font-family: 'Amiri', serif;
+        font-size: 45px;
+        font-weight: 700;
+        color: var(--paletteColor2);
+    }
+
+    /* Fixed Button Styling */
+    .btn-hub {
+        background-color: var(--paletteColor2);
+        color: white !important;
+        font-weight: 700;
+        padding: 12px 30px;
+        border-radius: 50px;
+        text-transform: uppercase;
+        border: none;
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .btn-hub:hover {
+        background-color: var(--paletteColor3);
+        transform: scale(1.05);
+    }
+
+    .urdu-intro {
+        font-family: 'Noto Nastaliq Urdu', serif;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 2.2;
+    }
+
+    /* Ensure consistent font weights for text */
+    .dhikr-strong {
+        font-weight: 700;
+        font-size: 18px;
+    }
+    
+    .urdu-strong {
+        font-family: 'Noto Nastaliq Urdu', serif;
+        font-weight: 700;
+    }
+</style>
+
+
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 style="font-family: 'Amiri'; font-size: 4rem;">Islamic Studies</h1>
+        <p class="urdu-strong text-center text-success">Ø¬Ø§Ù…Ø¹ Ø§Ø³Ù„Ø§Ù…ÛŒ ØªØ¹Ù„ÛŒÙ…ÛŒ Ù¾Ø±ÙˆÚ¯Ø±Ø§Ù…</p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="course-card p-4 text-center" onclick="window.location.href='hifzulquran.php';">
+                <i class="fas fa-quran fa-3x mb-3 text-danger"></i>
+                <h3 class="fw-bold">Quran Hifz</h3>
+                <p class="urdu-strong" style="font-size: 20px;">Ø­ÙØ¸ Ø§Ù„Ù‚Ø±Ø¢Ù† Ø§Ù„Ú©Ø±ÛŒÙ…</p>
+                <a href="hifzulquran.php" class="btn btn-hub mt-2">Start Hifz</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="course-card p-4 text-center" onclick="window.location.href='morning-evening-azkaar.php';">
+                <i class="fas fa-praying-hands fa-3x mb-3 text-danger"></i>
+                <h3 class="fw-bold">Daily Azkaar</h3>
+                <p class="urdu-strong" style="font-size: 20px;">ØµØ¨Ø­ Ùˆ Ø´Ø§Ù… Ú©Û’ Ø§Ø°Ú©Ø§Ø±</p>
+                <a href="morning-evening-azkaar.php" class="btn btn-hub mt-2">View Azkaar</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="course-card p-4 text-center" onclick="window.location.href='tajweed-mastery.php';">
+                <i class="fas fa-microphone-alt fa-3x mb-3 text-danger"></i>
+                <h3 class="fw-bold">Tajweed Rules</h3>
+                <p class="urdu-strong" style="font-size: 20px;">ØªØ¬ÙˆÛŒØ¯ Ú©Û’ Ù‚ÙˆØ§Ø¹Ø¯</p>
+                <a href="tajweed-mastery.php" class="btn btn-hub mt-2">Learn Tajweed</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="course-card p-4 text-center" onclick="window.location.href='tafseer_studies.php';">
+                <i class="fas fa-book-open fa-3x mb-3 text-danger"></i>
+                <h3 class="fw-bold">Tafseer Studies</h3>
+                <p class="urdu-strong" style="font-size: 20px;">ØªÙØ³ÛŒØ± Ø§Ù„Ù‚Ø±Ø¢Ù† Ø§Ù„Ú©Ø±ÛŒÙ…</p>
+                <a href="tafseer_studies.php" class="btn btn-hub mt-2">Explore Tafseer</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="course-card p-4 text-center" onclick="window.location.href='noorani_qaida.php';">
+                <i class="fas fa-child fa-3x mb-3 text-danger"></i>
+                <h3 class="fw-bold">Basic Qaida & Nazra</h3>
+                <p class="urdu-strong" style="font-size: 20px;">Ø¨Ù†ÛŒØ§Ø¯ÛŒ Ù‚Ø§Ø¹Ø¯Û Ø§ÙˆØ± Ù†Ø§Ø¸Ø±Û</p>
+                <a href="noorani_qaida.php" class="btn btn-hub mt-2">Start Learning</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 pt-5">
+        <h2 class="fw-bold text-center mb-4">Course Duration & Fee Structure</h2>
+        <div class="table-responsive shadow rounded-4">
+            <table class="table table-hover bg-white mb-0 align-middle text-center">
+                <thead class="bg-dark text-white">
+                    <tr class="dhikr-strong" style="font-size: 20px;">
+                        <th class="py-3">Course</th>
+                        <th>Duration</th>
+                        <th>Timing</th>
+                        <th>Monthly Fee</th>
+                    </tr>
+                </thead>
+                <tbody class="dhikr-strong" style="font-size: 22px;">
+                    <tr><td>Basic Qaida</td><td>6 Months</td><td>30m / 5 Days</td><td class="text-danger">$30</td></tr>
+                    <tr><td>Nazra Quran</td><td>1 Year</td><td>30m / 5 Days</td><td class="text-danger">$35</td></tr>
+                    <tr><td>Hifz Quran</td><td>3 Years</td><td>60m / 5 Days</td><td class="text-danger">$50</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<?php include('footer.php'); ?>
+
+    <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
+    </script>
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

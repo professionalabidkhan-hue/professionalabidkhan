@@ -1,0 +1,19 @@
+About Abid Khan: Bridging Divine Wisdom & Digital Excellence
+
+Welcome to Abid Khan Pedagogy, where we believe that true success in 2026 requires a balance of spiritual grounding and modern technical skill. My name is Abid Khan, and I have dedicated my life to being a Tajweed Teacher and an IT Consultant, helping students worldwide excel in both worlds.
+Spiritual Education (Holy Quran)
+
+I specialize in Online Quran Teaching with a strict focus on Tajweed. My mission is to ensure every student masters the Holy Quran with Tajweed, focusing on correct Makharij (pronunciation) and soul-stirring recitation. Whether you are a beginner or looking for advanced Online Quran Learning, my pedagogy is designed to make the words of Allah clear and easy to understand.
+Digital Empowerment (IT Courses)
+
+In the fast-paced world of technology, I provide high-impact IT Online Courses. From web development to digital security, my IT Courses are built for those who want to remain unique and distinguished in the global market.
+
+Why Choose Abid Khan Pedagogy?
+
+    One-on-One Attention: Personalized Online Quran sessions tailored to your pace.
+
+    Modern E-Learning: Using 2026’s best digital tools for an interactive experience.
+
+    Distinguished Results: A unique blend of Tajweed and IT skills you won't find anywhere else.
+
+“Start your journey today with the name of Allah, and let us build your future together.”

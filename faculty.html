@@ -1,0 +1,25 @@
+<?php
+// faculty.php - The Institute Pillars
+include('header.php');
+include('ai_assistant.php'); 
+?>
+<div class="container mt-5 pt-5">
+    <h1 class="text-center fw-bold mb-5">INSTITUTE <span style="color: #c5a059;">FACULTY</span></h1>
+    <div class="row g-4">
+        <div class="col-md-6 mx-auto">
+            <div class="admin-card text-center p-5" style="border: 2px solid #c5a059; background: #1e293b;">
+                <img src="ABID KHAN.png" class="rounded-circle mb-4" style="width: 200px; height: 200px; border: 4px solid #c5a059; object-fit: cover;">
+                <h2 class="text-white fw-bold">Professor Abid Khan</h2>
+                <p class="text-warning fw-bold">Chief Architect & Founder</p>
+                <hr class="border-secondary">
+                <p class="small text-secondary">Visionary lead in E-Pedagogy and Cyber-Infrastructure. Orchestrator of the Sentinel-6 security protocols.</p>
+                <div class="d-flex justify-content-center gap-3">
+                    <span class="badge bg-dark">AI Research</span>
+                    <span class="badge bg-dark">Cloud Arch</span>
+                    <span class="badge bg-dark">Pedagogy</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include('footer.php'); ?>

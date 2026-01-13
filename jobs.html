@@ -1,0 +1,198 @@
+﻿<?php 
+include('header.php'); 
+include('fetch_rozee_jobs.php'); 
+include('ai_assistant.php'); 
+include('connect.php'); // Sentinel Security & DB Bridge
+
+// 1. VAULT JOBS - Professional Hierarchy
+$vault_jobs = [
+    [
+        "title" => "Cloud Solutions Architect",
+        "location" => "Remote (USA/Europe)",
+        "type" => "International",
+        "icon" => "fa-cloud",
+        "link" => "cloud_arch.php", 
+        "desc" => "Lead global pedagogy delivery networks using high-availability AWS/Azure architectures."
+    ],
+    [
+        "title" => "Lead AI Researcher",
+        "location" => "London, UK / Remote",
+        "type" => "International",
+        "icon" => "fa-microchip",
+        "link" => "ai_researcher.php",
+        "desc" => "Orchestrate adaptive learning algorithms for next-generation e-pedagogy systems."
+    ],
+    [
+        "title" => "Senior PHP Developer (Backend)",
+        "location" => "Lahore / Karachi",
+        "type" => "Domestic",
+        "icon" => "fa-database",
+        "link" => "web_dev_pakistan.php",
+        "desc" => "Architecting scalable institute databases and secure high-traffic student portals."
+    ]
+];
+
+$rozeeJobs = getRozeeJobs();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <style>
+        :root {
+            --royal-gold: #c5a059;
+            --deep-navy: #0f172a;
+            --academic-blue: #1e293b;
+            --pure-white: #f8fafc;
+        }
+
+        body {
+            background-color: #020617;
+            background-image: radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.5) 0, transparent 50%);
+            color: var(--pure-white);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .job-card {
+            background: var(--academic-blue);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--royal-gold);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            border-left: 5px solid var(--royal-gold);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        .ai-insight-box {
+            background: rgba(197, 160, 89, 0.05);
+            border-left: 3px solid var(--royal-gold);
+            padding: 12px;
+            font-size: 0.85rem;
+            color: #d1d5db;
+        }
+
+        .btn-academic {
+            background: transparent;
+            border: 1px solid var(--royal-gold);
+            color: var(--royal-gold);
+            font-weight: 700;
+        }
+
+        .btn-academic:hover {
+            background: var(--royal-gold);
+            color: var(--deep-navy);
+        }
+
+        /* Verification Styling */
+        .verifier-box {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid var(--royal-gold);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5 pt-5">
+    
+    <header class="text-center mb-5">
+        <h1 class="fw-bold mb-2 text-uppercase tracking-wider">Institute <span style="color: var(--royal-gold);">Career Dashboard</span></h1>
+        <p class="text-secondary small">Authenticated Ecosystem for Professional Pedagogy Development</p>
+    </header>
+
+    <div class="verifier-box p-4 mb-5 shadow-lg">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <h4 class="text-white mb-1"><i class="fas fa-shield-check text-warning me-2"></i>Sentinel Verify</h4>
+                <p class="small text-muted mb-0">Validate Institutional Certificates instantly.</p>
+            </div>
+            <div class="col-lg-8">
+                <form action="" method="POST" class="d-flex gap-2">
+                    <input type="text" name="verify_id" class="form-control bg-dark text-white border-secondary" placeholder="Enter Certificate ID (e.g. ABID-HUB-2026-001)" required>
+                    <button type="submit" name="check_cert" class="btn btn-academic px-4">VERIFY</button>
+                </form>
+            </div>
+        </div>
+
+        <?php
+        if(isset($_POST['check_cert'])){
+            $cert_id = mysqli_real_escape_string($conn, $_POST['verify_id']);
+            $query = "SELECT * FROM certificates WHERE cert_id = '$cert_id' AND status = 'Active'";
+            $res = mysqli_query($conn, $query);
+
+            if(mysqli_num_rows($res) > 0){
+                $data = mysqli_fetch_assoc($res);
+                echo "<div class='mt-3 p-3 border border-success rounded bg-success bg-opacity-10 text-center animate__animated animate__fadeIn'>
+                        <span class='text-success fw-bold'><i class='fas fa-check-circle'></i> AUTHENTICATED:</span> Issued to {$data['student_name']} for {$data['course_name']} (Grade: {$data['grade']})
+                      </div>";
+            } else {
+                echo "<div class='mt-3 p-3 border border-danger rounded bg-danger bg-opacity-10 text-center animate__animated animate__shakeX'>
+                        <span class='text-danger fw-bold'><i class='fas fa-times-circle'></i> UNVERIFIED:</span> No active record found in the Sentinel Vault.
+                      </div>";
+            }
+        }
+        ?>
+    </div>
+
+    <h2 class="section-title">Exclusive Vault</h2>
+    <div class="row g-4 mb-5">
+        <?php foreach ($vault_jobs as $job): ?>
+        <div class="col-lg-4 col-md-6">
+            <div class="job-card p-4 d-flex flex-column">
+                <div class="d-flex justify-content-between mb-3">
+                    <div class="text-warning"><i class="fas <?php echo $job['icon']; ?> fa-2xl"></i></div>
+                    <span class="badge border border-warning text-warning rounded-pill px-3"><?php echo $job['type']; ?></span>
+                </div>
+                <h4 class="fw-bold h5 text-white"><?php echo $job['title']; ?></h4>
+                <p class="text-secondary small mb-3"><?php echo $job['desc']; ?></p>
+                <div class="ai-insight-box mb-4">
+                    <i class="fas fa-brain me-1 small"></i> <?php echo analyzeJobWithAI($job['title'], $job['desc']); ?>
+                </div>
+                <a href="<?php echo $job['link']; ?>" class="btn btn-academic w-100 mt-auto">Apply for Candidacy</a>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+
+    <h2 class="section-title" style="border-color: #10b981;">Live Intelligence</h2>
+    <div class="row g-4">
+        <?php if (!empty($rozeeJobs)): ?>
+            <?php foreach ($rozeeJobs as $liveJob): ?>
+            <div class="col-lg-4 col-md-6">
+                <div class="job-card p-4 border-success-subtle">
+                    <div class="badge bg-success mb-3 px-3">EXTERNAL FEED</div>
+                    <h5 class="fw-bold text-white mb-2"><?php echo htmlspecialchars($liveJob['title']); ?></h5>
+                    <div class="ai-insight-box mb-3" style="border-left-color: #10b981;">
+                        <?php echo analyzeJobWithAI($liveJob['title']); ?>
+                    </div>
+                    <p class="text-secondary small mb-4"><i class="fas fa-university me-2"></i><?php echo htmlspecialchars($liveJob['company']); ?></p>
+                    <a href="<?php echo $liveJob['link']; ?>" class="btn btn-outline-secondary w-100 btn-sm">View Specification</a>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+</div>
+
+<?php include('footer.php'); ?>
+</body>
+</html>

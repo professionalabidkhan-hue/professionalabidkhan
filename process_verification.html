@@ -1,0 +1,29 @@
+<?php
+session_start();
+require_once 'connect.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $otp = mysqli_real_escape_string($conn, $_POST['otp']);
+    
+    // Validate the OTP and Expiry
+    $sql = "SELECT email FROM ak_users WHERE otp_code = '$otp' AND otp_expiry > NOW()";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['verified_email'] = $row['email'];
+        header("Location: reset_password_final.php");
+    } else {
+        header("Location: verify_otp.php?error=invalid_key");
+    }
+}
+?><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>

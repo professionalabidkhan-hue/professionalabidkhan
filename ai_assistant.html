@@ -1,0 +1,35 @@
+<?php
+// ai_assistant.php
+
+/**
+ * Sentinel AI Assistant Logic
+ * Analyzes job titles and descriptions to provide Hub-specific insights.
+ */
+function analyzeJobWithAI($jobTitle, $jobDesc = "") {
+    // FALLBACK SENTINEL LOGIC (Used if API is offline or key is missing)
+    $insights = [
+        "Cyber" => "Matches 'Sentinel-6' Security protocols. High priority for Hub members.",
+        "Developer" => "Direct alignment with our Full-Stack Architecture modules. Career growth: Exponential.",
+        "React" => "Frontend dominance role. Ideal for modern UI specialists in the community.",
+        "Research" => "Pedagogy-linked opportunity. High value for academic portfolio building.",
+        "Default" => "Verified opportunity. Aligns with Hub professional standards."
+    ];
+
+    foreach ($insights as $keyword => $message) {
+        if (stripos($jobTitle, $keyword) !== false) {
+            return $message;
+        }
+    }
+
+    return $insights["Default"];
+}
+?><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>

@@ -1,0 +1,73 @@
+﻿<?php
+// session_start(); // Commented out so visitors don't need a session
+require_once 'connect.php';
+
+// Fetch Total Count for the Header
+$count_query = mysqli_query($conn, "SELECT COUNT(*) as total FROM ak_users WHERE user_role = 'trainer'");
+$count_data = mysqli_fetch_assoc($count_query);
+
+// Fetch All Mentors (Public Data Only)
+$query = "SELECT full_name, department, profile_pic FROM ak_users WHERE user_role = 'trainer' ORDER BY full_name ASC";
+$result = mysqli_query($conn, $query);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/all.min.css">
+    <style>
+        body { background: #050608; color: #c9d1d9; font-family: 'Consolas', monospace; padding: 30px; }
+        .search-box { background: #0d1117; border: 1px solid #00d4ff; color: white; border-radius: 25px; padding: 12px 25px; width: 100%; margin-bottom: 30px; }
+        .tutor-card { background: #0d1117; border: 1px solid #30363d; border-radius: 15px; padding: 25px; transition: 0.3s; margin-bottom: 20px; }
+        .tutor-card:hover { border-color: #00d4ff; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2); }
+        .tutor-pic { width: 100px; height: 100px; border-radius: 50%; border: 3px solid #00d4ff; object-fit: cover; margin-bottom: 15px; }
+        .btn-join { background: #00d4ff; color: #000; font-weight: bold; border-radius: 20px; padding: 5px 20px; text-decoration: none; }
+        .public-badge { background: rgba(0, 212, 255, 0.1); color: #00d4ff; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="text-white fw-bold">OUR ELITE MENTORS</h2>
+            <p class="text-info">Discover Experts at Abid Khan Pedagogy Institute</p>
+            <div class="mt-3">
+                <span class="public-badge"><?php echo $count_data['total']; ?> Certified Tutors Online</span>
+            </div>
+        </div>
+        
+        <input type="text" id="mentorSearch" class="search-box" placeholder="ðŸ” Search by Name or Skill (IT/Quran)..." onkeyup="filterMentors()">
+
+        <div class="row" id="mentorList">
+            <?php while($row = mysqli_fetch_assoc($result)): ?>
+            <div class="col-md-4 mentor-item">
+                <div class="tutor-card text-center">
+                    <img src="<?php echo $row['profile_pic']; ?>" class="tutor-pic">
+                    <h5 class="mentor-name text-white mb-1"><?php echo $row['full_name']; ?></h5>
+                    <div class="text-info small mb-3"><?php echo $row['department']; ?> Specialist</div>
+                    <a href="signup.php" class="btn-join">BOOK A SESSION</a>
+                </div>
+            </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+
+    <script>
+        function filterMentors() {
+            let input = document.getElementById('mentorSearch').value.toLowerCase();
+            let items = document.getElementsByClassName('mentor-item');
+            for (let i = 0; i < items.length; i++) {
+                let name = items[i].querySelector(".mentor-name").innerText.toLowerCase();
+                let dept = items[i].querySelector(".text-info").innerText.toLowerCase();
+                items[i].style.display = (name.includes(input) || dept.includes(input)) ? "block" : "none";
+            }
+        }
+    </script>
+</body>
+</html>

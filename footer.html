@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<footer class="mt-5 pt-5 pb-4" style="background: rgba(10, 11, 16, 0.95); border-top: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="ABID KHAN.png" width="65" height="65" class="rounded-circle me-3" 
+                         style="border: 2px solid var(--primary-blue); box-shadow: 0 0 20px rgba(11, 99, 211, 0.4); object-fit: cover;">
+                    <div>
+                        <h5 class="fw-bold mb-0" style="letter-spacing: 1px;">Abid Khan Hub</h5>
+                        <small class="text-primary fw-bold">Global Education Architect</small>
+                    </div>
+                </div>
+                <p class="text-secondary small pr-lg-5">
+                    Merging high-end IT excellence with authentic spiritual growth. Providing 24/7 global education modules in Cybersecurity, AI, and Quranic Studies.
+                </p>
+                <div class="mt-3">
+                    <a href="#" class="text-secondary me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                    <a href="#" class="text-secondary me-3"><i class="fab fa-youtube fa-lg"></i></a>
+                    <a href="#" class="text-secondary"><i class="fab fa-facebook fa-lg"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4" style="font-size: 0.85rem; color: var(--primary-blue);">Education</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="it_panel.php" class="text-secondary text-decoration-none footer-link">IT Laboratory</a></li>
+                    <li class="mb-2"><a href="islamic_studies.php" class="text-decoration-none text-secondary footer-link">Islamic Studies</a></li>
+                    
+                </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4" style="font-size: 0.85rem; color: var(--primary-blue);">Support</h6>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a href="jobs.php" class="text-decoration-none text-secondary footer-link">Career Portal</a></li>
+                    <li class="mb-2"><a href="privacy.html" class="text-decoration-none text-secondary footer-link">Privacy Policy</a></li>
+                    <li class="mb-2"><a href="terms.html" class="text-decoration-none text-secondary footer-link">Terms & Rules</a></li>
+                    <li class="mb-2"><a href="contact.html" class="text-decoration-none text-secondary footer-link">Contact Admin</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-4 mb-4 text-lg-end">
+                <h6 class="text-uppercase fw-bold mb-4" style="font-size: 0.85rem; color: var(--primary-blue);">Global Connect</h6>
+                <p class="small text-secondary mb-3">Questions? Contact our office via WhatsApp for instant support.</p>
+                <a href="https://wa.me/923497469638" class="btn-whatsapp-master shadow-lg">
+                    <i class="fab fa-whatsapp me-2"></i> WhatsApp Office
+                </a>
+                <p class="mt-4 small text-secondary">
+                    <i class="fas fa-location-dot me-2 text-primary"></i> Islamabad, Pakistan (Global Hub)
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-4 pt-4 border-top border-secondary">
+            <div class="col-md-12 text-center">
+                <p class="small text-secondary mb-0">
+                    &copy; 2026 <strong>Abid Khan E-Learning Hub</strong>. All Rights Reserved. <br>
+                    <span style="color: var(--primary-blue); font-size: 0.75rem;">Design & Architecture by Abid Khan Technical Team.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer-link { transition: 0.3s ease; display: inline-block; }
+    .footer-link:hover { color: var(--primary-blue) !important; transform: translateX(5px); }
+    .btn-whatsapp-master {
+        background: linear-gradient(45deg, #25D366, #128C7E);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .btn-whatsapp-master:hover { color: white; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor Doctor Abid Khan | Pedagogy Institute & Security Hub</title>
+    <meta name="description" content="The official elite platform of Professor Doctor Abid Khan. Global expert in Pedagogy, secure Alphanumeric OTP systems, and advanced digital education architecture. Built for sovereignty and security.">
+    <meta name="keywords" content="Professor Doctor Abid Khan, Abid Khan Pedagogy, Pedagogy Institute, Telenor OTP Security, Alphanumeric OTP, Secure Education Gateway, Digital Architecture Pakistan">
+    <meta name="author" content="Professor Doctor Abid Khan">
+    <meta property="og:title" content="Professor Doctor Abid Khan Pedagogy Institute">
+    <meta property="og:description" content="Secure your education journey with the Sovereign Alphanumeric Gate. Managed by Professor Doctor Abid Khan.">
+    <meta property="og:url" content="https://professionalabidkhan-hue.github.io">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Recovery | ABID KHAN HUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --accent: #4fc3f7;
+            --glass: rgba(13, 17, 23, 0.85);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body, html { 
+            height: 100%; margin: 0; background: #07090d; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: flex; align-items: center; justify-content: center;
+            background: radial-gradient(circle at center, #1a1c2c, #07090d);
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(25px);
+            border: 1px solid var(--border);
+            border-radius: 40px;
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        .master-avatar {
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(79, 195, 247, 0.5);
+        }
+
+        .master-input {
+            background: rgba(0, 0, 0, 0.5) !important;
+            border: 1px solid var(--border) !important;
+            color: #fff !important;
+            border-radius: 15px !important;
+            padding: 15px !important;
+            text-align: center;
+        }
+
+        .btn-sentinel {
+            background: var(--accent) !important;
+            color: #000 !important;
+            font-weight: 800;
+            border-radius: 15px;
+            padding: 15px;
+            transition: 0.4s;
+            border: none;
+            text-transform: uppercase;
+        }
+
+        .btn-sentinel:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--accent);
+            background: #fff !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="glass-card text-center">
+    <img src="your-pic-url.jpg" alt="Master Abid" class="master-avatar">
+    
+    <h3 class="text-white fw-bold mb-2">Email Recovery</h3>
+    <p class="text-secondary small mb-4">Enter your Master Email to receive a 6-digit Access Code.</p>
+    
+    <form action="send_email_otp.php" method="POST">
+        <div class="mb-4">
+            <input type="email" name="email" class="form-control master-input" placeholder="email@domain.com" required>
+        </div>
+        <button type="submit" class="btn btn-sentinel w-100">
+            <i class="fas fa-envelope-open-text me-2"></i> Send Email OTP
+        </button>
+    </form>
+    
+    <div class="mt-4">
+        <a href="signin.php" class="text-secondary text-decoration-none small">Return to Vault</a>
+    </div>
+</div>
+
+</body>
+</html><script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = function(e) {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) return false;
+    };
+    document.addEventListener('dragstart', e => e.preventDefault());
+</script>
+<style>
+    body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+</style>
+
