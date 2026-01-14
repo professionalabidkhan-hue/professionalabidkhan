@@ -91,11 +91,18 @@
         <button type="submit" class="btn-open">OPEN VAULT</button>
     </form>
     
-    <div class="mt-4">
-        <a href="signup.html" class="text-secondary small text-decoration-none">New Identity? <span class="text-info">Register Here</span></a>
+    <!-- Forgot Password + Signup Links -->
+    <div class="mt-4 d-flex flex-column gap-2">
+        <a href="forgot_password.html" class="text-secondary small text-decoration-none">
+            Forgot Access Key? <span class="text-info">Reset Here</span>
+        </a>
+        <a href="signup.html" class="text-secondary small text-decoration-none">
+            New Identity? <span class="text-info">Register Here</span>
+        </a>
     </div>
 </div>
 
+  
 <script>
     // Master Gate Logic
     document.getElementById('loginGate').addEventListener('submit', function(e) {
