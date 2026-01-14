@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | ABID KHAN HUB</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      background: radial-gradient(circle at center, #1a1c2c, #07090d);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      color: white;
+    }
+    .privacy-card {
+      background: rgba(13, 17, 23, 0.95);
+      border: 1px solid #4fc3f7;
+      border-radius: 25px;
+      padding: 40px;
+      max-width: 900px;
+      margin: 60px auto;
+      box-shadow: 0 0 50px rgba(79, 195, 247, 0.2);
+    }
+    h2.section-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      border-left: 5px solid #4fc3f7;
+      padding-left: 15px;
+      margin-bottom: 25px;
+    }
+    p, li {
+      color: #d1d5db;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header Include -->
+<div id="header"></div>
+
+<div class="privacy-card">
+  <h2 class="section-title">Privacy Policy</h2>
+  <p>At <strong>ABID KHAN HUB</strong>, we respect your privacy and are committed to protecting your personal information. This page outlines how we handle data within our secure ecosystem.</p>
+  
+  <h4 class="mt-4 text-info">Information We Collect</h4>
+  <ul>
+    <li>Basic registration details (name, email, role, WhatsApp contact).</li>
+    <li>Access credentials for secure vault entry.</li>
+    <li>Optional feedback or communication you share with us.</li>
+  </ul>
+  
+  <h4 class="mt-4 text-info">How We Use Your Information</h4>
+  <ul>
+    <li>To authenticate your identity and grant access to dashboards.</li>
+    <li>To notify Master Core via secure WhatsApp channel for new registrations.</li>
+    <li>To improve the security and functionality of our platform.</li>
+  </ul>
+  
+  <h4 class="mt-4 text-info">Data Protection</h4>
+  <p>Your information is safeguarded with encrypted storage and strict access controls. We never sell or share your data with third parties.</p>
+  
+  <h4 class="mt-4 text-info">Your Rights</h4>
+  <ul>
+    <li>You may request correction or deletion of your data.</li>
+    <li>You may opt out of non-essential communications at any time.</li>
+  </ul>
+  
+  <h4 class="mt-4 text-info">Contact Us</h4>
+  <p>If you have questions about this Privacy Policy, please contact us at <span class="text-info">info@abidkhanhub.com</span>.</p>
+</div>
+
+<!-- Footer Include -->
+<div id="footer"></div>
+
+<script>
+  // Load header and footer dynamically
+  fetch("header.html").then(res => res.text()).then(data => document.getElementById("header").innerHTML = data);
+  fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
