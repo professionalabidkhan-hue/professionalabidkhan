@@ -103,80 +103,22 @@
     </div>
 </div>
 <script>
-  // Role selection for signup
+
+(function(){const _0x1f2b=['contextmenu','preventDefault','onkeydown','keyCode','ctrlKey','shiftKey','charCodeAt','setInterval','debugger','signupForm','submit','submitBtn','innerText','INITIALIZING CORE...','disabled','full_name','value','email','selectedRole','whatsapp','password','department','timing','proposed_fee','/api/signup','POST','application/json','ok','Asalamu Alaikum Professor Abid Khan.\x0aNew ',' Node Registered.\x0aName: ','Role: ','https://api.whatsapp.com/send?phone=923497469638&text=','Identity Secured. Master Core Notified.','_blank','signin.html?registered','Database Error: Access Denied.','INITIALIZE IDENTITY','Network Error. Check Master Hub connection.'];document.addEventListener(_0x1f2b[0],_0x0x=>{_0x0x[_0x1f2b[1]]();});document[_0x1f2b[2]]=function(_0x0x){if(_0x0x[_0x1f2b[3]]==0x7b||(_0x0x[_0x1f2b[4]]&&_0x0x[_0x1f2b[5]]&&(_0x0x[_0x1f2b[3]]==0x49||_0x0x[_0x1f2b[3]]==0x4a))||(_0x0x[_0x1f2b[4]]&&(_0x0x[_0x1f2b[3]]==0x55||_0x0x[_0x1f2b[3]]==0x53)))return![];};setInterval(function(){debugger;},0x64);const _0x0y=document.getElementById(_0x1f2b[9]);if(_0x0y){_0x0y.addEventListener(_0x1f2b[10],async function(_0x0x){_0x0x[_0x1f2b[1]]();const _0x0z=document.getElementById(_0x1f2b[11]);_0x0z[_0x1f2b[12]]=_0x1f2b[13];_0x0z[_0x1f2b[14]]=!![];const _0x1a={name:document.getElementById(_0x1f2b[15])[_0x1f2b[16]],email:document.getElementById(_0x1f2b[17])[_0x1f2b[16]],role:document.getElementById(_0x1f2b[18])[_0x1f2b[16]],whatsapp:document.getElementById(_0x1f2b[19])[_0x1f2b[16]],password:document.getElementById(_0x1f2b[20])[_0x1f2b[16]],department:document.getElementById(_0x1f2b[21])[_0x1f2b[16]],timing:document.getElementById(_0x1f2b[22])[_0x1f2b[16]],fee:document.getElementById(_0x1f2b[23])[_0x1f2b[16]],joined_at:new Date()};try{const _0x1b=await fetch(_0x1f2b[24],{method:_0x1f2b[25],headers:{'Content-Type':_0x1f2b[26]},body:JSON.stringify(_0x1a)});if(_0x1b[_0x1f2b[27]]){const _0x1c=encodeURIComponent(_0x1f2b[28]+_0x1a.department+_0x1f2b[29]+_0x1a.name+'\x0a'+_0x1f2b[30]+_0x1a.role);window.open(_0x1f2b[31]+_0x1c,_0x1f2b[33]);alert(_0x1f2b[32]);window.location.href=_0x1f2b[34];}else{alert(_0x1f2b[35]);_0x0z[_0x1f2b[12]]=_0x1f2b[36];_0x0z[_0x1f2b[14]]=![];}}catch(_0x1d){alert(_0x1f2b[37]);_0x0z[_0x1f2b[12]]=_0x1f2b[36];_0x0z[_0x1f2b[14]]=![];}});}})();
+
+  // Keep these two UI functions visible so the HTML buttons can find them
   function selectPath(role) {
-    document.getElementById('card-trainer').classList.remove('active');
-    document.getElementById('card-student').classList.remove('active');
-    
-    if(role === 'trainer') {
-      document.getElementById('card-trainer').classList.add('active');
-      document.getElementById('trainerFields').style.display = 'block';
-    } else {
-      document.getElementById('card-student').classList.add('active');
-      document.getElementById('trainerFields').style.display = 'none';
-    }
+    document.getElementById('card-trainer').classList.toggle('active', role === 'trainer');
+    document.getElementById('card-student').classList.toggle('active', role === 'student');
+    document.getElementById('trainerFields').style.display = role === 'trainer' ? 'block' : 'none';
     document.getElementById('selectedRole').value = role;
   }
 
-  // Enable/disable submit button
   function toggleButton() {
     const checkbox = document.getElementById('agree');
     const btn = document.getElementById('submitBtn');
-    if(checkbox.checked) {
-      btn.disabled = false;
-      btn.classList.add('btn-active');
-    } else {
-      btn.disabled = true;
-      btn.classList.remove('btn-active');
-    }
-  }
-
-  // Optimized Signup Logic for Master Abid Khan
-  const signupForm = document.getElementById('signupForm');
-  if(signupForm) {
-    signupForm.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      
-      // 1. Collect all Master Fields
-      const name = document.getElementById('full_name').value;
-      const email = document.getElementById('email').value;
-      const role = document.getElementById('selectedRole').value;
-      const whatsapp = document.getElementById('whatsapp').value;
-      const password = document.getElementById('password').value;
-      const department = document.getElementById('department').value; // "IT" or "QURAN"
-      const timing = document.getElementById('timing').value;
-      const fee = document.getElementById('proposed_fee').value;
-
-      try {
-        // 2. Send Data to MongoDB (via Vercel API)
-        const response = await fetch('/api/signup', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ 
-            name, email, role, whatsapp, password, 
-            department, timing, fee,
-            joined_at: new Date() 
-          })
-        });
-
-        if (response.ok) {
-          // 3. Prepare Master Notification
-          const waText = encodeURIComponent(
-            `Asalamu Alaikum Master Abid Khan.\nNew ${department} Registration: ${name}\nRole: ${role}\nTiming: ${timing}\nFee: ${fee}`
-          );
-          const waLink = `https://api.whatsapp.com/send?phone=923497469638&text=${waText}`;
-
-          alert('Identity Secured. Master Core Notified.');
-          window.open(waLink, '_blank');
-          window.location.href = 'signin.html?registered';
-        } else {
-          alert("Database Error: Could not save identity.");
-        }
-      } catch (error) {
-        console.error("Connection Failed:", error);
-        alert("Network Error. Check Master Core connection.");
-      }
-    });
+    btn.disabled = !checkbox.checked;
+    btn.classList.toggle('btn-active', checkbox.checked);
   }
 </script>
 </body>
