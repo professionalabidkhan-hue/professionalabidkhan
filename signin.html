@@ -99,54 +99,24 @@
 <!-- Footer Include -->
 <div id="footer"></div>
 <script>
-  // 1. Load header and footer
+  // 1. DYNAMIC UI ELEMENTS (Header/Footer)
   fetch("header.html").then(res => res.text()).then(data => document.getElementById("header").innerHTML = data);
   fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer").innerHTML = data);
 
-  // 2. Main Signin Logic
-  async function handleSignin(event) {
-    event.preventDefault();
-    
-    const email = document.getElementById('email').value.trim();
-    const pass = document.getElementById('password').value.trim();
-    const errorBox = document.getElementById('vault-error');
-
-    // STEP A: Check for Master/Professor Access (Hardcoded for you)
-    if (email === "professor@abidkhan.com" && pass === "MASTER_CORE_2026") {
-      localStorage.setItem('userRole', 'mentor');
-      window.location.href = "DASHBOARD_MENTOR.html";
-      return;
+  // 2. SECURITY SENTINEL (Blocks F12, Right-Click, and Shortcuts)
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.onkeydown = function(e) {
+    if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83))) {
+      return false;
     }
+  };
 
-    // STEP B: Check MongoDB for Students (Dynamic Access)
-    try {
-      const response = await fetch('/api/signin', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password: pass })
-      });
+  // 3. STEALTH SIGNIN CORE (Base64 Encoded Logic)
+  // This string hides the logic for Master Access and MongoDB Connection
+  const _0xSigninCore = "YXN5bmMgZnVuY3Rpb24gaGFuZGxlU2lnbmluKGV2ZW50KSB7ZXZlbnQucHJldmVudERlZmF1bHQoKTtjb25zdCBlbWFpbCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdlbWFpbCcpLnZhbHVlLnRyaW0oKTtjb25zdCBwYXNzID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Bhc3N3b3JkJykudmFsdWUudHJpbSgpO2NvbnN0IGVycm9yQm94ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3ZhdWx0LWVycm9yJyk7aWYgKGVtYWlsID09PSAicHJvZmVzc29yQGFiaWRraGFuLmNvbSIgJiYgcGFzcyA9PT0gIk1BU1RFUl9DT1JFXzIwMjYiKSB7bG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3VzZXJSb2xlJywgJ21lbnRvcicpO3dpbmRvdy5sb2NhdGlvbi5ocmVmID0gIkRBU0hCT0FSRF9NRU5UT1IuaHRtbCI7cmV0dXJuO310cnkge2NvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goJy9hcGkvc2lnbmluJywge21ldGhvZDogJ1BPU1QnLGhlYWRlcnM6IHsgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJyB9LGJvZHk6IEpTT04uc3RyaW5naWZ5KHsgZW1haWwsIHBhc3N3b3JkOiBwYXNzIH0pIH0pO2lmIChyZXNwb25zZS5vaykge2NvbnN0IGRhdGEgPSBhd2FpdCByZXNwb25zZS5qc29uKCk7bG9jYWxTdG9yYWdlLnNldEl0ZW0oJ3VzZXJFbWFpbCcsIGRhdGEuZW1haWwpO2xvY2FsU3RvcmFnZS5zZXRJdGVtKCd1c2VyTmFtZScsIGRhdGEubmFtZSk7d2luZG93LmxvY2F0aW9uLmhyZWYgPSAiU1RVREVOVFNESVNIQk9BUkQuaHRtbCI7fSBlbHNlIHtlcnJvckJveC5zdHlsZS5kaXNwbGF5ID0gImJsb2NrIjtlcnJvckJveC5pbm5lclRleHQgPSAiSWRlbnRpdHkgVmVyaWZpY2F0aW9uIEZhaWxlZC4iO319IGNhdGNoIChlcnIpIHtlcnJvckJveC5zdHlsZS5kaXNwbGF5ID0gImJsb2NrIjtlcnJvckJveC5pbm5lclRleHQgPSAiTWFzdGVyIENvcmUgQ29ubmVjdGlvbiBFcnJvci4iO319Y29uc3QgbG9naW5HYXRlID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2xvZ2luR2F0ZScpO2lmKGxvZ2luR2F0ZSl7bG9naW5HYXRlLmFkZEV2ZW50TGlzdGVuZXIoJ3N1Ym1pdCcsIGhhbmRsZVNpZ25pbik7fQ==";
 
-      if (response.ok) {
-        const data = await response.json();
-        // Save to LocalStorage so Gemini AI knows who is talking
-        localStorage.setItem('userEmail', data.email);
-        localStorage.setItem('userName', data.name);
-        window.location.href = "STUDENTSDASHBOARD.html";
-      } else {
-        errorBox.style.display = "block";
-        errorBox.innerText = "Identity Verification Failed. Check your credentials.";
-      }
-    } catch (err) {
-      errorBox.style.display = "block";
-      errorBox.innerText = "Master Core Connection Error. Try again later.";
-    }
-  }
-
-  // Attach the function to your form
-  const loginGate = document.getElementById('loginGate');
-  if(loginGate) {
-    loginGate.addEventListener('submit', handleSignin);
-  }
+  // Execute the hidden logic
+  eval(atob(_0xSigninCore));
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
