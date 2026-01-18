@@ -6,38 +6,45 @@ export default {
       try {
         const data = await request.json();
 
-        // 1. Prepare the SQL Statement matching your 13 columns
-        const info = await env.DB.prepare(`
+        // [MANDATORY] We must 'await' the result of the database operation
+        const query = env.DB.prepare(`
           INSERT INTO users (
             full_name, email, whatsapp, password, role, 
             department, timing, qualification, experience, 
             expected_revenue, proposed_fee
           )
           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        `).bind(
-          data.name,           // From your HTML 'name'
-          data.email, 
-          data.whatsapp, 
-          data.password, 
+        `);
+
+        const result = await query.bind(
+          data.name || "Unknown", 
+          data.email || null, 
+          data.whatsapp || null, 
+          data.password || null, 
           data.role || 'student', 
-          data.department, 
-          data.timing, 
-          data.qc || null,     // qualification
-          data.ex || null,     // experience
-          null,                // expected_revenue
-          data.fee || null     // proposed_fee
+          data.department || 'IT', 
+          data.timing || null, 
+          data.qc || null, 
+          data.ex || null, 
+          null, 
+          data.fee || null
         ).run();
 
-        return new Response(JSON.stringify({ 
-          success: true, 
-          message: `Identity Secured in ${data.department} Department.`,
-          identity_id: info.meta.last_row_id 
-        }), {
-          headers: { "Content-Type": "application/json" },
-        });
+        // This check confirms if the row actually landed in the table
+        if (result.success) {
+          console.log(`Successfully wrote ID: ${result.meta.last_row_id}`);
+          return new Response(JSON.stringify({ 
+            success: true, 
+            message: "Identity Secured in Master Core.",
+            id: result.meta.last_row_id 
+          }), { headers: { "Content-Type": "application/json" } });
+        } else {
+          throw new Error("Database accepted command but failed to write.");
+        }
 
       } catch (error) {
-        return new Response(JSON.stringify({ error: "Failed to initialize identity." }), { status: 500 });
+        console.error("Critical Database Error:", error.message);
+        return new Response(JSON.stringify({ error: error.message }), { status: 500 });
       }
     }
     return env.ASSETS.fetch(request);
