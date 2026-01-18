@@ -139,65 +139,87 @@
     </div>
 </div>
 <script>
-// Add this inside your _coreLogic function
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+// 1. UI Control Functions
+function selectPath(role) {
+    document.getElementById('card-trainer').classList.toggle('active', role === 'trainer');
+    document.getElementById('card-student').classList.toggle('active', role === 'student');
+    document.getElementById('trainerFields').style.display = (role === 'trainer') ? 'block' : 'none';
+    document.getElementById('selectedRole').value = role;
+}
+
+function toggleButton() {
+    const isChecked = document.getElementById('agree').checked;
     const btn = document.getElementById('submitBtn');
+    btn.disabled = !isChecked;
+    btn.style.opacity = isChecked ? "1" : "0.5";
+    btn.style.cursor = isChecked ? "pointer" : "not-allowed";
+}
+
+// 2. Main Submission Logic
+const _coreLogic = () => {
+    const form = document.getElementById('signupForm');
     const status = document.getElementById('statusMessage');
-    
-    // 1. Enter Loading State
-    btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> SYNCHRONIZING...';
-    btn.disabled = true;
-    status.classList.add('d-none'); // Hide previous messages
 
-    const payload = {
-        name: document.getElementById('full_name').value,
-        email: document.getElementById('email').value,
-        whatsapp: document.getElementById('whatsapp').value,
-        password: document.getElementById('password').value,
-        role: document.getElementById('selectedRole').value,
-        department: document.getElementById('department').value,
-        timing: document.getElementById('timing').value,
-        fee: document.getElementById('proposed_fee').value,
-        qc: document.getElementById('qualification')?.value || null,
-        ex: document.getElementById('experience')?.value || null
-    };
-
-    try {
-        const response = await fetch('/api/signup', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-
-        const result = await response.json();
-
-        if (response.ok && result.success) {
-            // 2. SUCCESS: Show Green Message
-            status.innerHTML = `<strong>✓ SUCCESS:</strong> ${result.message || 'Identity Secured in Master Core.'}`;
-            status.className = "mt-3 p-2 text-center d-block animate__animated animate__fadeIn";
-            status.style.backgroundColor = "rgba(0, 255, 128, 0.1)";
-            status.style.color = "#00ff80";
-            status.style.border = "1px solid #00ff80";
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
             
-            // Redirect after 2.5 seconds
-            setTimeout(() => { window.location.href = 'signin.html'; }, 2500);
-        } else {
-            // 3. LOGIC ERROR: Show Red Message (e.g., Duplicate Email)
-            throw new Error(result.error || "Master Hub rejected the credentials.");
-        }
-    } catch (err) {
-        // 4. CRITICAL ERROR: Show Red/Amber Message
-        status.innerHTML = `<strong>⚠ ERROR:</strong> ${err.message}`;
-        status.className = "mt-3 p-2 text-center d-block animate__animated animate__shakeX";
-        status.style.backgroundColor = "rgba(255, 49, 49, 0.1)";
-        status.style.color = "#ff3131";
-        status.style.border = "1px solid #ff3131";
-        
-        btn.innerText = "INITIALIZE IDENTITY";
-        btn.disabled = false;
+            // Enter Loading State
+            btn.innerHTML = 'SYNCHRONIZING...';
+            btn.disabled = true;
+            status.classList.add('d-none'); 
+
+            const payload = {
+                name: document.getElementById('full_name').value,
+                email: document.getElementById('email').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                password: document.getElementById('password').value,
+                role: document.getElementById('selectedRole').value,
+                department: document.getElementById('department').value,
+                timing: document.getElementById('timing').value,
+                fee: document.getElementById('proposed_fee').value,
+                qc: document.getElementById('qualification')?.value || null,
+                ex: document.getElementById('experience')?.value || null
+            };
+
+            try {
+                const response = await fetch('/api/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    // SUCCESS: Green Feedback
+                    status.innerHTML = `<strong>✓ SUCCESS:</strong> ${result.message}`;
+                    status.className = "mt-3 p-2 text-center d-block";
+                    status.style.backgroundColor = "rgba(0, 255, 128, 0.1)";
+                    status.style.color = "#00ff80";
+                    status.style.border = "1px solid #00ff80";
+                    
+                    setTimeout(() => { window.location.href = 'signin.html'; }, 2500);
+                } else {
+                    // ERROR: Red Feedback
+                    throw new Error(result.error || "Master Hub rejected the credentials.");
+                }
+            } catch (err) {
+                status.innerHTML = `<strong>⚠ ERROR:</strong> ${err.message}`;
+                status.className = "mt-3 p-2 text-center d-block";
+                status.style.backgroundColor = "rgba(255, 49, 49, 0.1)";
+                status.style.color = "#ff3131";
+                status.style.border = "1px solid #ff3131";
+                
+                btn.innerText = "INITIALIZE IDENTITY";
+                btn.disabled = false;
+            }
+        });
     }
-});
+};
+
+_coreLogic();
 </script>
 </body>
 </html>
