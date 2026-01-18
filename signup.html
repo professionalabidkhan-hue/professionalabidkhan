@@ -102,26 +102,76 @@
         </form>
     </div>
 </div>
-<script>
-  // 1. PUBLIC UI FUNCTIONS (Visible for HTML Buttons)
-  function selectPath(role) {
+// 1. UI Control Functions
+function selectPath(role) {
     document.getElementById('card-trainer').classList.toggle('active', role === 'trainer');
     document.getElementById('card-student').classList.toggle('active', role === 'student');
     document.getElementById('trainerFields').style.display = (role === 'trainer') ? 'block' : 'none';
     document.getElementById('selectedRole').value = role;
-  }
+}
 
-  function toggleButton() {
+function toggleButton() {
     const isChecked = document.getElementById('agree').checked;
     const btn = document.getElementById('submitBtn');
     btn.disabled = !isChecked;
     btn.classList.toggle('btn-active', isChecked);
-  }
+}
 
-  // 2. UPDATED STEALTH CORE (Captures ALL fields for MongoDB)
-  const _0xAbidCore = "ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignY29udGV4dG1lbnUnLCBlID0+IGUucHJldmVudERlZmF1bHQoKSk7ZG9jdW1lbnQub25rZXlkb3duID0gZnVuY3Rpb24oZSl7aWYoZS5rZXlDb2RlID09IDEyMyB8fCAoZS5jdHJsS2V5ICYmIGUuc2hpZnRLZXkgJiYgKGUua2V5Q29kZSA9PSA3MyB8fCBlLmtleUNvZGUgPT0gNzQpKSB8fCAoZS5jdHJsS2V5ICYmIChlLmtleUNvZGUgPT0gODUgfHwgZS5rZXlDb2RlID09IDgzKSkpIHJldHVybiBmYWxzZTt9O2NvbnN0IGYgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc2lnbnVwRm9ybScpO2lmKGYpe2YuYWRkRXZlbnRMaXN0ZW5lcignc3VibWl0JywgYXN5bmMgZnVuY3Rpb24oZSl7ZS5wcmV2ZW50RGVmYXVsdCgpO2NvbnN0IGIgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnsubmitBtnJyk7Yi5pbm5lclRleHQ9IklOSVRJQUxJWklORy4uLiI7Yi5kaXNhYmxlZD10cnVlO2NvbnN0IGQgPSB7bmFtZTpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZnVsbF9uYW1lJykudmFsdWUsZW1haWw6ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2VtYWlsJykudmFsdWUscm9sZTpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc2VsZWN0ZWRSb2xlJykudmFsdWUsd2hhdHNhcHA6ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3doYXRzYXBwJykudmFsdWUscGFzc3dvcmQ6ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3Bhc3N3b3JkJykudmFsdWUsZGVwYXJ0bWVudDpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnZGVwYXJ0bWVudCcpLnZhbHVlLHRpbWluZzpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgndGltaW5nJykudmFsdWUsZmVlOmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwcm9wb3NlZF9mZWUnKS52YWx1ZSxxYzpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncXVhbGlmaWNhdGlvbicpLnZhbHVlLGV4OmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdleHBlcmllbmNlJykudmFsdWUsamNvcjpuZXcgRGF0ZSgpfTt0cnl7Y29uc3QgciA9IGF3YWl0IGZldGNoKCcvYXBpL3NpZ251cCcse21ldGhvZDonUE9TVCcsaGVhZGVyczp7J0NvbnRlbnQtVHlwZSc6J2FwcGxpY2F0aW9uL2pzb24nfSxib2R5OkpTT04uc3RyaW5naWZ5KGQpfSk7aWYoci5vayl7YWxlcnQoJ0lkZW50aXR5IFNlY3VyZWQuIE1hc3RlciBDb3JlIE5vdGlmaWVkLicpO3dpbmRvdy5sb2NhdGlvbi5ocmVmPSdzaWduaW4uaHRtbCc7fWVsc2V7YWxlcnQoJ0RhdGFiYXNlIEVycm9yOiBDaGVjayBWZXJjZWwgTG9ncycpO2IuaW5uZXJUZXh0PSJJTklUSUFMSVpFIjtiLmRpc2FibGVkPWZhbHNlO319Y2F0Y2goZXIpe2FsZXJ0KCdDb25uZWN0aW9uIEZhaWxlZCcpO2IuaW5uZXJUZXh0PSJJTklUSUFMSVpFIjtiLmRpc2FibGVkPWZhbHNlO319KTt9";
+// 2. Main Logic - Re-encoded for security
+const _coreLogic = () => {
+    // Disable Right Click & Dev Tools
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.onkeydown = (e) => {
+        if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || (e.ctrlKey && (e.keyCode == 85 || e.keyCode == 83))) return false;
+    };
 
-  eval(atob(_0xAbidCore));
-</script>
+    const form = document.getElementById('signupForm');
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = "INITIALIZING...";
+            btn.disabled = true;
+
+            // Prepare Data to match your D1 Column Names
+            const payload = {
+                name: document.getElementById('full_name').value,
+                email: document.getElementById('email').value,
+                role: document.getElementById('selectedRole').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                password: document.getElementById('password').value,
+                department: document.getElementById('department').value,
+                timing: document.getElementById('timing').value,
+                fee: document.getElementById('proposed_fee').value,
+                qc: document.getElementById('qualification') ? document.getElementById('qualification').value : null,
+                ex: document.getElementById('experience') ? document.getElementById('experience').value : null
+            };
+
+            try {
+                const response = await fetch('/api/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    alert('Identity Secured. Master Core Notified.');
+                    window.location.href = 'signin.html'; // Or wherever you want them to go
+                } else {
+                    const errData = await response.json();
+                    alert('System Error: ' + (errData.error || 'Check Logs'));
+                    btn.innerText = "INITIALIZE IDENTITY";
+                    btn.disabled = false;
+                }
+            } catch (err) {
+                alert('Connection Failed to Master Hub');
+                btn.innerText = "INITIALIZE IDENTITY";
+                btn.disabled = false;
+            }
+        });
+    }
+};
+
+_coreLogic();
 </body>
 </html>
